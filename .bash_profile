@@ -14,7 +14,7 @@ export EDITOR='atom --wait'
 
 export HOMEBREW_NO_ANALYTICS=1
 
-alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu; cd /usr/local/Homebrew/Library/Taps/caskroom/homebrew-cask && git stash pop; cd'
+alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; cd /usr/local/Homebrew/Library/Taps/caskroom/homebrew-cask && git stash pop; cd; brew cu'
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"'
 
