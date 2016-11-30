@@ -14,10 +14,10 @@ export EDITOR='atom --wait'
 
 export HOMEBREW_NO_ANALYTICS=1
 
-alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu'
+alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu; cd /usr/local/Homebrew/Library/Taps/caskroom/homebrew-cask && git stash pop; cd'
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"'
 
-alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master'
+alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd'
 
 alias dropsync='rsync -a -v --delete /users/miccal/dropbox /users/miccal/documents'
