@@ -6,7 +6,5 @@ cask 'dropbox' do
   name 'Dropbox'
   homepage 'https://www.dropbox.com/'
 
-  auto_updates true
-
   app 'Dropbox.app'
 end
