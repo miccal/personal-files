@@ -175,7 +175,7 @@ brew update; brew cleanup; brew cask cleanup; cd "$(brew --repository)"/Library/
 ```
 **Create a cask:**
 
-_*UPDATE FORK FIRST*_
+_!!!UPDATE FORK FIRST!!!_
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 
