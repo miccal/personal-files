@@ -40,7 +40,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 
-cd /usr/local/Caskroom/; rm -r dropbox mactex
+cd /usr/local/Caskroom/; rm -r dropbox mactex; cd
 
 brew cask install aquaterm atom djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; brew install bash cheat git gnuplot --with-aquaterm gpg mpv --with-bundle mpw pass; brew install --HEAD pdftoipe; brew install vitorgalvao/tiny-scripts/cask-repair; brew linkapps
 
@@ -48,7 +48,7 @@ brew cask install little-flocker
 
 brew cask install little-snitch
 
-cd /usr/local/Caskroom/; rm -r little-flocker little-snitch
+cd /usr/local/Caskroom/; rm -r little-flocker little-snitch; cd
 ```
 **For rae:**
 ```bash
@@ -60,7 +60,7 @@ brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup;
 
 brew doctor
 
-cd "$(brew --repository)"; git fetch; git reset --hard origin/master
+cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
 ```
 **Set homebrew bash as default:**
 
