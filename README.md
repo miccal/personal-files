@@ -56,7 +56,7 @@ brew cask install xquartz libreoffice messenger transmission; brew install bash 
 ```
 **Homebrew maintenance:**
 ```bash
-brew update; brew upgrade; brew cleanup; brew cask cleanup; brew cu
+brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu
 
 brew doctor
 
@@ -140,6 +140,8 @@ hub fork
 ```
 **Git setup:**
 ```bash
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
+
 git config --global user.email "miccal.matthews@gmail.com"
 
 git config --global user.name "miccal"
@@ -150,6 +152,8 @@ git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
 **Git check:**
 ```bash
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
+
 git remote -v
 ```
 Output:
