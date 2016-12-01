@@ -177,7 +177,7 @@ cask-repair -v VERSION -l origin -p miccal CASK
 ```
 **Update fork:**
 ```bash
-brew update; brew cleanup; brew cask cleanup; cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd
 ```
 **Create a cask:**
 
