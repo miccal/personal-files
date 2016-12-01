@@ -46,9 +46,11 @@ brew cask install aquaterm atom djview ipe keepingyouawake libreoffice linear to
 
 brew cask install little-flocker
 
+cd /usr/local/Caskroom/; rm -r little-flocker; cd
+
 brew cask install little-snitch
 
-cd /usr/local/Caskroom/; rm -r little-flocker little-snitch; cd
+cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
 **For rae:**
 ```bash
