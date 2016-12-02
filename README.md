@@ -30,7 +30,10 @@ softwareupdate -ia --verbose
 ```
 **Homebrew taps**
 ```bash
-brew tap caskroom/cask; brew tap homebrew/head-only; brew tap vitorgalvao/tiny-scripts; brew tap buo/cask-upgrade
+brew tap caskroom/cask; 
+brew tap homebrew/head-only; 
+brew tap vitorgalvao/tiny-scripts; 
+brew tap buo/cask-upgrade
 ```
 **Installs**
 ```bash
@@ -44,7 +47,11 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; brew install bash cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; brew install --HEAD pdftoipe; brew install vitorgalvao/tiny-scripts/cask-repair; brew linkapps
+brew cask install aquaterm atom djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
+brew install bash cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
+brew install --HEAD pdftoipe; 
+brew install vitorgalvao/tiny-scripts/cask-repair; 
+brew linkapps
 
 brew cask install little-flocker
 
@@ -56,7 +63,9 @@ cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
 **For rae**
 ```bash
-brew cask install xquartz libreoffice messenger transmission; brew install bash gpg mpv --with-bundle mpw pass; brew linkapps
+brew cask install xquartz libreoffice messenger transmission; 
+brew install bash gpg mpv --with-bundle mpw pass; 
+brew linkapps
 ```
 **Homebrew maintenance**
 ```bash
@@ -179,7 +188,7 @@ cask-repair -v VERSION -l origin -p miccal CASK
 ```
 **Update homebrew-cask fork**
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
 **Create a cask**
 
