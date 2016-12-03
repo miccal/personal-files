@@ -212,9 +212,11 @@ git rm CASK.rb
 
 git commit -m "PR TITLE"
 
-git push miccal CASK
+git commit -am "PR TITLE"
 
-git push -f miccal CASK
+git push miccal BRANCH
+
+git push -f miccal BRANCH
 
 git checkout master
 
