@@ -1,41 +1,41 @@
-**Create macos bootable usb**
+### Create macos bootable usb
 ```bash
 sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction
 ```
-**Show/hide hidden files**
+### Show/hide hidden files
 ```bash
 defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
 
 defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder
 ```
-**Enable trim**
+### Enable trim
 ```bash
 sudo trimforce enable
 ```
-**Turn time machine snapshots off**
+### Turn time machine snapshots off
 ```bash
 sudo tmutil disablelocal
 ```
-**Command line tools for xcode**
+### Command line tools for xcode
 ```bash
 xcode-select --install
 ```
-**Install macos updates**
+### Install macos updates
 ```bash
 softwareupdate -ia --verbose
 ```
-**Install homebrew**
+### Install homebrew
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-**Homebrew taps**
+### Homebrew taps
 ```bash
 brew tap caskroom/cask; 
 brew tap homebrew/head-only; 
 brew tap vitorgalvao/tiny-scripts; 
 brew tap buo/cask-upgrade
 ```
-**Installs**
+### Installs
 ```bash
 brew cask install xquartz
 
@@ -61,13 +61,13 @@ brew cask install little-snitch
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
-**For rae**
+### For rae
 ```bash
 brew cask install xquartz libreoffice messenger transmission; 
 brew install bash gpg mpv --with-bundle mpw pass; 
 brew linkapps
 ```
-**Homebrew maintenance**
+### Homebrew maintenance
 ```bash
 brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu
 
@@ -75,7 +75,7 @@ brew doctor
 
 cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
 ```
-**Set homebrew bash as default**
+### Set homebrew bash as default
 
 List current shells:
 ```bash
@@ -97,7 +97,7 @@ Set default shell:
 ```bash
 chsh -s /usr/local/bin/bash miccal
 ```
-**Gpg**
+### Gpg
 ```bash
 gpg --export GPGID > public.key
 
@@ -113,7 +113,7 @@ gpg --list-secret-keys
 
 gpg --edit-key GPGID
 ```
-**Pass**
+### Pass
 ```bash
 pass init GPGID
 
@@ -127,11 +127,11 @@ pass remove NAME
 
 pass edit NAME
 ```
-**Master password**
+### Master password
 ```bash
 mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
-**Symlinks**
+### Symlinks
 ```bash
 ln -s ~/Dropbox/.password-store ~/.password-store
 
@@ -141,7 +141,7 @@ ln -s ~/Dropbox/.gnupg ~/.gnupg
 
 ln -s ~/Dropbox/.atom ~/.atom
 ```
-**Hub setup**
+### Hub setup
 ```bash
 cd "$(brew --repository)" && hub issue
 
@@ -151,7 +151,7 @@ git config --local hub.protocol https
 
 hub fork
 ```
-**Git setup**
+### Git setup
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
 
@@ -163,7 +163,7 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
-**Git check**
+### Git check
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
 
@@ -176,7 +176,7 @@ miccal  https://github.com/miccal/homebrew-cask (push)
 origin  https://github.com/caskroom/homebrew-cask (fetch)
 origin  https://github.com/caskroom/homebrew-cask (push)
 ```
-**Cask repair**
+### Cask repair
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 
@@ -186,11 +186,11 @@ cask-repair -e -l origin -p miccal CASK
 
 cask-repair -v VERSION -l origin -p miccal CASK
 ```
-**Update homebrew-cask fork**
+### Update homebrew-cask fork
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
-**Create a cask**
+### Create a cask
 
 _!!!UPDATE FORK FIRST!!!_
 ```bash
