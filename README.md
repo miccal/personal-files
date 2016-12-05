@@ -143,7 +143,7 @@ ln -s ~/Dropbox/.atom ~/.atom
 ```
 ### Dropbox cleanup
 ```bash
-cd .dropbox.cache; ls -l
+cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
 ```
 `rm -r` everything except for `placeholder_cache` and `prefetch_cache`.
 ### Hub setup
