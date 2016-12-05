@@ -61,19 +61,11 @@ brew cask install little-snitch
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
-### For rae
+### Installs for rae
 ```bash
 brew cask install xquartz libreoffice messenger transmission; 
 brew install bash gpg mpv --with-bundle mpw pass; 
 brew linkapps
-```
-### Homebrew maintenance
-```bash
-brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu
-
-brew doctor
-
-cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
 ```
 ### Set homebrew bash as default
 
@@ -97,6 +89,29 @@ Set default shell:
 ```bash
 chsh -s /usr/local/bin/bash miccal
 ```
+### Homebrew maintenance
+```bash
+brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu
+
+brew doctor
+
+cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
+```
+### Symlinks
+```bash
+ln -s ~/Dropbox/.password-store ~/.password-store
+
+ln -s ~/Dropbox/.bash_profile ~/.bash_profile
+
+ln -s ~/Dropbox/.gnupg ~/.gnupg
+
+ln -s ~/Dropbox/.atom ~/.atom
+```
+### Dropbox cleanup
+```bash
+cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
+```
+`rm -r` everything except for `placeholder_cache` and `prefetch_cache`.
 ### Gpg
 ```bash
 gpg --export GPGID > public.key
@@ -131,21 +146,6 @@ pass edit NAME
 ```bash
 mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
-### Symlinks
-```bash
-ln -s ~/Dropbox/.password-store ~/.password-store
-
-ln -s ~/Dropbox/.bash_profile ~/.bash_profile
-
-ln -s ~/Dropbox/.gnupg ~/.gnupg
-
-ln -s ~/Dropbox/.atom ~/.atom
-```
-### Dropbox cleanup
-```bash
-cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
-```
-`rm -r` everything except for `placeholder_cache` and `prefetch_cache`.
 ### Hub setup
 ```bash
 cd "$(brew --repository)" && hub issue
