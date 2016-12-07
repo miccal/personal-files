@@ -558,6 +558,6 @@ cask 'libreoffice-language-pack' do
 
   preflight do
     system_command '/usr/bin/tar', args: ['-C', '#{appdir}/LibreOffice.app/', '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
-    system_command '/usr/bin/touch', args: ['/Applications/LibreOffice.app/Contents/Resources/extensions']
+    system_command '/usr/bin/touch', args: ['#{appdir}/LibreOffice.app/Contents/Resources/extensions']
   end
 end
