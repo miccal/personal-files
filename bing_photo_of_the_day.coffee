@@ -38,7 +38,7 @@ render: -> """
 update: (output, domEl) ->
   mydiv = $(domEl).find('#background')
   html = ''
-  outputhtml = output.replace("<url>", "").replace("</url>", "").replace(/(?:\r\n|\r|\n)/g, '').trim()
+  outputhtml = output.replace("<url>", "").replace("</url>", "").replace(/(?:\r\n|\r|\n)/g, '').replace("_1366x768.jpg", "_1920x1080.jpg").trim()
   html += "<div class='wallpaper'> "
   html += "<img src='http://www.bing.com" +outputhtml+ "' class='myimage' >"
   html += "</div>"
