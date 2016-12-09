@@ -108,10 +108,17 @@ ln -s ~/Dropbox/.gnupg ~/.gnupg
 ln -s ~/Dropbox/.atom ~/.atom
 ```
 ### Dropbox cleanup
+
+Clean up the cache:
 ```bash
 cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
 ```
 `rm -r` everything except for `placeholder_cache` and `prefetch_cache`.
+
+Remove conflicted files:
+```bash
+cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
+```
 ### Gpg
 ```bash
 gpg --export GPGID > public.key
