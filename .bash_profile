@@ -21,3 +21,9 @@ alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Cask
 alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd'
 
 alias dropsync='rsync -a -v --delete /users/miccal/dropbox /users/miccal/documents'
+
+alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l'
+
+alias dropcleanlist='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*"; cd'
+
+alias dropclean='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
