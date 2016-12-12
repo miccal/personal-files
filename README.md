@@ -31,6 +31,9 @@ softwareupdate -ia --verbose
 ### Homebrew taps
 ```bash
 brew tap caskroom/cask; 
+brew tap caskroom/versions; 
+brew tap caskroom/fonts; 
+brew tap caskroom/eid; 
 brew tap homebrew/head-only; 
 brew tap vitorgalvao/tiny-scripts; 
 brew tap buo/cask-upgrade
