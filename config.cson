@@ -1,0 +1,76 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "wrap-guide"
+      "about"
+      "archive-view"
+      "autocomplete-atom-api"
+      "autocomplete-css"
+      "autocomplete-html"
+      "autocomplete-plus"
+      "autocomplete-snippets"
+      "autosave"
+      "background-tips"
+      "bookmarks"
+      "command-palette"
+      "deprecation-cop"
+      "dev-live-reload"
+      "encoding-selector"
+      "exception-reporting"
+      "fuzzy-finder"
+      "git-diff"
+      "go-to-line"
+      "grammar-selector"
+      "image-view"
+      "incompatible-packages"
+      "keybinding-resolver"
+      "language-c"
+      "language-clojure"
+      "language-csharp"
+      "language-css"
+      "language-go"
+      "language-hyperlink"
+      "language-java"
+      "language-javascript"
+      "language-json"
+      "language-less"
+      "language-make"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-python"
+      "language-ruby-on-rails"
+      "language-sass"
+      "language-source"
+      "language-sql"
+      "language-todo"
+      "language-toml"
+      "language-yaml"
+      "line-ending-selector"
+      "link"
+      "metrics"
+      "notifications"
+      "open-on-github"
+      "package-generator"
+      "snippets"
+      "styleguide"
+      "symbols-view"
+      "update-package-dependencies"
+      "welcome"
+      "language-gfm"
+      "timecop"
+      "autoflow"
+    ]
+    restorePreviousWindowsOnStart: false
+    telemetryConsent: "no"
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "ed1d4063-496d-1803-bf4e-d919fca87cad"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
