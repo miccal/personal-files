@@ -20,6 +20,15 @@ alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Cask
 
 alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd'
 
+alias sha='shasum -a 256'
+
+alias appcast='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/find_sparkle_appcast"'
+
+checkpoint ()
+{
+  curl --compressed --location --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36' "$1" | /usr/bin/sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256
+}
+
 alias dropsync='rsync -a -v --delete /users/miccal/dropbox /users/miccal/documents'
 
 alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l'
