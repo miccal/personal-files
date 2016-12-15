@@ -144,7 +144,7 @@ pass init GPGID
 
 pass insert -m NAME
 
-pass generate GEN LENGTH
+pass generate -f -n GEN LENGTH
 
 pass NAME
 
