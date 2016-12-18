@@ -8,7 +8,7 @@ cask 'wine-staging' do
 
   depends_on cask: 'xquartz'
 
-  pkg "winehq-staging-#{version}.pkg"
+  pkg "winehq-staging-#{version}.pkg",
       choices: {
                  'choiceIdentifier' => 'choice3',
                  'choiceAttribute'  => 'selected',
