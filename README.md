@@ -50,7 +50,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
+brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
 brew install bash cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
 brew install --HEAD pdftoipe; 
 brew install vitorgalvao/tiny-scripts/cask-repair; 
@@ -63,6 +63,10 @@ cd /usr/local/Caskroom/; rm -r little-flocker; cd
 brew cask install little-snitch
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
+```
+When `poppler` is updated:
+```bash
+brew reinstall -HEAD pdftoipe
 ```
 ### Installs for rae
 ```bash
