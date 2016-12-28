@@ -36,7 +36,8 @@ brew tap caskroom/fonts;
 brew tap caskroom/eid; 
 brew tap homebrew/head-only; 
 brew tap vitorgalvao/tiny-scripts; 
-brew tap buo/cask-upgrade
+brew tap buo/cask-upgrade; 
+brew tap victorpopkov/tap
 ```
 ### Installs
 ```bash
@@ -54,6 +55,7 @@ brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice 
 brew install bash cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
 brew install --HEAD pdftoipe; 
 brew install vitorgalvao/tiny-scripts/cask-repair; 
+brew install cask-scripts; 
 brew linkapps
 
 brew cask install little-flocker
