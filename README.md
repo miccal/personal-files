@@ -52,10 +52,8 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
-brew install bash cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
+brew install bash cask-repair cask-scripts cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
 brew install --HEAD pdftoipe; 
-brew install vitorgalvao/tiny-scripts/cask-repair; 
-brew install cask-scripts; 
 brew linkapps
 
 brew cask install little-flocker
