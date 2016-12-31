@@ -36,8 +36,7 @@ brew tap caskroom/fonts;
 brew tap caskroom/eid; 
 brew tap homebrew/head-only; 
 brew tap vitorgalvao/tiny-scripts; 
-brew tap buo/cask-upgrade; 
-brew tap victorpopkov/tap
+brew tap buo/cask-upgrade;
 ```
 ### Installs
 ```bash
@@ -52,7 +51,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
-brew install bash cask-repair cask-scripts cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
+brew install bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
 brew install --HEAD pdftoipe; 
 brew linkapps
 
