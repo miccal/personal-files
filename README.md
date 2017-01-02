@@ -161,7 +161,7 @@ mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```bash
 cd "$(brew --repository)" && hub issue
 
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
 
 git config --local hub.protocol https
 
@@ -169,7 +169,7 @@ hub fork
 ```
 ### Git setup
 ```bash
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 
 git config --global user.email "miccal.matthews@gmail.com"
 
@@ -179,13 +179,13 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 
-cd $(brew --repository homebrew/core)
+cd "$(brew --repository homebrew/core)"
 
 git remote add miccal https://github.com/miccal/homebrew-core.git
 ```
 ### Git check
 ```bash
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 
 git remote -v
 ```
@@ -197,7 +197,7 @@ origin  https://github.com/caskroom/homebrew-cask (fetch)
 origin  https://github.com/caskroom/homebrew-cask (push)
 ```
 ```bash
-cd $(brew --repository homebrew/core)
+cd "$(brew --repository homebrew/core)"
 
 git remote -v
 ```
@@ -210,7 +210,7 @@ origin	https://github.com/Homebrew/homebrew-core (push)
 ```
 ### Cask repair
 ```bash
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
 
 cask-repair -l origin -p miccal CASK
 
@@ -226,7 +226,7 @@ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout mast
 
 _!!!UPDATE FORK FIRST!!!_
 ```bash
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
 
 git status
 
@@ -258,14 +258,13 @@ git branch -D BRANCH
 ```
 ### Update homebrew-core fork
 ```bash
-cd $(brew --repository homebrew/core); git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository homebrew/core)"; git checkout master; git pull origin; git push miccal master; cd
 ```
 ### Create a formula
 
 _!!!UPDATE FORK FIRST!!!_
 ```bash
-cd $(brew --repository homebrew/core)/formula
+cd "$(brew --repository homebrew/core)"/formula
 
 brew audit --strict FORMULA
 ```
-
