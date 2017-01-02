@@ -34,7 +34,6 @@ brew tap caskroom/cask;
 brew tap caskroom/versions; 
 brew tap caskroom/fonts; 
 brew tap caskroom/eid; 
-brew tap homebrew/head-only; 
 brew tap vitorgalvao/tiny-scripts; 
 brew tap buo/cask-upgrade;
 ```
@@ -51,8 +50,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
-brew install bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass; 
-brew install --HEAD pdftoipe; 
+brew install bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass pdftoipe; 
 brew linkapps
 
 brew cask install little-flocker
@@ -65,7 +63,7 @@ cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
 When `poppler` is updated:
 ```bash
-brew reinstall -HEAD pdftoipe
+brew reinstall pdftoipe
 ```
 ### Installs for rae
 ```bash
@@ -180,6 +178,10 @@ git config --global user.name "miccal"
 git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
+
+cd $(brew --repository homebrew/core)
+
+git remote add miccal https://github.com/miccal/homebrew-core.git
 ```
 ### Git check
 ```bash
@@ -193,6 +195,18 @@ miccal  https://github.com/miccal/homebrew-cask (fetch)
 miccal  https://github.com/miccal/homebrew-cask (push)
 origin  https://github.com/caskroom/homebrew-cask (fetch)
 origin  https://github.com/caskroom/homebrew-cask (push)
+```
+```bash
+cd $(brew --repository homebrew/core)
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/homebrew-core.git (fetch)
+miccal	https://github.com/miccal/homebrew-core.git (push)
+origin	https://github.com/Homebrew/homebrew-core (fetch)
+origin	https://github.com/Homebrew/homebrew-core (push)
 ```
 ### Cask repair
 ```bash
@@ -242,3 +256,16 @@ git branch
 
 git branch -D BRANCH
 ```
+### Update homebrew-core fork
+```bash
+cd $(brew --repository homebrew/core); git checkout master; git pull origin; git push miccal master; cd
+```
+### Create a formula
+
+_!!!UPDATE FORK FIRST!!!_
+```bash
+cd $(brew --repository homebrew/core)/formula
+
+brew audit --strict FORMULA
+```
+
