@@ -50,7 +50,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
-brew install bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass pdftoipe; 
+brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass pdftoipe; 
 brew linkapps
 
 brew cask install little-flocker
@@ -154,6 +154,10 @@ pass remove NAME
 pass edit NAME
 ```
 ### Master password
+```bash
+aspell --lang=en --mode=tex check FILE.tex
+```
+### Aspell
 ```bash
 mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
