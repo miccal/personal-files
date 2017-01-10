@@ -155,11 +155,11 @@ pass edit NAME
 ```
 ### Master password
 ```bash
-aspell --lang=en --mode=tex check FILE.tex
+mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
 ### Aspell
 ```bash
-mpw -u "Miccal Matthews" -t long -c 1 NAME
+aspell --lang=en --mode=tex check FILE.tex
 ```
 ### Hub setup
 ```bash
