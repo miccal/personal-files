@@ -49,8 +49,8 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear torbrowser transmission ubersicht; 
-brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpv --with-bundle mpw pass pdftoipe; 
+brew cask install aquaterm atom cakebrew djview ipe keepingyouawake libreoffice linear mpv torbrowser transmission ubersicht; 
+brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm gpg hub mpw pass pdftoipe; 
 brew linkapps
 
 brew cask install little-flocker
@@ -100,6 +100,10 @@ brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup;
 brew doctor
 
 cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
+
+brew deps --installed --tree
+
+brew leaves
 ```
 ### Symlinks
 ```bash
