@@ -67,9 +67,8 @@ brew reinstall pdftoipe
 ```
 ### Installs for rae
 ```bash
-brew cask install xquartz libreoffice messenger transmission; 
-brew install bash gpg mpv --with-bundle mpw pass; 
-brew linkapps
+brew cask install xquartz libreoffice messenger mpv transmission; 
+brew install bash gpg mpw pass;
 ```
 ### Set homebrew bash as default
 
@@ -114,6 +113,8 @@ ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 ln -s ~/Dropbox/.gnupg ~/.gnupg
 
 ln -s ~/Dropbox/.atom ~/.atom
+
+ln -s ~/Dropbox/.vimrc ~/.vimrc
 ```
 ### Dropbox cleanup
 
