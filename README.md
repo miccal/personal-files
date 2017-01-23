@@ -221,11 +221,11 @@ origin	https://github.com/Homebrew/homebrew-core (push)
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
 
-cask-repair -l origin -p miccal CASK
+cask-repair CASK
 
-cask-repair -e -l origin -p miccal CASK
+cask-repair -e CASK
 
-cask-repair -v VERSION -l origin -p miccal CASK
+cask-repair -v VERSION CASK
 ```
 ### Update homebrew-cask fork
 ```bash
