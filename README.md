@@ -200,10 +200,12 @@ git remote -v
 ```
 Expected output:
 ```bash
-miccal  https://github.com/miccal/homebrew-cask (fetch)
-miccal  https://github.com/miccal/homebrew-cask (push)
-origin  https://github.com/caskroom/homebrew-cask (fetch)
-origin  https://github.com/caskroom/homebrew-cask (push)
+cask-repair	https://github.com/miccal/homebrew-cask (fetch)
+cask-repair	https://github.com/miccal/homebrew-cask (push)
+miccal	https://github.com/miccal/homebrew-cask.git (fetch)
+miccal	https://github.com/miccal/homebrew-cask.git (push)
+origin	https://github.com/caskroom/homebrew-cask (fetch)
+origin	https://github.com/caskroom/homebrew-cask (push)
 ```
 ```bash
 cd "$(brew --repository homebrew/core)"
