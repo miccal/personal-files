@@ -26,8 +26,6 @@ alias appcast='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/develop
 
 alias checkpoint='brew cask _appcast_checkpoint --calculate'
 
-alias caskrepairedit='cask-repair -e'
-
 alias pkginstall='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_payload_in_pkg"'
 
 alias pkgapps='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_apps_in_pkg"'
@@ -41,8 +39,3 @@ alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l'
 alias dropcleanlist='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*"; cd'
 
 alias dropclean='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
-
-caskrepairversion ()
-{
-  cask-repair -v $1 $2
-}
