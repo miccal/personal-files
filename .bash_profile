@@ -24,7 +24,9 @@ alias sha='shasum -a 256'
 
 alias appcast='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/find_sparkle_appcast"'
 
-alias caskrepairedit='cask-repair -e -l origin -p miccal'
+alias checkoiint='brew cask _appcast_checkpoint --calculate'
+
+alias caskrepairedit='cask-repair -e'
 
 alias pkginstall='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_payload_in_pkg"'
 
@@ -40,12 +42,7 @@ alias dropcleanlist='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*"
 
 alias dropclean='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
-checkpoint ()
-{
-  curl --compressed --location --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36' "$1" | /usr/bin/sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256
-}
-
 caskrepairversion ()
 {
-  cask-repair -v $1 -l origin -p miccal $2
+  cask-repair -v $1 $2
 }
