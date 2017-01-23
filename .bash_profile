@@ -24,7 +24,7 @@ alias sha='shasum -a 256'
 
 alias appcast='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/find_sparkle_appcast"'
 
-alias checkoiint='brew cask _appcast_checkpoint --calculate'
+alias checkpoint='brew cask _appcast_checkpoint --calculate'
 
 alias caskrepairedit='cask-repair -e'
 
