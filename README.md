@@ -31,9 +31,10 @@ softwareupdate -ia --verbose
 ### Homebrew taps
 ```bash
 brew tap caskroom/cask; 
-brew tap caskroom/versions; 
-brew tap caskroom/fonts; 
+brew tap caskroom/drivers; 
 brew tap caskroom/eid; 
+brew tap caskroom/fonts; 
+brew tap caskroom/versions; 
 brew tap vitorgalvao/tiny-scripts; 
 brew tap buo/cask-upgrade;
 ```
@@ -191,6 +192,10 @@ git remote set-url miccal https://github.com/miccal/homebrew-cask
 cd "$(brew --repository homebrew/core)"
 
 git remote add miccal https://github.com/miccal/homebrew-core.git
+
+cd "$(brew --repository)"
+
+git remote add miccal https://github.com/miccal/brew.git
 ```
 ### Git check
 ```bash
@@ -218,6 +223,18 @@ miccal	https://github.com/miccal/homebrew-core.git (fetch)
 miccal	https://github.com/miccal/homebrew-core.git (push)
 origin	https://github.com/Homebrew/homebrew-core (fetch)
 origin	https://github.com/Homebrew/homebrew-core (push)
+```
+```bash
+cd "$(brew --repository)"
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/brew.git (fetch)
+miccal	https://github.com/miccal/brew.git (push)
+origin	https://github.com/Homebrew/brew (fetch)
+origin	https://github.com/Homebrew/brew (push)
 ```
 ### Cask repair
 ```bash
@@ -278,4 +295,8 @@ _!!!UPDATE FORK FIRST!!!_
 cd "$(brew --repository homebrew/core)"/formula
 
 brew audit --strict FORMULA
+```
+### Update brew fork
+```bash
+cd "$(brew --repository)"; git checkout master; git pull origin; git push miccal master; cd
 ```
