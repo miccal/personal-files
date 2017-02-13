@@ -60,7 +60,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom cakebrew djview ipe keepingyouawake keyboardcleantool libreoffice linear mpv torbrowser transmission ubersicht; 
+brew cask install aquaterm atom bwana cakebrew djview ipe keepingyouawake keyboardcleantool libreoffice linear mpv torbrowser transmission ubersicht; 
 brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm --with-tex --without-gd --without-lua --with-test gpg hub mpw pass pdftoipe; 
 brew linkapps
 
