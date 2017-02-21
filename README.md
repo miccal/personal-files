@@ -75,11 +75,6 @@ When `poppler` is updated:
 ```bash
 brew reinstall pdftoipe
 ```
-### Installs for rae
-```bash
-brew cask install libreoffice messenger mpv transmission; 
-brew install bash gpg mpw pass;
-```
 ### Set homebrew bash as default
 
 List current shells:
