@@ -148,6 +148,18 @@ gpg --list-keys
 gpg --list-secret-keys
 
 gpg --edit-key GPGID
+
+trust
+```
+### Gpg-agent
+Contents of `~/.gnupg/gpg-agent.conf`:
+```bash
+use-standard-socket
+default-cache-ttl 0
+```
+Reload `gpg-agent`:
+```bash
+gpg-connect-agent reloadagent /bye
 ```
 ### Pass
 ```bash
