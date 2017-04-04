@@ -151,6 +151,10 @@ gpg --edit-key GPGID
 
 trust
 ```
+If `gpg: WARNING: unsafe permissions on homedir '/Users/miccal/.gnupg'` is shown, run
+```bash
+chmod 700 ~/.gnupg
+```
 ### Gpg-agent
 Contents of `~/.gnupg/gpg-agent.conf`:
 ```bash
