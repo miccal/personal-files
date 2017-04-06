@@ -63,17 +63,9 @@ cd /usr/local/Caskroom/; rm -r mactex; cd
 brew cask install aquaterm atom bwana cakebrew djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv torbrowser transmission ubersicht; 
 brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm --with-tex --without-gd --without-lua --with-test gpg hub mpw pass pdftoipe wifi-password
 
-brew cask install little-flocker
-
-cd /usr/local/Caskroom/; rm -r little-flocker; cd
-
 brew cask install little-snitch
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
-```
-When `poppler` is updated:
-```bash
-brew reinstall pdftoipe
 ```
 ### Set homebrew bash as default
 
