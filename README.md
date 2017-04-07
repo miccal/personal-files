@@ -52,9 +52,7 @@ brew tap buo/cask-upgrade;
 ```bash
 brew cask install xquartz
 
-brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/dropbox.rb
-
-cd /usr/local/Caskroom/; rm -r dropbox; cd
+brew cask install dropbox
 
 brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 
