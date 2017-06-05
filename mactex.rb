@@ -1,5 +1,5 @@
 cask 'mactex' do
-  version '20161009'
+  version '20170524'
   sha256 :no_check
 
   url "http://dante.ctan.org/tex-archive/systems/mac/mactex/mactex-#{version}.pkg"
