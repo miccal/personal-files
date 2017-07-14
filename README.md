@@ -46,7 +46,6 @@ brew tap caskroom/eid;
 brew tap caskroom/fonts; 
 brew tap caskroom/versions; 
 brew tap vitorgalvao/tiny-scripts; 
-brew tap buo/cask-upgrade;
 ```
 ### Installs
 ```bash
@@ -58,7 +57,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv torbrowser transmission ubersicht; 
+brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv silverlight torbrowser transmission ubersicht; 
 brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm --without-gd --without-lua --with-test gpg hub mpw pass pdftoipe wifi-password
 
 brew cask install little-snitch
