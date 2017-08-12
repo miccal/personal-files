@@ -58,7 +58,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv silverlight torbrowser transmission ubersicht; 
-brew install aspell --with-lang-en bash cask-repair cheat git gnuplot --with-aquaterm --without-lua gpg hub mpw pass pdftoipe wifi-password
+brew install aspell --with-lang-en bash cask-repair cheat git --without-completions gnuplot --with-aquaterm --without-lua gpg hub mpw pass pdftoipe wifi-password
 
 brew cask install little-snitch
 
