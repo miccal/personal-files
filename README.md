@@ -73,7 +73,7 @@ transmission
 ubersicht
 
 brew install
-aspell --with-lang-en
+aspell --without-lang-de --without-lang-es --without-lang-fr
 bash
 cask-repair
 cheat 
