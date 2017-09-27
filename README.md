@@ -1,6 +1,6 @@
 ### Create macos bootable usb
 ```bash
-sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction
+sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --nointeraction
 ```
 ### Show/hide hidden files
 ```bash
@@ -57,7 +57,7 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv silverlight torbrowser transmission ubersicht; 
+brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv torbrowser transmission ubersicht; 
 brew install aspell --with-lang-en bash cask-repair cheat git --without-completions gnuplot --with-aquaterm --without-lua gpg hub mpw pass pdftoipe wifi-password
 
 brew cask install little-snitch
@@ -88,7 +88,7 @@ chsh -s /usr/local/bin/bash miccal
 ```
 ### Homebrew maintenance
 ```bash
-brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cu
+brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy
 
 brew doctor
 
