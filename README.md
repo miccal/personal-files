@@ -57,8 +57,34 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask install aquaterm atom bwana djview ipe keepingyouawake keyboard-cleaner libreoffice linear mpv torbrowser transmission ubersicht; 
-brew install aspell --with-lang-en bash cask-repair cheat git --without-completions gnuplot --with-aquaterm --without-lua gpg hub mpw pass pdftoipe wifi-password
+brew cask install
+aquaterm
+atom
+bwana
+djview
+ipe
+keepingyouawake
+keyboard-cleaner
+libreoffice
+linear
+mpv
+torbrowser
+transmission
+ubersicht
+
+brew install
+aspell --with-lang-en
+bash
+cask-repair
+cheat 
+git --without-completions
+gnuplot --with-aquaterm --without-lua
+gpg
+hub
+mpw
+pass
+pdftoipe
+wifi-password
 
 brew cask install little-snitch
 
@@ -116,7 +142,7 @@ Clean up the cache:
 ```bash
 cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
 ```
-`rm -r` everything except for `placeholder_cache` and `prefetch_cache`.
+`rm -r` everything except for `attrs_cache`, `placeholder_cache` and `prefetch_cache`.
 
 Remove conflicted files:
 ```bash
@@ -145,11 +171,6 @@ If `gpg: WARNING: unsafe permissions on homedir '/Users/miccal/.gnupg'` is shown
 chmod 700 ~/.gnupg
 ```
 ### Gpg-agent
-Contents of `~/.gnupg/gpg-agent.conf`:
-```bash
-use-standard-socket
-default-cache-ttl 0
-```
 Reload `gpg-agent`:
 ```bash
 gpg-connect-agent reloadagent /bye
