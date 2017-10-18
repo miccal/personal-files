@@ -261,6 +261,9 @@ cask-repair -v VERSION CASK
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
+```
 ### Create a cask
 
 _!!!UPDATE FORK FIRST!!!_
