@@ -8,24 +8,6 @@ defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
 
 defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder
 ```
-### Check trim status
-```bash
-system_profiler SPSerialATADataType | grep 'TRIM'
-```
-Expected output:
-```bash
-TRIM Support: No
-
-TRIM Support: YES
-```
-### Enable trim
-```bash
-sudo trimforce enable
-```
-### Turn time machine snapshots off
-```bash
-sudo tmutil disablelocal
-```
 ### Command line tools for xcode
 ```bash
 xcode-select --install
@@ -80,7 +62,6 @@ cheat
 git --without-completions
 gnuplot --with-aquaterm --without-lua
 gpg
-hub
 mpw
 pass
 pdftoipe
