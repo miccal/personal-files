@@ -14,6 +14,10 @@ export EDITOR='atom --wait'
 
 export HOMEBREW_NO_ANALYTICS=1
 
+export HOMEBREW_VERBOSE=1
+
+export HOMEBREW_DEVELOPER=1
+
 alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"'
