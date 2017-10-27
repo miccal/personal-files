@@ -1,4 +1,4 @@
-export PS1='\[\e[1;38;5;$((RANDOM%16))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%16))m\]$PWD\[\e[m\] \[\e[1;38;5;$((RANDOM%16))m\][>\[\e[m\] '
+export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\][>\[\e[m\] '
 
 # \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory.
 
