@@ -23,10 +23,6 @@ softwareupdate -ia --verbose
 ### Homebrew taps
 ```bash
 brew tap caskroom/cask; 
-brew tap caskroom/drivers; 
-brew tap caskroom/eid; 
-brew tap caskroom/fonts; 
-brew tap caskroom/versions; 
 brew tap vitorgalvao/tiny-scripts; 
 ```
 ### Installs
@@ -199,14 +195,6 @@ git config --global user.name "miccal"
 git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
-
-cd "$(brew --repository homebrew/core)"
-
-git remote add miccal https://github.com/miccal/homebrew-core.git
-
-cd "$(brew --repository)"
-
-git remote add miccal https://github.com/miccal/brew.git
 ```
 ### Git check
 ```bash
@@ -222,30 +210,6 @@ miccal	https://github.com/miccal/homebrew-cask.git (fetch)
 miccal	https://github.com/miccal/homebrew-cask.git (push)
 origin	https://github.com/caskroom/homebrew-cask (fetch)
 origin	https://github.com/caskroom/homebrew-cask (push)
-```
-```bash
-cd "$(brew --repository homebrew/core)"
-
-git remote -v
-```
-Expected output:
-```bash
-miccal	https://github.com/miccal/homebrew-core.git (fetch)
-miccal	https://github.com/miccal/homebrew-core.git (push)
-origin	https://github.com/Homebrew/homebrew-core (fetch)
-origin	https://github.com/Homebrew/homebrew-core (push)
-```
-```bash
-cd "$(brew --repository)"
-
-git remote -v
-```
-Expected output:
-```bash
-miccal	https://github.com/miccal/brew.git (fetch)
-miccal	https://github.com/miccal/brew.git (push)
-origin	https://github.com/Homebrew/brew (fetch)
-origin	https://github.com/Homebrew/brew (push)
 ```
 ### Cask repair
 ```bash
@@ -297,20 +261,4 @@ git checkout master
 git branch
 
 git branch -D BRANCH
-```
-### Update homebrew-core fork
-```bash
-cd "$(brew --repository homebrew/core)"; git checkout master; git pull origin; git push miccal master; cd
-```
-### Create a formula
-
-_!!!UPDATE FORK FIRST!!!_
-```bash
-cd "$(brew --repository homebrew/core)"/formula
-
-brew audit --strict FORMULA
-```
-### Update brew fork
-```bash
-cd "$(brew --repository)"; git checkout master; git pull origin; git push miccal master; cd
 ```
