@@ -22,6 +22,7 @@ softwareupdate -ia --verbose
 ```
 ### Homebrew taps
 ```bash
+brew tap homebrew/bundle;
 brew tap caskroom/cask; 
 brew tap vitorgalvao/tiny-scripts; 
 ```
@@ -66,6 +67,10 @@ wifi-password
 brew cask install little-snitch
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
+```
+### Homebrew bundle
+```bash
+brew bundle dump --file=/Users/miccal/dropbox/.Brewfile
 ```
 ### Set homebrew bash as default
 
