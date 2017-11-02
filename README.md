@@ -57,8 +57,8 @@ bash
 cask-repair
 cheat 
 git --without-completions
+gnupg
 gnuplot --with-aquaterm --without-lua
-gpg
 mpw
 pass
 pdftoipe
