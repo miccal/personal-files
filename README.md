@@ -22,9 +22,13 @@ softwareupdate -ia --verbose
 ```
 ### Homebrew taps
 ```bash
+brew tap caskroom/cask;
+brew tap caskroom/drivers;
+brew tap caskroom/eid;
+brew tap caskroom/fonts;
+brew tap caskroom/versions;
 brew tap homebrew/bundle;
-brew tap caskroom/cask; 
-brew tap vitorgalvao/tiny-scripts; 
+brew tap vitorgalvao/tiny-scripts
 ```
 ### Installs
 ```bash
@@ -42,6 +46,7 @@ atom
 bwana
 djview
 ipe
+java6
 keepingyouawake
 keyboard-cleaner
 libreoffice
