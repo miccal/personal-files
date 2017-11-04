@@ -75,7 +75,7 @@ cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
 ### Homebrew bundle
 ```bash
-brew bundle dump --file=/Users/miccal/dropbox/.Brewfile
+brew bundle dump --force --file=/Users/miccal/dropbox/.Brewfile
 ```
 ### Set homebrew bash as default
 
