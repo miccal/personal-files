@@ -60,13 +60,15 @@ brew install
 aspell --without-lang-de --without-lang-es --without-lang-fr
 bash
 cask-repair
-cheat 
+cheat
+curl
 git --without-completions
 gnupg
 gnuplot --with-aquaterm --without-lua
 mpw
 pass
 pdftoipe
+vim --with-override-system-vi --without-perl --without-python --without-ruby
 wifi-password
 
 brew cask install little-snitch
