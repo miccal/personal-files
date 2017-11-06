@@ -12,6 +12,8 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 export EDITOR='atom --wait'
 
 export HOMEBREW_NO_ANALYTICS=1
