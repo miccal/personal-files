@@ -10,6 +10,8 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 # $((x+RANDOM%(y-x+1))) generates a random integer between [x,y].
 
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
 export EDITOR='atom --wait'
 
 export HOMEBREW_NO_ANALYTICS=1
