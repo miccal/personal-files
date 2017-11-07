@@ -57,18 +57,18 @@ transmission
 ubersicht
 
 brew install
-aspell --without-lang-de --without-lang-es --without-lang-fr
+aspell
 bash
 cask-repair
 cheat
 curl
-git --without-completions
-gnuplot --with-aquaterm --without-lua
+git
+gnuplot --with-aquaterm
 mpw
 pass
 pdftoipe
-python3 --without-gdbm --without-readline --without-sqlite --without-xz
-vim --with-override-system-vi --without-perl --without-python --without-ruby
+python3
+vim --with-override-system-vi
 wifi-password
 
 brew cask install little-snitch
