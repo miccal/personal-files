@@ -63,15 +63,11 @@ cask-repair
 cheat
 curl
 git --without-completions
-gnupg
 gnuplot --with-aquaterm --without-lua
 mpw
 pass
-perl
 pdftoipe
-python --without-gdbm --without-readline --without-sqlite
 python3 --without-gdbm --without-readline --without-sqlite --without-xz
-ruby --without-readline
 vim --with-override-system-vi --without-perl --without-python --without-ruby
 wifi-password
 
