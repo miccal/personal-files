@@ -2,12 +2,6 @@
 ```bash
 sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --nointeraction
 ```
-### Show/hide hidden files
-```bash
-defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
-
-defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder
-```
 ### Command line tools for xcode
 ```bash
 xcode-select --install
@@ -30,7 +24,7 @@ brew tap caskroom/versions;
 brew tap homebrew/bundle;
 brew tap vitorgalvao/tiny-scripts
 ```
-### Installs
+### Homebrew installs
 ```bash
 brew cask install xquartz
 
@@ -86,6 +80,18 @@ brew bundle dump --verbose --force --file=/Users/miccal/dropbox/.Brewfile
 
 brew bundle install --verbose --file=/Users/miccal/dropbox/.Brewfile
 ```
+### Homebrew maintenance
+```bash
+brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy
+
+brew doctor
+
+cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
+
+brew deps --installed --tree
+
+brew leaves
+```
 ### Set homebrew bash as default
 
 List current shells:
@@ -108,18 +114,6 @@ Set default shell:
 ```bash
 chsh -s /usr/local/bin/bash miccal
 ```
-### Homebrew maintenance
-```bash
-brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy
-
-brew doctor
-
-cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
-
-brew deps --installed --tree
-
-brew leaves
-```
 ### Symlinks
 ```bash
 ln -s ~/Dropbox/.password-store ~/.password-store
@@ -131,6 +125,24 @@ ln -s ~/Dropbox/.gnupg ~/.gnupg
 ln -s ~/Dropbox/.atom ~/.atom
 
 ln -s ~/Dropbox/.vimrc ~/.vimrc
+```
+### Pass
+```bash
+pass init GPGID
+
+pass insert -m NAME
+
+pass generate -f -n GEN LENGTH
+
+pass NAME
+
+pass remove NAME
+
+pass edit NAME
+```
+### Master password
+```bash
+mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
 ### Dropbox cleanup
 
@@ -170,24 +182,6 @@ chmod 700 ~/.gnupg
 Reload `gpg-agent`:
 ```bash
 gpg-connect-agent reloadagent /bye
-```
-### Pass
-```bash
-pass init GPGID
-
-pass insert -m NAME
-
-pass generate -f -n GEN LENGTH
-
-pass NAME
-
-pass remove NAME
-
-pass edit NAME
-```
-### Master password
-```bash
-mpw -u "Miccal Matthews" -t long -c 1 NAME
 ```
 ### Aspell
 ```bash
@@ -245,6 +239,20 @@ cask-repair -v VERSION CASK
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
 ```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-drivers; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-fonts; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-eid; git checkout master; git pull origin; git push miccal master; cd
+```
+
+To force the update:
+```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
 ```
 ### Create a cask
@@ -280,4 +288,10 @@ git checkout master
 git branch
 
 git branch -D BRANCH
+```
+### Show/hide hidden files
+```bash
+defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
+
+defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder
 ```
