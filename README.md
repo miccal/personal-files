@@ -40,6 +40,11 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
+brew cask zap --force
+bibdesk
+latexit
+excalibur
+
 brew cask install
 aquaterm
 atom
