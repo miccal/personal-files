@@ -142,7 +142,7 @@ pass edit NAME
 ```
 ### Master password
 ```bash
-mpw -u "Miccal Matthews" -t long -c 1 NAME
+mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ```
 ### Dropbox cleanup
 
