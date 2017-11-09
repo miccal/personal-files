@@ -226,13 +226,13 @@ origin	https://github.com/caskroom/homebrew-cask (push)
 ```
 ### Cask repair
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
-
 cask-repair CASK
 
-cask-repair -e CASK
+cask-repair --edit-cask CASK
 
-cask-repair -v VERSION CASK
+cask-repair --cask-version VERSION CASK
+
+cask-repair --delete-branches
 ```
 ### Update homebrew-cask fork
 ```bash
