@@ -1,4 +1,4 @@
-export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\][>\[\e[m\] '
+export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]($(ls -al1 | wc -l | sed "s/ //g"))\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\][>\[\e[m\] '
 
 # \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory.
 
@@ -19,6 +19,8 @@ export EDITOR='atom --wait'
 export HOMEBREW_NO_ANALYTICS=1
 
 export HOMEBREW_DEVELOPER=1
+
+alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
 
 alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
 
