@@ -26,7 +26,7 @@ alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"'
 
-alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd'
+alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions; git checkout master; git pull origin; git push "miccal" master; cd'
 
 alias sha='shasum -a 256'
 
