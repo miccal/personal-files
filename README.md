@@ -44,6 +44,7 @@ aquaterm
 atom
 bwana
 djview
+google-chrome
 ipe
 java6
 keepingyouawake
