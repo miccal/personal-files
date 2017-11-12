@@ -61,7 +61,6 @@ aspell
 bash
 cask-repair
 cheat
-chrome-cli
 curl
 git
 gnuplot --with-aquaterm
