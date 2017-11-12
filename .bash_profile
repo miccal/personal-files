@@ -20,6 +20,8 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export HOMEBREW_DEVELOPER=1
 
+alias chrome='open "/Applications/Google Chrome.app" --args --incognito'
+
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
 
 alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
