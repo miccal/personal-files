@@ -1,6 +1,6 @@
 export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\]($(ls -al1 | wc -l | sed "s/ //g"))\[\e[m\] \[\e[1;38;5;$((RANDOM%256))m\][>\[\e[m\] '
 
-# \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory.
+# \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory, $(ls -al1 | wc -l | sed "s/ //g") = shows number of files in current working directory.
 
 # \[\e[x;38;5;COLORm\] where x = 0 for normal, x = 1 for bold, x = 2 for faint, x = 3 for italic, x = 4 for underline, x = 5 for blink, x = 7 for reverse.
 
