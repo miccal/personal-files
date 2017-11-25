@@ -20,6 +20,11 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export HOMEBREW_DEVELOPER=1
 
+sfind ()
+{
+  sudo find / -iname "*$1*"
+}
+
 alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://now.foxtel.com.au'
 
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
