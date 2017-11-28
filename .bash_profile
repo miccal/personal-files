@@ -20,6 +20,8 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export HOMEBREW_DEVELOPER=1
 
+export HOMEBREW_FORCE_BREWED_CURL=1
+
 sfind ()
 {
   sudo find / -iname "*$1*"
