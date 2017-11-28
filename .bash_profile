@@ -22,6 +22,8 @@ export HOMEBREW_DEVELOPER=1
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 
+export HOMEBREW_GIT=/usr/local/opt/git/bin/git
+
 sfind ()
 {
   sudo find / -iname "*$1*"
