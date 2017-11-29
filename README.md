@@ -43,6 +43,7 @@ brew cask install
 aquaterm
 atom
 bwana
+chalk
 detexify
 djview
 google-chrome
