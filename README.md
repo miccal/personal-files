@@ -71,7 +71,6 @@ pass
 pdftoipe
 python3
 vim --with-override-system-vi
-wifi-password
 
 brew cask install little-snitch
 
