@@ -29,6 +29,8 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
+alias maple='/Library/Frameworks/Maple.framework/Versions/2016/bin/maple'
+
 alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://now.foxtel.com.au'
 
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
