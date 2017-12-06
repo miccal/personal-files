@@ -70,6 +70,7 @@ mpw
 pass
 pdftoipe
 python3
+unar
 vim --with-override-system-vi
 
 brew cask install little-snitch
