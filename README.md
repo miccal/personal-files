@@ -53,6 +53,7 @@ keepingyouawake
 keyboard-cleaner
 libreoffice
 linear
+master-password
 mpv
 torbrowser
 transmission
