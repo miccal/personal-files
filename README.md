@@ -322,3 +322,12 @@ defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
 
 defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder
 ```
+### Filevault
+List enabled users:
+```bash
+sudo fdesetup list
+```
+Remove `Guest` user:
+```bash
+sudo fdesetup remove -user Guest
+```
