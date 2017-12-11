@@ -16,13 +16,14 @@ xcode-select --install
 ```
 ### Homebrew taps
 ```bash
-brew tap caskroom/cask
-brew tap caskroom/drivers
-brew tap caskroom/eid
-brew tap caskroom/fonts
-brew tap caskroom/versions
-brew tap homebrew/bundle
-brew tap vitorgalvao/tiny-scripts
+brew tap
+caskroom/cask
+caskroom/drivers
+caskroom/eid
+caskroom/fonts
+caskroom/versions
+homebrew/bundle
+vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
