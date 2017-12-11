@@ -28,6 +28,8 @@ brew tap vitorgalvao/tiny-scripts
 ```bash
 brew cask install xquartz
 
+brew cask install master-password
+
 brew cask install dropbox
 
 brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
@@ -53,7 +55,6 @@ keepingyouawake
 keyboard-cleaner
 libreoffice
 linear
-master-password
 mpv
 torbrowser
 transmission
