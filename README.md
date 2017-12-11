@@ -35,10 +35,14 @@ https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
-brew cask zap --force
-bibdesk
-latexit
-excalibur
+mv /Applications/TeX/BibDesk.app /Applications/BibDesk.app
+brew cask zap --force bibdesk
+
+mv /Applications/TeX/LaTeXiT.app /Applications/LaTeXiT.app
+brew cask zap --force latexit
+
+mv /Applications/TeX/Excalibur-4.0.7/Excalibur.app /Applications/Excalibur.app
+brew cask zap --force excalibur
 
 brew cask install
 aquaterm
@@ -68,8 +72,11 @@ git
 gnuplot --with-aquaterm
 mpw
 pass
+perl
 pdftoipe
+python
 python3
+ruby
 unar
 vim --with-override-system-vi
 
