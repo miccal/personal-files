@@ -26,13 +26,12 @@ brew tap vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
-brew cask install xquartz
-
-brew cask install master-password
-
-brew cask install dropbox
-
-brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
+brew cask install
+xquartz
+keepingyouawake
+master-password
+dropbox
+https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
@@ -51,7 +50,6 @@ djview
 google-chrome
 ipe
 java6
-keepingyouawake
 keyboard-cleaner
 libreoffice
 linear
