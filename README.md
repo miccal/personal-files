@@ -42,7 +42,7 @@ brew cask zap --force bibdesk
 mv /Applications/TeX/LaTeXiT.app /Applications/LaTeXiT.app
 brew cask zap --force latexit
 
-mv /Applications/TeX/Excalibur-4.0.7/Excalibur.app /Applications/Excalibur.app
+mv /Applications/TeX/Excalibur-*/Excalibur.app /Applications/Excalibur.app
 brew cask zap --force excalibur
 
 brew cask install
