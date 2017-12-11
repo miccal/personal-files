@@ -2,13 +2,13 @@
 ```bash
 sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --nointeraction
 ```
-### Command line tools for xcode
-```bash
-xcode-select --install
-```
 ### Install macos updates
 ```bash
 softwareupdate -ia --verbose
+```
+### Command line tools for xcode
+```bash
+xcode-select --install
 ```
 ### Install homebrew
 ```bash
@@ -16,19 +16,19 @@ softwareupdate -ia --verbose
 ```
 ### Homebrew taps
 ```bash
-brew tap caskroom/cask;
-brew tap caskroom/drivers;
-brew tap caskroom/eid;
-brew tap caskroom/fonts;
-brew tap caskroom/versions;
-brew tap homebrew/bundle;
+brew tap caskroom/cask
+brew tap caskroom/drivers
+brew tap caskroom/eid
+brew tap caskroom/fonts
+brew tap caskroom/versions
+brew tap homebrew/bundle
 brew tap vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
 brew cask install
-xquartz
 keepingyouawake
+xquartz
 master-password
 dropbox
 https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
@@ -103,7 +103,6 @@ brew deps --installed --tree
 brew leaves
 ```
 ### Set homebrew bash as default
-
 List current shells:
 ```bash
 cat /etc/shells
@@ -155,7 +154,6 @@ pass edit NAME
 mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ```
 ### Dropbox cleanup
-
 Clean up the cache:
 ```bash
 cd /Users/miccal/Dropbox/.dropbox.cache; ls -l
@@ -208,6 +206,7 @@ git config --local hub.protocol https
 hub fork
 ```
 ### Git setup
+For `homebrew-cask`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 
@@ -219,7 +218,20 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
+For `homebrew-versions`:
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions
+
+git config --global user.email "miccal.matthews@gmail.com"
+
+git config --global user.name "miccal"
+
+git remote add miccal https://github.com/miccal/homebrew-versions
+
+git remote set-url miccal https://github.com/miccal/homebrew-versions
+```
 ### Git check
+For `homebrew-cask`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 
@@ -227,12 +239,23 @@ git remote -v
 ```
 Expected output:
 ```bash
-cask-repair	https://github.com/miccal/homebrew-cask (fetch)
-cask-repair	https://github.com/miccal/homebrew-cask (push)
-miccal	https://github.com/miccal/homebrew-cask.git (fetch)
-miccal	https://github.com/miccal/homebrew-cask.git (push)
+miccal	https://github.com/miccal/homebrew-cask (fetch)
+miccal	https://github.com/miccal/homebrew-cask (push)
 origin	https://github.com/caskroom/homebrew-cask (fetch)
 origin	https://github.com/caskroom/homebrew-cask (push)
+```
+For `homebrew-versions`:
+```bash
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/homebrew-versions (fetch)
+miccal	https://github.com/miccal/homebrew-versions (push)
+origin	https://github.com/caskroom/homebrew-versions (fetch)
+origin	https://github.com/caskroom/homebrew-versions (push)
 ```
 ### Cask repair
 ```bash
@@ -244,23 +267,13 @@ cask-repair --cask-version VERSION CASK
 
 cask-repair --delete-branches
 ```
-### Update homebrew-cask fork
+### Update homebrew-cask and homebrew-versions forks
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions; git checkout master; git pull origin; git push miccal master; cd
 ```
-```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-drivers; git checkout master; git pull origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-fonts; git checkout master; git pull origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-eid; git checkout master; git pull origin; git push miccal master; cd
-```
-
 To force the update:
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
