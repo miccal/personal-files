@@ -37,12 +37,15 @@ https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 cd /usr/local/Caskroom/; rm -r mactex; cd
 
 mv /Applications/TeX/BibDesk.app /Applications/BibDesk.app
+
 brew cask zap --force bibdesk
 
 mv /Applications/TeX/LaTeXiT.app /Applications/LaTeXiT.app
+
 brew cask zap --force latexit
 
 mv /Applications/TeX/Excalibur-*/Excalibur.app /Applications/Excalibur.app
+
 brew cask zap --force excalibur
 
 brew cask install
