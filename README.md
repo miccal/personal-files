@@ -56,12 +56,12 @@ chalk
 detexify
 djview
 google-chrome
+iina
 ipe
 java6
 keyboard-cleaner
 libreoffice
 linear
-mpv
 torbrowser
 transmission
 ubersicht
