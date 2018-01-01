@@ -62,3 +62,15 @@ alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git c
 alias sha='shasum -a 256'
 
 alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
+
+# Java
+export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
+
+export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+
+alias java6='export JAVA_HOME=$JAVA_6_HOME'
+
+alias java9='export JAVA_HOME=$JAVA_9_HOME'
+
+# Default: java6
+export JAVA_HOME=$JAVA_6_HOME
