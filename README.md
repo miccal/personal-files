@@ -59,6 +59,7 @@ google-chrome
 iina
 ipe
 java6
+java
 keyboard-cleaner
 libreoffice
 linear
