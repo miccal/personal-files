@@ -32,9 +32,8 @@ keepingyouawake
 xquartz
 master-password
 dropbox
+https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
-
-cd /usr/local/Caskroom/; rm -r mactex; cd
 
 mv /Applications/TeX/BibDesk.app /Applications/BibDesk.app
 
@@ -61,7 +60,6 @@ ipe
 java6
 java
 keyboard-cleaner
-libreoffice
 linear
 torbrowser
 transmission
