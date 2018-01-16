@@ -51,6 +51,7 @@ brew cask install
 aquaterm
 atom
 bwana
+calibre
 chalk
 detexify
 djview
