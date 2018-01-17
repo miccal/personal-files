@@ -39,7 +39,7 @@ alias checkpoint='brew cask _appcast_checkpoint --calculate'
 
 alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://now.foxtel.com.au'
 
-alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l'
+alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l1'
 
 alias dropclean='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
