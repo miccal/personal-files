@@ -1,5 +1,5 @@
 cask 'libreoffice' do
-  version '5.4.4'
+  version '6.0.0'
   sha256 :no_check
 
   url "http://mirror.internode.on.net/pub/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
