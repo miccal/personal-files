@@ -18,9 +18,6 @@ xcode-select --install
 ```bash
 brew tap
 caskroom/cask
-caskroom/drivers
-caskroom/eid
-caskroom/fonts
 caskroom/versions
 homebrew/bundle
 vitorgalvao/tiny-scripts
