@@ -62,6 +62,7 @@ linear
 torbrowser
 transmission
 ubersicht
+veeer
 
 brew install
 aspell
