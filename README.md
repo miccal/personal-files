@@ -29,7 +29,6 @@ keepingyouawake
 xquartz
 master-password
 dropbox
-https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 https://raw.githubusercontent.com/miccal/personal-files/master/mactex.rb
 
 mv /Applications/TeX/BibDesk.app /Applications/BibDesk.app
@@ -57,6 +56,7 @@ ipe
 java6
 java
 keyboard-cleaner
+https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
 torbrowser
 transmission
@@ -74,10 +74,8 @@ git
 gnuplot --with-aquaterm
 mpw
 pass
-perl
 pdftoipe
-python
-ruby
+perl
 unar
 vim --with-override-system-vi
 
