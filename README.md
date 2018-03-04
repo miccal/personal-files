@@ -51,7 +51,6 @@ bwana
 calibre
 chalk
 detexify
-djview
 google-chrome
 iina
 ipe
@@ -70,6 +69,7 @@ bash
 cask-repair
 cheat
 curl
+djvu2pdf
 git
 gnuplot --with-aquaterm
 mpw
@@ -77,7 +77,6 @@ pass
 perl
 pdftoipe
 python
-python3
 ruby
 unar
 vim --with-override-system-vi
