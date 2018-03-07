@@ -58,10 +58,10 @@ java
 keyboard-cleaner
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
+shiftit
 torbrowser
 transmission
 ubersicht
-veeer
 
 brew install
 aspell
