@@ -51,7 +51,7 @@ calibre
 chalk
 detexify
 google-chrome
-iina
+iina-beta
 ipe
 java6
 java
