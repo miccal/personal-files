@@ -24,6 +24,10 @@ vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
+brew cask install little-snitch
+
+cd /usr/local/Caskroom/; rm -r little-snitch; cd
+
 brew cask install
 keepingyouawake
 xquartz
@@ -58,7 +62,7 @@ java
 keyboard-cleaner
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
-shiftit
+spectacle
 torbrowser
 transmission
 ubersicht
@@ -78,10 +82,6 @@ pdftoipe
 perl
 unar
 vim --with-override-system-vi
-
-brew cask install little-snitch
-
-cd /usr/local/Caskroom/; rm -r little-snitch; cd
 ```
 ### Homebrew bundle
 ```bash
