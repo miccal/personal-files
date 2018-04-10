@@ -1,4 +1,4 @@
-cask 'mactex' do
+cask 'mactex-no-gui' do
   version '20170524'
   sha256 :no_check
 
@@ -9,6 +9,7 @@ cask 'mactex' do
   depends_on formula: 'ghostscript'
 
   pkg "mactex-#{version}.pkg"
+      # installer -showChoicesXML -pkg mactex-#{version}.pkg -target /
       choices: [
                  {
                    # TeXLive
