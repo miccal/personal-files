@@ -1,12 +1,10 @@
 cask 'mactex-no-gui' do
-  version '20170524'
+  version '20180417'
   sha256 :no_check
 
   url "http://mirror.aarnet.edu.au/pub/CTAN/systems/mac/mactex/mactex-#{version}.pkg"
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
-
-  depends_on formula: 'ghostscript'
 
   pkg "mactex-#{version}.pkg"
       # installer -showChoicesXML -pkg mactex-#{version}.pkg -target /
