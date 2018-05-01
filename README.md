@@ -33,9 +33,18 @@ keepingyouawake
 xquartz
 master-password
 dropbox
-https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
-tex-live-utility
-texshop
+
+brew install 
+bash
+curl
+ghostscript
+git
+
+brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
+
+cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
+
+brew cask install
 aquaterm
 atom
 bwana
@@ -50,19 +59,18 @@ java
 keyboard-cleaner
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
-spectacle
+shiftit
+tex-live-utility
+texshop
 torbrowser
 transmission
 ubersicht
 
 brew install
 aspell
-bash
 cask-repair
 cheat
-curl
 djvu2pdf
-git
 gnuplot --with-aquaterm
 mpw
 pass
