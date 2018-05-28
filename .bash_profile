@@ -31,9 +31,11 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
-alias appcast='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/find_sparkle_appcast"'
+alias appcast='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast"'
 
-alias cdcasks='cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"'
+alias bing='cd /Users/miccal/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
+
+alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Casks"'
 
 alias checkpoint='brew cask _appcast_checkpoint --calculate'
 
@@ -51,13 +53,13 @@ alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
 
-alias pkgapps='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_apps_in_pkg"'
+alias pkgapps='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_apps_in_pkg"'
 
-alias pkginstall='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_payload_in_pkg"'
+alias pkginstall='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_payload_in_pkg"'
 
-alias pkguninstall='"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_ids_in_pkg"'
+alias pkguninstall='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_ids_in_pkg"'
 
-alias push='cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions; git checkout master; git pull origin; git push "miccal" master; cd'
+alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push "miccal" master; cd'
 
 alias sha='shasum -a 256'
 
@@ -66,11 +68,11 @@ alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --
 # Java
 export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
 
-export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
 
 alias java6='export JAVA_HOME=$JAVA_6_HOME'
 
-alias java9='export JAVA_HOME=$JAVA_9_HOME'
+alias java10='export JAVA_HOME=$JAVA_10_HOME'
 
 # Default: java6
 export JAVA_HOME=$JAVA_6_HOME
