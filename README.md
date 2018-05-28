@@ -17,9 +17,12 @@ xcode-select --install
 ### Homebrew taps
 ```bash
 brew tap
-caskroom/cask
-caskroom/versions
 homebrew/bundle
+homebrew/cask
+homebrew/cask-drivers
+homebrew/cask-eid
+homebrew/cask-fonts
+homebrew/cask-versions
 vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
@@ -48,15 +51,12 @@ brew cask install
 aquaterm
 atom
 bwana
-calibre
-chalk
 detexify
 google-chrome
 iina-beta
 ipe
 java6
 java
-keyboard-cleaner
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
 shiftit
@@ -194,7 +194,7 @@ aspell --lang=en --mode=tex check FILE.tex
 ```bash
 cd "$(brew --repository)" && hub issue
 
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask/Casks
 
 git config --local hub.protocol https
 
@@ -203,7 +203,7 @@ hub fork
 ### Git setup
 For `homebrew-cask`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 
 git config --global user.email "miccal.matthews@gmail.com"
 
@@ -213,9 +213,9 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
-For `homebrew-versions`:
+For `homebrew-cask-versions`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
 
 git config --global user.email "miccal.matthews@gmail.com"
 
@@ -228,7 +228,7 @@ git remote set-url miccal https://github.com/miccal/homebrew-versions
 ### Git check
 For `homebrew-cask`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 
 git remote -v
 ```
@@ -236,12 +236,12 @@ Expected output:
 ```bash
 miccal	https://github.com/miccal/homebrew-cask (fetch)
 miccal	https://github.com/miccal/homebrew-cask (push)
-origin	https://github.com/caskroom/homebrew-cask (fetch)
-origin	https://github.com/caskroom/homebrew-cask (push)
+origin	https://github.com/homebrew/homebrew-cask (fetch)
+origin	https://github.com/homebrew/homebrew-cask (push)
 ```
-For `homebrew-versions`:
+For `homebrew-cask-versions`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
 
 git remote -v
 ```
@@ -249,8 +249,8 @@ Expected output:
 ```bash
 miccal	https://github.com/miccal/homebrew-versions (fetch)
 miccal	https://github.com/miccal/homebrew-versions (push)
-origin	https://github.com/caskroom/homebrew-versions (fetch)
-origin	https://github.com/caskroom/homebrew-versions (push)
+origin	https://github.com/homebrew/homebrew-cask-versions (fetch)
+origin	https://github.com/homebrew/homebrew-cask-versions (push)
 ```
 ### Cask repair
 ```bash
@@ -264,20 +264,20 @@ cask-repair --delete-branches
 ```
 ### Update homebrew-cask and homebrew-versions forks
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-versions; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push miccal master; cd
 ```
 To force the update:
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
 ```
 ### Create a cask
 
 _!!!UPDATE FORK FIRST!!!_
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask/Casks
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask/Casks
 
 git status
 
