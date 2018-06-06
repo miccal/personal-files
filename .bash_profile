@@ -24,8 +24,6 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 sfind ()
 {
   sudo find / -iname "*$1*"
@@ -39,7 +37,7 @@ alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Cask
 
 alias checkpoint='brew cask _appcast_checkpoint --calculate'
 
-alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://now.foxtel.com.au'
+alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://www.lms.uwa.edu.au/'
 
 alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l1'
 
@@ -63,7 +61,7 @@ alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git c
 
 alias sha='shasum -a 256'
 
-alias update='softwareupdate -ia --verbose; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
+alias update='softwareupdate -iaR; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy'
 
 # Java
 export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
