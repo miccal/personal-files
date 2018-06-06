@@ -4,7 +4,7 @@ sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createins
 ```
 ### Install macos updates
 ```bash
-softwareupdate -ia --verbose
+softwareupdate -iaR
 ```
 ### Command line tools for xcode
 ```bash
@@ -56,7 +56,6 @@ google-chrome
 iina-beta
 ipe
 java6
-java
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
 shiftit
@@ -65,18 +64,16 @@ texshop
 torbrowser
 transmission
 ubersicht
+whatsapp
 
 brew install
 aspell
 cask-repair
 cheat
-djvu2pdf
 gnuplot --with-aquaterm
 mpw
 pass
 pdftoipe
-perl
-unar
 vim --with-override-system-vi
 ```
 ### Homebrew bundle
