@@ -66,6 +66,8 @@ transmission
 ubersicht
 whatsapp
 
+cd /usr/local/Caskroom/; rm -r whatsapp; cd
+
 brew install
 aspell
 cask-repair
