@@ -27,9 +27,9 @@ vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
-brew cask install little-snitch
+brew cask install little-snitch-nightly
 
-cd /usr/local/Caskroom/; rm -r little-snitch; cd
+cd /usr/local/Caskroom/; rm -r little-snitch-nightly; cd
 
 brew cask install
 keepingyouawake
@@ -64,9 +64,6 @@ texshop
 torbrowser
 transmission
 ubersicht
-whatsapp
-
-cd /usr/local/Caskroom/; rm -r whatsapp; cd
 
 brew install
 aspell
