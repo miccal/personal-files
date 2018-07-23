@@ -1,5 +1,5 @@
 cask 'libreoffice' do
-  version '6.0.4'
+  version '6.0.5'
   sha256 :no_check
 
   url "https://mirror.aarnet.edu.au/pub/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
