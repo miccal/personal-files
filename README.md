@@ -258,7 +258,7 @@ cask-repair --cask-version VERSION CASK
 
 cask-repair --delete-branches
 ```
-### Update homebrew-cask and homebrew-versions forks
+### Update homebrew-cask and homebrew-cask-versions forks
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
