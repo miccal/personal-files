@@ -327,12 +327,6 @@ Output:
             "Archive File Name" = "Ghostery.safariextz";
             "Bundle Directory Name" = "Ghostery.safariextension";
 --
-            "Archive File Name" = "AutoPagerize.safariextz";
-            "Bundle Directory Name" = "AutoPagerize.safariextension";
---
-            "Archive File Name" = "Adguard AdBlocker.safariextz";
-            "Bundle Directory Name" = "Adguard AdBlocker.safariextension";
---
-            "Archive File Name" = "Open in IINA.safariextz";
-            "Bundle Directory Name" = "Open in IINA.safariextension";
+            "Archive File Name" = "AdGuard AdBlocker.safariextz";
+            "Bundle Directory Name" = "AdGuard AdBlocker.safariextension";
 ```
