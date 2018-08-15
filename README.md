@@ -73,6 +73,7 @@ gnuplot --with-aquaterm
 mpw
 pass
 pdftoipe
+pwgen
 vim --with-override-system-vi
 ```
 ### Homebrew bundle
