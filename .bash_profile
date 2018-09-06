@@ -12,13 +12,15 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 export EDITOR='atom --wait'
 
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
 export HOMEBREW_DEVELOPER=1
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 
-export HOMEBREW_FORCE_VENDOR_RUBY=1
+export HOMEBREW_FORCE_BREWED_GIT=1
 
-export HOMEBREW_GIT=/usr/local/opt/git/bin/git
+export HOMEBREW_FORCE_VENDOR_RUBY=1
 
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -34,10 +36,6 @@ alias appcast='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/develop
 alias bing='cd /Users/miccal/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Casks"'
-
-alias checkpoint='brew cask _appcast_checkpoint --calculate'
-
-alias chrome='open "/Applications/Google Chrome.app" --args --incognito --window-position=0,0 --window-size=2000,2000 https://www.lms.uwa.edu.au/'
 
 alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l1'
 
@@ -62,15 +60,3 @@ alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git c
 alias sha='shasum -a 256'
 
 alias update='softwareupdate -iaR; brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask outdated --greedy'
-
-# Java
-export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
-
-export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
-
-alias java6='export JAVA_HOME=$JAVA_6_HOME'
-
-alias java10='export JAVA_HOME=$JAVA_10_HOME'
-
-# Default: java6
-export JAVA_HOME=$JAVA_6_HOME
