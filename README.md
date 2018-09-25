@@ -1,6 +1,6 @@
 ### Create macos bootable usb
 ```bash
-sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ macOS\ Mojave.app --nointeraction
+sudo '/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
 ```
 ### Install macos updates
 ```bash
