@@ -36,6 +36,9 @@ keepingyouawake
 xquartz
 master-password
 dropbox
+atom
+
+sudo chown -R `whoami` ~/.atom
 
 brew install 
 bash
@@ -49,7 +52,6 @@ cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 
 brew cask install
 aquaterm
-atom
 bwana
 detexify
 google-chrome
@@ -61,10 +63,11 @@ linear
 shiftit
 tex-live-utility
 texshop
-torbrowser
+tor-browser
 transmission
 ubersicht
 vlc
+whatsapp
 
 brew install
 aspell
