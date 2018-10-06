@@ -33,11 +33,11 @@ cd /usr/local/Caskroom/; rm -r little-snitch-nightly; cd
 
 brew cask install
 keepingyouawake
+shiftit
 xquartz
 master-password
 dropbox
 atom
-shiftit
 
 sudo chown -R `whoami` ~/.atom
 
