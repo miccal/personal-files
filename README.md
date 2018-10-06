@@ -37,6 +37,7 @@ xquartz
 master-password
 dropbox
 atom
+shiftit
 
 sudo chown -R `whoami` ~/.atom
 
@@ -60,7 +61,7 @@ ipe
 java6
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 linear
-shiftit
+mathpix-snipping-tool
 tex-live-utility
 texshop
 tor-browser
