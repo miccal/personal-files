@@ -67,7 +67,6 @@ texshop
 tor-browser
 transmission
 ubersicht
-vlc
 whatsapp
 
 cd /usr/local/Caskroom/; rm -r whatsapp; cd
