@@ -56,7 +56,7 @@ aquaterm
 bwana
 detexify
 google-chrome
-iina-beta
+iina
 ipe
 java6
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
@@ -80,7 +80,6 @@ mpw
 pass
 pdftoipe
 pwgen
-vim --with-override-system-vi
 ```
 ### Homebrew bundle
 ```bash
