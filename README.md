@@ -47,7 +47,9 @@ curl
 ghostscript
 git
 
-brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
+brew cask install 
+https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
+mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 
@@ -55,11 +57,12 @@ brew cask install
 bwana
 detexify
 google-chrome
-iina
 iina-beta
+iina
 ipe
 java6
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
+libreoffice
 linear
 mathpix-snipping-tool
 tex-live-utility
