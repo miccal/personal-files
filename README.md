@@ -52,11 +52,11 @@ brew cask install https://raw.githubusercontent.com/miccal/personal-files/master
 cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 
 brew cask install
-aquaterm
 bwana
 detexify
 google-chrome
 iina
+iina-beta
 ipe
 java6
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
@@ -75,7 +75,7 @@ brew install
 aspell
 cask-repair
 cheat
-gnuplot --with-aquaterm
+gnuplot
 mpw
 pass
 pdftoipe
