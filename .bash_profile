@@ -26,6 +26,8 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
+export PATH="/usr/local/sbin:$PATH"
+
 sfind ()
 {
   sudo find / -iname "*$1*"
