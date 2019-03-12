@@ -19,9 +19,6 @@ xcode-select --install
 brew tap
 homebrew/bundle
 homebrew/cask
-homebrew/cask-drivers
-homebrew/cask-eid
-homebrew/cask-fonts
 homebrew/cask-versions
 vitorgalvao/tiny-scripts
 ```
@@ -30,6 +27,10 @@ vitorgalvao/tiny-scripts
 brew cask install little-snitch-nightly
 
 cd /usr/local/Caskroom/; rm -r little-snitch-nightly; cd
+
+brew cask install little-snitch
+
+cd /usr/local/Caskroom/; rm -r little-snitch; cd
 
 brew cask install
 keepingyouawake
@@ -71,8 +72,6 @@ tor-browser
 transmission
 ubersicht
 whatsapp
-
-cd /usr/local/Caskroom/; rm -r whatsapp; cd
 
 brew install
 aspell
