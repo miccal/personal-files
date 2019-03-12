@@ -47,6 +47,7 @@ bash
 curl
 ghostscript
 git
+pass
 
 brew cask install 
 https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
@@ -79,7 +80,6 @@ cask-repair
 cheat
 gnuplot
 mpw
-pass
 pdftoipe
 pwgen
 ```
