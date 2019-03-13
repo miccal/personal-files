@@ -35,17 +35,17 @@ sfind ()
 
 alias appcast='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast"'
 
-alias bing='cd /Users/miccal/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
+alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Casks"'
 
-alias dropcache='cd /Users/miccal/Dropbox/.dropbox.cache; ls -l1'
+alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -l1'
 
-alias dropclean='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
+alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
-alias dropcleanlist='cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*"; cd'
+alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; cd'
 
-alias dropsync='rsync -a -v --delete /users/miccal/dropbox /users/miccal/documents'
+alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
