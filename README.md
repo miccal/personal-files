@@ -85,9 +85,9 @@ pwgen
 ```
 ### Homebrew bundle
 ```bash
-brew bundle dump --verbose --force --file=/Users/miccal/dropbox/.Brewfile
+brew bundle dump --verbose --force --file=~/dropbox/.Brewfile
 
-brew bundle install --verbose --file=/Users/miccal/dropbox/.Brewfile
+brew bundle install --verbose --file=~/dropbox/.Brewfile
 ```
 ### Homebrew maintenance
 ```bash
@@ -124,13 +124,13 @@ chsh -s /usr/local/bin/bash miccal
 ```
 ### Symlinks
 ```bash
-ln -s ~/Dropbox/.password-store ~/.password-store
+ln -s ~/Dropbox/.atom ~/.atom
 
 ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
 ln -s ~/Dropbox/.gnupg ~/.gnupg
 
-ln -s ~/Dropbox/.atom ~/.atom
+ln -s ~/Dropbox/.password-store ~/.password-store
 
 ln -s ~/Dropbox/.vimrc ~/.vimrc
 ```
@@ -155,13 +155,13 @@ mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ### Dropbox cleanup
 Clean up the cache:
 ```bash
-cd /Users/miccal/Dropbox/.dropbox.cache; ls -l1
+cd ~/Dropbox/.dropbox.cache; ls -l1
 ```
 `rm -r` everything except for `attrs_cache`, `placeholder_cache` and `prefetch_cache`.
 
 Remove conflicted files:
 ```bash
-cd /Users/miccal/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
+cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
 ```
 ### Gpg
 ```bash
@@ -181,7 +181,7 @@ gpg --edit-key GPGID
 
 trust
 ```
-If `gpg: WARNING: unsafe permissions on homedir '/Users/miccal/.gnupg'` is shown, run
+If `gpg: WARNING: unsafe permissions on homedir '~/.gnupg'` is shown, run
 ```bash
 chmod 700 ~/.gnupg
 ```
@@ -264,6 +264,8 @@ cask-repair --edit-cask CASK
 
 cask-repair --cask-version VERSION CASK
 
+cask-repair --blind-submit CASK
+
 cask-repair --delete-branches
 ```
 ### Update homebrew-cask and homebrew-cask-versions forks
@@ -325,16 +327,4 @@ sudo fdesetup list
 Remove `Guest` user:
 ```bash
 sudo fdesetup remove -user Guest
-```
-### List safari extensions
-```bash
-defaults read ~/Library/Safari/Extensions/extensions | grep -A 1 "Archive File Name"
-```
-Output:
-```bash
-            "Archive File Name" = "Ghostery.safariextz";
-            "Bundle Directory Name" = "Ghostery.safariextension";
---
-            "Archive File Name" = "AdGuard AdBlocker.safariextz";
-            "Bundle Directory Name" = "AdGuard AdBlocker.safariextension";
 ```
