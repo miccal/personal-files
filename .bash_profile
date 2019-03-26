@@ -61,4 +61,4 @@ alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git c
 
 alias sha='shasum -a 256'
 
-alias update='softwareupdate -iaR; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
+alias update='softwareupdate -ia; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
