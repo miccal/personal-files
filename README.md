@@ -4,7 +4,7 @@ sudo '/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmed
 ```
 ### Install macos updates
 ```bash
-softwareupdate -iaR
+softwareupdate -ia
 ```
 ### Command line tools for xcode
 ```bash
