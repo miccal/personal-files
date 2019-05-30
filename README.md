@@ -58,6 +58,7 @@ cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 brew cask install
 bwana
 detexify
+flotato
 google-chrome
 iina-beta
 iina
