@@ -19,6 +19,7 @@ xcode-select --install
 brew tap
 homebrew/bundle
 homebrew/cask
+homebrew/cask-drivers
 homebrew/cask-versions
 vitorgalvao/tiny-scripts
 ```
@@ -56,6 +57,7 @@ mactex-no-gui
 cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 
 brew cask install
+bose-soundtouch
 bwana
 detexify
 flotato
@@ -218,6 +220,18 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
+For `homebrew-cask-drivers`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers
+
+git config --global user.email "miccal.matthews@gmail.com"
+
+git config --global user.name "miccal"
+
+git remote add miccal https://github.com/miccal/homebrew-cask-drivers
+
+git remote set-url miccal https://github.com/miccal/homebrew-cask-drivers
+```
 For `homebrew-cask-versions`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
@@ -244,6 +258,19 @@ miccal	https://github.com/miccal/homebrew-cask (push)
 origin	https://github.com/homebrew/homebrew-cask (fetch)
 origin	https://github.com/homebrew/homebrew-cask (push)
 ```
+For `homebrew-cask-drivers`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/homebrew-cask-drivers (fetch)
+miccal	https://github.com/miccal/homebrew-cask-drivers (push)
+origin	https://github.com/Homebrew/homebrew-cask-drivers (fetch)
+origin	https://github.com/Homebrew/homebrew-cask-drivers (push)
+```
 For `homebrew-cask-versions`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
@@ -269,9 +296,12 @@ cask-repair --blind-submit CASK
 
 cask-repair --delete-branches
 ```
-### Update homebrew-cask and homebrew-cask-versions forks
+### Update homebrew-cask, homebrew-cask-drivers and homebrew-cask-versions forks
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push miccal master; cd
