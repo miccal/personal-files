@@ -58,6 +58,7 @@ cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 
 brew cask install
 bose-soundtouch
+bose-updater
 bwana
 detexify
 flotato
