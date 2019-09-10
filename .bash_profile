@@ -51,7 +51,9 @@ alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
 
-alias pdf4='pdfnup --nup 2x2 --frame true --suffix "(4 pages per sheet)"' 
+alias mp3count='find . -name "*.mp3" | wc -l'
+
+alias pdf4='pdfnup --nup 2x2 --frame true --suffix "(4 pages per sheet)"'
 
 alias pkgapps='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_apps_in_pkg"'
 
