@@ -86,6 +86,7 @@ gnuplot
 mpw
 pdftoipe
 pwgen
+unar
 ```
 ### Homebrew bundle
 ```bash
