@@ -1,13 +1,13 @@
 cask 'mactex-no-gui' do
-  version '20190508'
+  version '2019.0508'
   sha256 :no_check
 
-  url "http://mirror.aarnet.edu.au/pub/CTAN/systems/mac/mactex/mactex-#{version}.pkg"
+  url "http://mirror.aarnet.edu.au/pub/CTAN/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
-  pkg "mactex-#{version}.pkg"
-      # installer -showChoicesXML -pkg mactex-#{version}.pkg -target /
+  pkg "mactex-#{version.no_dots}.pkg"
+      # installer -showChoicesXML -pkg mactex-#{version.no_dots}.pkg -target /
       choices: [
                  {
                    # TeXLive
