@@ -17,7 +17,6 @@ xcode-select --install
 ### Homebrew taps
 ```bash
 brew tap
-homebrew/bundle
 homebrew/cask
 homebrew/cask-drivers
 homebrew/cask-versions
@@ -88,12 +87,6 @@ mpw
 pdftoipe
 pwgen
 unar
-```
-### Homebrew bundle
-```bash
-brew bundle dump --verbose --force --file=~/dropbox/.Brewfile
-
-brew bundle install --verbose --file=~/dropbox/.Brewfile
 ```
 ### Homebrew maintenance
 ```bash
