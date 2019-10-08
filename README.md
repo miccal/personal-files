@@ -25,11 +25,11 @@ vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
-brew cask install little-snitch-nightly
+brew cask install little-snitch-nightly --no-quarantine
 
 cd /usr/local/Caskroom/; rm -r little-snitch-nightly; cd
 
-brew cask install little-snitch
+brew cask install little-snitch --no-quarantine
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
 
@@ -40,6 +40,7 @@ xquartz
 master-password
 dropbox
 atom
+--no-quarantine
 
 sudo chown -R `whoami` ~/.atom
 
