@@ -35,13 +35,10 @@ cd /usr/local/Caskroom/; rm -r little-snitch; cd
 brew cask install
 keepingyouawake
 shiftit
-xquartz
 master-password
 dropbox
 atom
 --no-quarantine
-
-sudo chown -R `whoami` ~/.atom
 
 brew install 
 bash
@@ -59,24 +56,18 @@ cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
 brew cask install
 bose-soundtouch
 bose-updater
-bwana
-detexify
-flotato
 google-chrome
 iina-beta
 iina
 ipe
-java6
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 libreoffice
-linear
 mathpix-snipping-tool
 tex-live-utility
 texshop
 tor-browser
 transmission
 ubersicht
-whatsapp
 
 brew install
 aspell
@@ -90,11 +81,13 @@ unar
 ```
 ### Homebrew maintenance
 ```bash
-brew update --force; brew upgrade --cleanup; brew cleanup -s; brew cask cleanup; brew cask outdated --greedy
+brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"
 
 brew doctor
 
 cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
+
+brew update-reset
 
 brew deps --installed --tree
 
@@ -194,12 +187,6 @@ aspell --lang=en --mode=tex check FILE.tex
 ### Hub setup
 ```bash
 cd "$(brew --repository)" && hub issue
-
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask/Casks
-
-git config --local hub.protocol https
-
-hub fork
 ```
 ### Git setup
 For `homebrew-cask`:
