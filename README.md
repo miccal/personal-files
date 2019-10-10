@@ -340,3 +340,7 @@ Remove `Guest` user:
 ```bash
 sudo fdesetup remove -user Guest
 ```
+### Set dock height
+```bash
+defaults write com.apple.dock tilesize -integer 48; killall Dock
+```
