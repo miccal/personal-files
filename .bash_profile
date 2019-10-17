@@ -39,7 +39,7 @@ alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl 
 
 alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Casks"'
 
-alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -l1'
+alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -al'
 
 alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
