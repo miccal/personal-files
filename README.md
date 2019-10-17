@@ -145,9 +145,8 @@ mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ### Dropbox cleanup
 Clean up the cache:
 ```bash
-cd ~/Dropbox/.dropbox.cache; ls -l1
+cd ~/Dropbox/.dropbox.cache; ls -al
 ```
-`rm -r` everything except for `attrs_cache`, `placeholder_cache` and `prefetch_cache`.
 
 Remove conflicted files:
 ```bash
