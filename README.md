@@ -151,13 +151,13 @@ cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
 ```
 ### Gpg
 ```bash
-gpg --export GPGID > public.key
+gpg --export GPGID > Dropbox/.public.key
 
-gpg --export-secret-key GPGID > private.key
+gpg --export-secret-key GPGID > Dropbox/.private.key
 
-gpg --import public.key
+gpg --import Dropbox/.public.key
 
-gpg --allow-secret-key-import --import private.key
+gpg --allow-secret-key-import --import Dropbox/.private.key
 
 gpg --list-keys
 
