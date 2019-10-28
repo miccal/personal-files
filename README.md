@@ -171,6 +171,20 @@ If `gpg: WARNING: unsafe permissions on homedir '~/.gnupg'` is shown, run
 ```bash
 chmod 700 ~/.gnupg
 ```
+### Gpg-agent
+Create configuration file:
+```bash
+cd Dropbox/.gnupg; touch gpg-agent.conf; textedit gpg-agent.conf
+```
+Add the following lines:
+```bash
+default-cache-ttl 0
+max-cache-ttl 0
+```
+Reload `gpg-agent`:
+```bash
+gpg-connect-agent reloadagent /bye
+```
 ### Aspell
 ```bash
 aspell --lang=en --mode=tex check FILE.tex
