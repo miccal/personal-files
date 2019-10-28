@@ -10,7 +10,7 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 # $((x+RANDOM%(y-x+1))) generates a random integer between [x,y].
 
-export EDITOR='atom --wait'
+export EDITOR='textedit'
 
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
@@ -33,17 +33,15 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
-alias appcast='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast"'
-
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
-
-alias cdcasks='cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/Casks"'
 
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -al'
 
 alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
 alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; cd'
+
+alias dropfix='cd dropbox/.gnupg; rm S.gpg-agent S.gpg-agent.browser S.gpg-agent.extra S.gpg-agent.ssh; cd'
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
@@ -55,14 +53,10 @@ alias mp3count='find . -name "*.mp3" | wc -l'
 
 alias pdf4='pdfnup --nup 2x2 --frame true --suffix "(4 pages per sheet)"'
 
-alias pkgapps='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_apps_in_pkg"'
-
-alias pkginstall='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_payload_in_pkg"'
-
-alias pkguninstall='"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_ids_in_pkg"'
-
 alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push "miccal" master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push "miccal" master; cd'
 
 alias sha='shasum -a 256'
 
+alias textedit='open -a TextEdit --wait-apps'
+ 
 alias update='softwareupdate -ia; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
