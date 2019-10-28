@@ -37,7 +37,6 @@ keepingyouawake
 shiftit
 master-password
 dropbox
-atom
 --no-quarantine
 
 brew install 
@@ -100,7 +99,7 @@ cat /etc/shells
 ```
 Add homebrew bash:
 ```bash
-sudo atom /etc/shells
+sudo textedit /etc/shells
 ```
 Add to last line:
 ```bash
@@ -116,8 +115,6 @@ chsh -s /usr/local/bin/bash miccal
 ```
 ### Symlinks
 ```bash
-ln -s ~/Dropbox/.atom ~/.atom
-
 ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
 ln -s ~/Dropbox/.gnupg ~/.gnupg
@@ -173,11 +170,6 @@ trust
 If `gpg: WARNING: unsafe permissions on homedir '~/.gnupg'` is shown, run
 ```bash
 chmod 700 ~/.gnupg
-```
-### Gpg-agent
-Reload `gpg-agent`:
-```bash
-gpg-connect-agent reloadagent /bye
 ```
 ### Aspell
 ```bash
@@ -300,7 +292,7 @@ git status
 
 git checkout -b BRANCH
 
-atom CASK.rb
+textedit CASK.rb
 
 brew cask audit --download CASK
 
