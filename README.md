@@ -117,8 +117,6 @@ chsh -s /usr/local/bin/bash miccal
 ```bash
 ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
-ln -s ~/Dropbox/.gnupg ~/.gnupg
-
 ln -s ~/Dropbox/.password-store ~/.password-store
 ```
 ### Pass
@@ -174,7 +172,7 @@ chmod 700 ~/.gnupg
 ### Gpg-agent
 Create configuration file:
 ```bash
-cd ~/Dropbox/.gnupg; touch gpg-agent.conf; textedit gpg-agent.conf
+cd ~/.gnupg; touch gpg-agent.conf; textedit gpg-agent.conf
 ```
 Add the following lines:
 ```bash
