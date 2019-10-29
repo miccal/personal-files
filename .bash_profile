@@ -41,8 +41,6 @@ alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
 alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; cd'
 
-alias dropfix='cd dropbox/.gnupg; rm S.gpg-agent S.gpg-agent.browser S.gpg-agent.extra S.gpg-agent.ssh; cd'
-
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
