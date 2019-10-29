@@ -71,7 +71,6 @@ ubersicht
 brew install
 aspell
 cask-repair
-cheat
 gnuplot
 mpw
 pdftoipe
