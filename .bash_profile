@@ -33,7 +33,7 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
-alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done; cd'
+alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -al'
 
