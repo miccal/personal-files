@@ -98,7 +98,7 @@ cat /etc/shells
 ```
 Add homebrew bash:
 ```bash
-sudo textedit /etc/shells
+sudo vim /etc/shells
 ```
 Add to last line:
 ```bash
@@ -291,7 +291,7 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git chec
 ```
 To force the update:
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force "miccal" master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force miccal master; cd
 ```
 ### Create a cask
 
