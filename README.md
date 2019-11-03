@@ -56,7 +56,6 @@ brew cask install
 bose-soundtouch
 bose-updater
 google-chrome
-iina-beta
 iina
 ipe
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
