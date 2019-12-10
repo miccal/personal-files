@@ -66,6 +66,7 @@ texshop
 tor-browser
 transmission
 ubersicht
+vlc
 
 brew install
 aspell
