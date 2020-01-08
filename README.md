@@ -67,6 +67,7 @@ tor-browser
 transmission
 ubersicht
 vlc
+whatsapp
 
 brew install
 aspell
