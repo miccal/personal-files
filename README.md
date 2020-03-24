@@ -68,6 +68,7 @@ transmission
 ubersicht
 vlc
 whatsapp
+zoomus
 
 brew install
 aspell
