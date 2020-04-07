@@ -57,6 +57,7 @@ bose-soundtouch
 bose-updater
 google-chrome
 iina
+https://raw.githubusercontent.com/miccal/personal-files/master/iina-beta.rb
 ipe
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 libreoffice
