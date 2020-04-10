@@ -10,22 +10,28 @@ cask 'mactex-no-gui' do
       # installer -showChoicesXML -pkg mactex-#{version.no_dots}.pkg -target /
       choices: [
                  {
-                   # TeXLive
+                   # Ghostscript#
                    'choiceIdentifier' => 'choice1',
                    'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
+                   'attributeSetting' => 0,
                  },
                  {
-                   # GUI-Applications
+                   # Ghostscript Dynamic Library
                    'choiceIdentifier' => 'choice2',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
                  },
                  {
-                   # Ghostscript
+                   # GUI-Applications
                    'choiceIdentifier' => 'choice3',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
+                 },
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => 'choice4',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
                  },
                ]
 
