@@ -37,6 +37,8 @@ alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAge
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
+alias cltupdate='sudo rm -rf /Library/Developer/CommandLineTools; sudo xcode-select --install'
+
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -al'
 
 alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
