@@ -4,7 +4,7 @@ sudo '/Applications/Install macOS Catalina.app/Contents/Resources/createinstallm
 ```
 ### Install macos updates
 ```bash
-softwareupdate -ia
+softwareupdate --all --install --force
 ```
 ### Command line tools for xcode
 ```bash
@@ -56,8 +56,8 @@ brew cask install
 bose-soundtouch
 bose-updater
 google-chrome
-iina
 https://raw.githubusercontent.com/miccal/personal-files/master/iina-beta.rb
+iina
 ipe
 https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
 libreoffice
