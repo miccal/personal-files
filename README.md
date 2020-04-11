@@ -34,7 +34,7 @@ cd /usr/local/Caskroom/; rm -r little-snitch; cd
 
 brew cask install
 keepingyouawake
-shiftit
+rectangle
 master-password
 dropbox
 --no-quarantine
