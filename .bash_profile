@@ -63,4 +63,4 @@ alias spell='aspell --lang=en --mode=tex check'
 
 alias textedit='open -a TextEdit --wait-apps'
  
-alias update='softwareupdate -ia; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
+alias update='softwareupdate --all --install --force; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
