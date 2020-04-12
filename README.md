@@ -20,6 +20,7 @@ brew tap
 homebrew/cask
 homebrew/cask-drivers
 homebrew/cask-versions
+miccal/miccal
 vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
@@ -46,7 +47,7 @@ ghostscript
 git
 pass
 
-brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-mactex-no-gui.rb
+brew cask install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
@@ -54,16 +55,16 @@ brew cask install
 bose-soundtouch
 bose-updater
 google-chrome
-https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-iina-beta.rb
 ipe
-https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-libreoffice.rb
+m-iina-beta
+m-libreoffice
+m-tor-browser
+m-vlc
 mathpix-snipping-tool
 tex-live-utility
 texshop
-https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-tor-browser.rb
 transmission
 ubersicht
-https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-vlc.rb
 whatsapp
 zoomus
 
