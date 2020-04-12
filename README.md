@@ -46,29 +46,24 @@ ghostscript
 git
 pass
 
-brew cask install 
-https://raw.githubusercontent.com/miccal/personal-files/master/mactex-no-gui.rb
-mactex-no-gui
+brew cask install https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-mactex-no-gui.rb
 
-cd /usr/local/Caskroom/; rm -r mactex-no-gui; cd
+cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
 brew cask install
 bose-soundtouch
 bose-updater
 google-chrome
-https://raw.githubusercontent.com/miccal/personal-files/master/iina-beta.rb
-iina
+https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-iina-beta.rb
 ipe
-https://raw.githubusercontent.com/miccal/personal-files/master/libreoffice.rb
-libreoffice
+https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-libreoffice.rb
 mathpix-snipping-tool
 tex-live-utility
 texshop
-tor-browser
+https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-tor-browser.rb
 transmission
 ubersicht
-https://raw.githubusercontent.com/miccal/personal-files/master/vlc.rb
-vlc
+https://raw.githubusercontent.com/miccal/personal-files/master/Cask/m-vlc.rb
 whatsapp
 zoomus
 
