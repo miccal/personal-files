@@ -1,4 +1,4 @@
-cask 'vlc' do
+cask 'm-vlc' do
   version '3.0.9.2'
   sha256 :no_check
 
