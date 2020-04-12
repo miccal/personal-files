@@ -67,6 +67,7 @@ texshop
 tor-browser
 transmission
 ubersicht
+https://raw.githubusercontent.com/miccal/personal-files/master/vlc.rb
 vlc
 whatsapp
 zoomus
