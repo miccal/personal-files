@@ -46,6 +46,7 @@ curl
 ghostscript
 git
 pass
+vim
 
 brew cask install m-mactex-no-gui
 
