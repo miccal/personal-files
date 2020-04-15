@@ -57,7 +57,7 @@ bose-soundtouch
 bose-updater
 google-chrome
 ipe
-m-iina-beta
+m-iina
 m-libreoffice
 m-tor-browser
 m-vlc
