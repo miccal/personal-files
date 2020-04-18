@@ -73,6 +73,7 @@ brew install
 aspell
 cask-repair
 gnuplot
+imagemagick
 mpw
 pdftoipe
 pwgen
