@@ -59,10 +59,10 @@ google-chrome
 ipe
 m-iina
 m-libreoffice
+m-tex-live-utility
 m-tor-browser
 m-vlc
 mathpix-snipping-tool
-tex-live-utility
 texshop
 transmission
 ubersicht
