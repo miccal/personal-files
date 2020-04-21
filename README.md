@@ -63,6 +63,7 @@ m-tex-live-utility
 m-tor-browser
 m-vlc
 mathpix-snipping-tool
+spires
 texshop
 transmission
 ubersicht
