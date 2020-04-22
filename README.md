@@ -55,6 +55,7 @@ cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 brew cask install
 bose-soundtouch
 bose-updater
+chromium
 google-chrome
 ipe
 m-iina
