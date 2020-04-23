@@ -33,6 +33,11 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
+caskpr ()
+{
+  cask-repair -v "$1" -b "$2"
+}
+
 alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
