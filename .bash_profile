@@ -61,6 +61,6 @@ alias sha='shasum -a 256'
 
 alias spell='aspell --lang=en --mode=tex check'
 
-alias textedit='open -a TextEdit --wait-apps'
+alias textedit='open -e -W'
  
 alias update='softwareupdate --all --install --force; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
