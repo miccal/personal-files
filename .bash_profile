@@ -45,11 +45,11 @@ sfind ()
 
 alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
 
-alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -Os $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
+alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
-alias cltupdate='sudo rm -rf /Library/Developer/CommandLineTools; sudo xcode-select --install'
+alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install'
 
-alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -al'
+alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -a -l'
 
 alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
@@ -73,4 +73,4 @@ alias spell='aspell --lang=en --mode=tex check'
 
 alias textedit='open -e -W'
  
-alias update='softwareupdate --all --install --force; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"'
+alias update='softwareupdate --all --install --force; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -r -f "$(brew --cache)"'
