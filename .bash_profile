@@ -28,14 +28,19 @@ export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
-sfind ()
-{
-  sudo find / -iname "*$1*"
-}
-
 caskpr ()
 {
   cask-repair -v "$1" -b "$2"
+}
+
+manpdf ()
+{
+  man -t "$1" | open -f -a Preview
+}
+
+sfind ()
+{
+  sudo find / -iname "*$1*"
 }
 
 alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
