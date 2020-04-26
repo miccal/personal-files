@@ -58,6 +58,7 @@ bose-updater
 chromium
 google-chrome
 ipe
+launchcontrol
 m-iina
 m-libreoffice
 m-tex-live-utility
