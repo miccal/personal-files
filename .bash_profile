@@ -10,7 +10,7 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 # $((x+RANDOM%(y-x+1))) generates a random integer between [x,y].
 
-export EDITOR=vim
+export EDITOR='/usr/bin/open -e -W'
 
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
@@ -71,6 +71,6 @@ alias sha='shasum -a 256'
 
 alias spell='aspell --lang=en --mode=tex check'
 
-alias textedit='open -e -W'
+alias textedit='/usr/bin/open -e -W'
  
 alias update='softwareupdate --all --install --force; brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -r -f "$(brew --cache)"'
