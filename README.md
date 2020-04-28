@@ -351,3 +351,7 @@ sudo fdesetup remove -user Guest
 ```bash
 defaults write com.apple.dock tilesize -integer 40; killall Dock
 ```
+### Disable spotlight
+```bash
+sudo mdutil -a -i off
+```
