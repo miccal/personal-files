@@ -238,6 +238,18 @@ git remote add miccal https://github.com/miccal/homebrew-versions
 
 git remote set-url miccal https://github.com/miccal/homebrew-versions
 ```
+For `homebrew-livecheck`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
+
+git config --global user.email "miccal.matthews@gmail.com"
+
+git config --global user.name "miccal"
+
+git remote add miccal https://github.com/miccal/homebrew-livecheck
+
+git remote set-url miccal https://github.com/miccal/homebrew-livecheck
+```
 ### Git check
 For `homebrew-cask`:
 ```bash
@@ -278,6 +290,19 @@ miccal	https://github.com/miccal/homebrew-versions (push)
 origin	https://github.com/homebrew/homebrew-cask-versions (fetch)
 origin	https://github.com/homebrew/homebrew-cask-versions (push)
 ```
+For `homebrew-livecheck`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/homebrew-livecheck (fetch)
+miccal	https://github.com/miccal/homebrew-livecheck (push)
+origin	https://github.com/homebrew/homebrew-livecheck (fetch)
+origin	https://github.com/homebrew/homebrew-livecheck (push)
+```
 ### Cask repair
 ```bash
 cask-repair CASK
@@ -290,7 +315,7 @@ cask-repair --blind-submit CASK
 
 cask-repair --delete-branches
 ```
-### Update homebrew-cask, homebrew-cask-drivers and homebrew-cask-versions forks
+### Update forks
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
 ```
@@ -299,6 +324,9 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git check
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull origin; git push miccal master; cd
 ```
 To force the update:
 ```bash
