@@ -95,6 +95,8 @@ brew update-reset
 brew deps --installed --tree
 
 brew leaves
+
+brew livecheck
 ```
 ### Set homebrew bash as default
 List current shells:
