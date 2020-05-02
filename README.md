@@ -19,7 +19,9 @@ xcode-select --install
 brew tap
 homebrew/cask
 homebrew/cask-drivers
+homebrew/cask-fonts
 homebrew/cask-versions
+homebrew/livecheck
 miccal/miccal
 vitorgalvao/tiny-scripts
 ```
