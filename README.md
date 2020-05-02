@@ -122,6 +122,8 @@ chsh -s /usr/local/bin/bash miccal
 ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
 ln -s ~/Dropbox/.password-store ~/.password-store
+
+ln -s ~/Dropbox/.brew_livecheck_watchlist ~/.brew_livecheck_watchlist
 ```
 ### Pass
 ```bash
