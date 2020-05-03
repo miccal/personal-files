@@ -342,6 +342,8 @@ git status
 
 git checkout -b BRANCH
 
+touch CASK.rb
+
 textedit CASK.rb
 
 brew cask audit --download CASK
