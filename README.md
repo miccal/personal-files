@@ -238,6 +238,18 @@ git remote add miccal https://github.com/miccal/homebrew-versions
 
 git remote set-url miccal https://github.com/miccal/homebrew-versions
 ```
+For `homebrew-core`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
+
+git config --global user.email "miccal.matthews@gmail.com"
+
+git config --global user.name "miccal"
+
+git remote add miccal https://github.com/miccal/homebrew-core
+
+git remote set-url miccal https://github.com/miccal/homebrew-core
+```
 For `homebrew-livecheck`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
@@ -290,6 +302,19 @@ miccal	https://github.com/miccal/homebrew-versions (push)
 origin	https://github.com/homebrew/homebrew-cask-versions (fetch)
 origin	https://github.com/homebrew/homebrew-cask-versions (push)
 ```
+For `homebrew-core`:
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/homebrew-core (fetch)
+miccal	https://github.com/miccal/homebrew-core (push)
+origin	https://github.com/Homebrew/homebrew-core (fetch)
+origin	https://github.com/Homebrew/homebrew-core (push)
+```
 For `homebrew-livecheck`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
@@ -324,6 +349,9 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git check
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push miccal master; cd
+```
+```bash
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull origin; git push miccal master; cd
