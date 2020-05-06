@@ -30,7 +30,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 brewpr ()
 {
-  HOMEBREW_GITHUB_API_TOKEN="$1" brew bump-formula-pr --strict "$2" --url="$3" --sha256="$4"
+  HOMEBREW_GITHUB_API_TOKEN="$1" brew bump-formula-pr --strict "$2" --url="$3" --sha256="$4" --no-browse
 }
 
 caskpr ()
