@@ -38,6 +38,11 @@ caskpr ()
   cask-repair -v "$1" -b "$2"
 }
 
+curlfollow ()
+{
+  curl -sLI "$1" | grep -i Location
+}
+
 manpdf ()
 {
   man -t "$1" | open -f -a Preview
