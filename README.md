@@ -12,7 +12,7 @@ xcode-select --install
 ```
 ### Install homebrew
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 ### Homebrew taps
 ```bash
@@ -234,9 +234,9 @@ git config --global user.email "miccal.matthews@gmail.com"
 
 git config --global user.name "miccal"
 
-git remote add miccal https://github.com/miccal/homebrew-versions
+git remote add miccal https://github.com/miccal/homebrew-cask-versions
 
-git remote set-url miccal https://github.com/miccal/homebrew-versions
+git remote set-url miccal https://github.com/miccal/homebrew-cask-versions
 ```
 For `homebrew-core`:
 ```bash
@@ -297,8 +297,8 @@ git remote -v
 ```
 Expected output:
 ```bash
-miccal	https://github.com/miccal/homebrew-versions (fetch)
-miccal	https://github.com/miccal/homebrew-versions (push)
+miccal	https://github.com/miccal/homebrew-cask-versions (fetch)
+miccal	https://github.com/miccal/homebrew-cask-versions (push)
 origin	https://github.com/homebrew/homebrew-cask-versions (fetch)
 origin	https://github.com/homebrew/homebrew-cask-versions (push)
 ```
