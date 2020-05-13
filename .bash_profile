@@ -59,7 +59,7 @@ alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl 
 
 alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install'
 
-alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -a -l'
+alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -A -l'
 
 alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
 
