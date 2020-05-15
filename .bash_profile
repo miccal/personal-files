@@ -6,7 +6,7 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]\s-\V-\[\e[m\] \[\e[1;38;5;$((RANDOM%2
 
 # \[\e[m\] resets to default.
 
-# COLOR = number between [0,255] - see https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
+# COLOR = number between [0,255] - see https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 
 # $((x+RANDOM%(y-x+1))) generates a random integer between [x,y].
 
