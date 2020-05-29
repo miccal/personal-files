@@ -61,9 +61,9 @@ alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-s
 
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -A -l'
 
-alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd'
+alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd'
 
-alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; cd'
+alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd'
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
