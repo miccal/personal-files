@@ -77,12 +77,13 @@ zoomus
 brew install
 aspell
 cask-repair
-gnuplot
 imagemagick
+maxima
 mpw
 pdftoipe
 pwgen
 unar
+wxmaxima
 ```
 ### Homebrew maintenance
 ```bash
@@ -149,12 +150,21 @@ pass edit NAME
 ```bash
 mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ```
+### Maxima
+Enable gnuplot functionality:
+```bash
+textedit ~/.maxima/maxima-init.mac
+```
+Add the following lines:
+```bash
+gnuplot_command:"/usr/local/bin/gnuplot"$
+draw_command:"/usr/local/bin/gnuplot"$
+```
 ### Dropbox cleanup
 Clean up the cache:
 ```bash
 cd ~/Dropbox/.dropbox.cache; ls -al
 ```
-
 Remove conflicted files:
 ```bash
 cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
