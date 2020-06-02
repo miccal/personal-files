@@ -16,14 +16,19 @@ xcode-select --install
 ```
 ### Homebrew taps
 ```bash
-brew tap
-homebrew/cask
-homebrew/cask-drivers
-homebrew/cask-fonts
-homebrew/cask-versions
-homebrew/livecheck
-miccal/miccal
-vitorgalvao/tiny-scripts
+brew tap homebrew/cask
+
+brew tap homebrew/cask-drivers
+
+brew tap homebrew/cask-fonts
+
+brew tap homebrew/cask-versions
+
+brew tap homebrew/livecheck
+
+brew tap miccal/miccal
+
+brew tap vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
@@ -35,55 +40,17 @@ brew cask install little-snitch --no-quarantine
 
 cd /usr/local/Caskroom/; rm -r little-snitch; cd
 
-brew cask install
-keepingyouawake
-rectangle
-master-password
-dropbox
---no-quarantine
+brew cask install keepingyouawake rectangle master-password dropbox --no-quarantine
 
-brew install 
-bash
-curl
-ghostscript
-git
-pass
-vim
+brew install bash curl ghostscript git pass vim
 
 brew cask install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew cask install
-bose-soundtouch
-bose-updater
-chromium
-google-chrome
-ipe
-launchcontrol
-m-iina
-m-libreoffice
-m-tex-live-utility
-m-tor-browser
-m-vlc
-mathpix-snipping-tool
-spires
-texshop
-transmission
-ubersicht
-whatsapp
-zoomus
+brew cask install bose-soundtouch bose-updater chromium google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool slack-beta spires texshop transmission ubersicht whatsapp zoomus
 
-brew install
-aspell
-cask-repair
-imagemagick
-maxima
-mpw
-pdftoipe
-pwgen
-unar
-wxmaxima
+brew install aspell cask-repair imagemagick maxima mpw pdftoipe pwgen unar wxmaxima
 ```
 ### Homebrew maintenance
 ```bash
@@ -352,6 +319,14 @@ cask-repair --blind-submit CASK
 
 cask-repair --delete-branches
 ```
+### Bump formula pr
+```bash
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict vim --url=https://github.com/vim/vim/archive/v{VERSION}.tar.gz --sha256={SHA} --no-browse
+
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick --url=https://dl.bintray.com/homebrew/mirror/ImageMagick-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
+
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick@6 --url=https://dl.bintray.com/homebrew/mirror/imagemagick%406-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
+```
 ### Update forks
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
@@ -372,41 +347,49 @@ To force the update:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force miccal master; cd
 ```
-### Create a cask
-
+### Manual PR's
 _!!!UPDATE FORK FIRST!!!_
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask/Casks
 
+After `cd`ing into directory:
+```bash
 git status
 
 git checkout -b BRANCH
 
-touch CASK.rb
+touch FILE.rb
 
-textedit CASK.rb
+textedit FILE.rb
 
-brew cask audit --download CASK
+git add FILE.rb
 
-brew cask style --fix CASK
+git rm FILE.rb
 
-git add CASK.rb
+git commit --message "PR TITLE"
 
-git rm CASK.rb
+git commit --all --message "PR TITLE"
 
-git commit -m "PR TITLE"
-
-git commit -am "PR TITLE"
+git commit --amend --message "PR TITLE"
 
 git push miccal BRANCH
 
-git push -f miccal BRANCH
+git fetch --all
+
+git rebase --interactive origin/master # squash
+
+git push --force miccal BRANCH
+
+git push --force-with-lease miccal BRANCH
 
 git checkout master
 
 git branch
 
-git branch -D BRANCH
+git branch --delete --force BRANCH
+```
+### List references in a remote repository
+Example:
+```bash
+git ls-remote https://gitlab.com/MasterPassword/MasterPassword.git
 ```
 ### Show/hide hidden files
 ```bash
