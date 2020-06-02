@@ -323,6 +323,8 @@ cask-repair --delete-branches
 ```bash
 HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict vim --url=https://github.com/vim/vim/archive/v{VERSION}.tar.gz --sha256={SHA} --no-browse
 
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict git-gui --url=https://www.kernel.org/pub/software/scm/git/git-{VERSION}.tar.xz --sha256={SHA} --no-browse
+
 HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick --url=https://dl.bintray.com/homebrew/mirror/ImageMagick-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
 
 HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick@6 --url=https://dl.bintray.com/homebrew/mirror/imagemagick%406-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
