@@ -352,7 +352,7 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout mast
 ### Manual PR's
 _!!!UPDATE FORK FIRST!!!_
 
-After `cd`ing into directory:
+After `cd`'ing into the relevant directory:
 ```bash
 git status
 
