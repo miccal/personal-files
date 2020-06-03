@@ -331,19 +331,19 @@ HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick@6 --
 ```
 ### Update forks
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 To force the update:
 ```bash
