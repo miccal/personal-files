@@ -321,15 +321,11 @@ cask-repair --delete-branches
 ```
 ### Bump formula pr
 ```bash
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict vim --url=https://github.com/vim/vim/archive/v{VERSION}.tar.gz --sha256={SHA} --no-browse
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --sha256={SHA} --no-browse
 
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict git-gui --url=https://www.kernel.org/pub/software/scm/git/git-{VERSION}.tar.xz --sha256={SHA} --no-browse
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --mirror={MIRROR} --sha256={SHA} --no-browse
 
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict harfbuzz --url=https://github.com/harfbuzz/harfbuzz/releases/download/{VERSION}/harfbuzz-{VERSION}.tar.xz --sha256={SHA} --no-browse
-
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick --url=https://dl.bintray.com/homebrew/mirror/ImageMagick-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
-
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict imagemagick@6 --url=https://dl.bintray.com/homebrew/mirror/imagemagick%406-{VERSION}.tar.xz --mirror=https://www.imagemagick.org/download/releases/ImageMagick-{VERSION}.tar.xz --sha256={SHA} --no-browse
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA}@{NUM} --url={URL,@->%40} --mirror={MIRROR,@->%40} --sha256={SHA} --no-browse
 ```
 ### Update forks
 ```bash
