@@ -48,7 +48,7 @@ brew cask install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew cask install bose-soundtouch bose-updater chromium google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires texshop transmission ubersicht whatsapp zoomus
+brew cask install bose-soundtouch bose-updater chromium etrecheckpro google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires texshop transmission ubersicht whatsapp zoomus
 
 brew install aspell cask-repair imagemagick maxima mpw pdftoipe pwgen unar wxmaxima
 ```
@@ -323,9 +323,9 @@ cask-repair --delete-branches
 ```bash
 HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --sha256={SHA} --no-browse
 
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --mirror={MIRROR} --sha256={SHA} --no-browse
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --mirror={MIRROR} --version={VERSION} --sha256={SHA} --no-browse
 
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA}@{NUM} --url={URL,@->%40} --mirror={MIRROR,@->%40} --sha256={SHA} --no-browse
+HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA}@{NUM} --url={URL,@->%40} --sha256={SHA} --no-browse
 ```
 ### Update forks
 ```bash
