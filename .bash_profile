@@ -57,6 +57,20 @@ alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAge
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
+alias cdcasks='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask'
+
+alias cdcore='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core'
+
+alias cddrivers='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers'
+
+alias cdlivecheck='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck'
+
+alias cdversions='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions'
+
+alias checktemp='sudo powermetrics -i 1 -n 1 | grep -i "temp"'
+
+alias checkfan='sudo powermetrics -i 1 -n 1 | grep -i "fan"'
+
 alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install'
 
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -A -l'
@@ -66,6 +80,8 @@ alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo f
 alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd'
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
+
+alias livecheck='brew livecheck --installed'
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
