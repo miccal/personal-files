@@ -120,12 +120,20 @@ mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ### Maxima
 Enable gnuplot functionality:
 ```bash
-textedit ~/.maxima/maxima-init.mac
+cd ~/.maxima
+
+touch maxima-init.mac
+
+textedit maxima-init.mac
 ```
 Add the following lines:
 ```bash
 gnuplot_command:"/usr/local/bin/gnuplot"$
 draw_command:"/usr/local/bin/gnuplot"$
+```
+Turn off dark mode for wxMaxima:
+```bash
+defaults write wxmaxima NSRequiresAquaSystemAppearance -bool yes
 ```
 ### Dropbox cleanup
 Clean up the cache:
