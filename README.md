@@ -189,6 +189,18 @@ aspell --lang=en --mode=tex check FILE.tex
 cd "$(brew --repository)" && hub issue
 ```
 ### Git setup
+For `brew`:
+```bash
+cd "$(brew --repository)"
+
+git config --global user.email "miccal.matthews@gmail.com"
+
+git config --global user.name "miccal"
+
+git remote add miccal https://github.com/miccal/brew
+
+git remote set-url miccal https://github.com/miccal/brew
+```
 For `homebrew-cask`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
@@ -250,6 +262,19 @@ git remote add miccal https://github.com/miccal/homebrew-livecheck
 git remote set-url miccal https://github.com/miccal/homebrew-livecheck
 ```
 ### Git check
+For `brew`:
+```bash
+cd "$(brew --repository)"
+
+git remote -v
+```
+Expected output:
+```bash
+miccal	https://github.com/miccal/brew (fetch)
+miccal	https://github.com/miccal/brew (push)
+origin	https://github.com/Homebrew/brew (fetch)
+origin	https://github.com/Homebrew/brew (push)
+```
 For `homebrew-cask`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
@@ -336,6 +361,9 @@ HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url=
 HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA}@{NUM} --url={URL,@->%40} --sha256={SHA} --no-browse
 ```
 ### Update forks
+```bash
+cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd
+```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
