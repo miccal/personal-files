@@ -57,6 +57,8 @@ alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAge
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
+alias cdbrew='cd "$(brew --repository)"'
+
 alias cdcasks='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask'
 
 alias cdcore='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core'
@@ -91,7 +93,7 @@ alias mp3count='find . -name "*.mp3" | wc -l'
 
 alias pdf4='pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)"'
 
-alias push='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull --rebase origin; git push miccal master; cd'
+alias push='cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull --rebase origin; git push miccal master; cd'
 
 alias sha='shasum -a 256'
 
