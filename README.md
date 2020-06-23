@@ -95,8 +95,6 @@ ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
 ln -s ~/Dropbox/.password-store ~/.password-store
 
-ln -s ~/Dropbox/.brew_livecheck_watchlist ~/.brew_livecheck_watchlist
-
 ln -s /usr/local/Cellar/wxmaxima/*/wxmaxima.app/ /Applications/wxMaxima
 ```
 ### Pass
@@ -116,33 +114,6 @@ pass edit NAME
 ### Master password
 ```bash
 mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
-```
-### Maxima
-Enable gnuplot functionality:
-```bash
-cd ~/.maxima
-
-touch maxima-init.mac
-
-textedit maxima-init.mac
-```
-Add the following lines:
-```bash
-gnuplot_command:"/usr/local/bin/gnuplot"$
-draw_command:"/usr/local/bin/gnuplot"$
-```
-Turn off dark mode for wxMaxima:
-```bash
-defaults write wxmaxima NSRequiresAquaSystemAppearance -bool yes
-```
-### Dropbox cleanup
-Clean up the cache:
-```bash
-cd ~/Dropbox/.dropbox.cache; ls -al
-```
-Remove conflicted files:
-```bash
-cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
 ```
 ### Gpg
 ```bash
@@ -179,6 +150,33 @@ max-cache-ttl 0
 Reload `gpg-agent`:
 ```bash
 gpg-connect-agent reloadagent /bye
+```
+### Maxima
+Enable gnuplot functionality:
+```bash
+cd ~/.maxima
+
+touch maxima-init.mac
+
+textedit maxima-init.mac
+```
+Add the following lines:
+```bash
+gnuplot_command:"/usr/local/bin/gnuplot"$
+draw_command:"/usr/local/bin/gnuplot"$
+```
+Turn off dark mode for wxMaxima:
+```bash
+defaults write wxmaxima NSRequiresAquaSystemAppearance -bool yes
+```
+### Dropbox cleanup
+Clean up the cache:
+```bash
+cd ~/Dropbox/.dropbox.cache; ls -al
+```
+Remove conflicted files:
+```bash
+cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
 ```
 ### Aspell
 ```bash
