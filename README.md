@@ -408,6 +408,8 @@ git push miccal BRANCH
 
 git fetch --all
 
+git fetch origin pull/ID/head:BRANCH
+
 git rebase --interactive origin/master # squash
 
 git push --force miccal BRANCH
