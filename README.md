@@ -419,6 +419,12 @@ git checkout master
 git branch
 
 git branch --delete --force BRANCH
+
+git branch -a
+
+git remote prune miccal
+
+git remote prune origin
 ```
 ### List references in a remote repository
 Example:
