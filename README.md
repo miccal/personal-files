@@ -48,7 +48,7 @@ brew cask install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew cask install bose-soundtouch bose-updater chromium etrecheckpro google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires texshop transmission ubersicht whatsapp xquartz zoomus
+brew cask install apparency bose-soundtouch bose-updater chromium etrecheckpro google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
 
 brew install aspell cask-repair imagemagick mpw pdftoipe pwgen rsync unar wxmaxima
 ```
