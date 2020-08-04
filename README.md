@@ -1,3 +1,7 @@
+### Get latest macos installer
+```bash
+softwareupdate --fetch-full-installer --full-installer-version 10.15.6
+```
 ### Create macos bootable usb
 ```bash
 sudo '/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
