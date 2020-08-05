@@ -1,4 +1,4 @@
-export PS1='\[\e[1;38;5;$((RANDOM%256))m\][\s-\V-]\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\][$PWD]\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\][$(ls -Al1 | wc -l | sed "s/ //g")]\[\e[m\]\n\[\e[1;38;5;$((RANDOM%256))m\][=>\[\e[m\] '
+export PS1='\[\e[1;38;5;$((RANDOM%256))m\][\s-\V-]\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\][$PWD]\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\][$(ls -Al1 | wc -l | sed "s/ //g")]\[\e[m\]\n\[\e[1;38;5;$((RANDOM%256))m\]|->\[\e[m\] '
 
 # \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory, $(ls -Al1 | wc -l | sed "s/ //g") = shows number of files in current working directory (omitting . and .. from the count), \n = new line.
 
