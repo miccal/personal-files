@@ -96,4 +96,4 @@ alias spell='aspell --lang=en --mode=tex check'
 
 alias textedit='/usr/bin/open -e -W'
  
-alias update='softwareupdate --list && brew update --force && brew upgrade --dry-run && brew cleanup -s && brew cask outdated --greedy --verbose && rm -r -f "$(brew --cache)"'
+alias update='softwareupdate --list && brew update --force && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
