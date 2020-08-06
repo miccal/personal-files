@@ -58,7 +58,7 @@ brew install aspell cask-repair imagemagick mpw pdftoipe pwgen rsync unar wxmaxi
 ```
 ### Homebrew maintenance
 ```bash
-brew update --force; brew upgrade --display-times; brew cleanup -s; brew cask outdated --greedy --verbose; rm -rf "$(brew --cache)"
+brew update --force && brew upgrade --dry-run && brew cleanup -s && brew cask outdated --greedy --verbose && rm -r -f "$(brew --cache)"
 
 brew doctor
 
