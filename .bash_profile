@@ -60,8 +60,6 @@ alias cdcore='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core'
 
 alias cddrivers='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers'
 
-alias cdlivecheck='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck'
-
 alias cdversions='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions'
 
 alias checktemp='sudo powermetrics -i 1 -n 1 | grep -i "temp"'
@@ -88,7 +86,7 @@ alias mp3count='find . -name "*.mp3" | wc -l'
 
 alias pdf4='pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)"'
 
-alias push='cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull --rebase origin; git push miccal master; cd'
+alias push='cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd'
 
 alias sha='shasum -a 256'
 
