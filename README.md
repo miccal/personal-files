@@ -251,18 +251,6 @@ git remote add miccal https://github.com/miccal/homebrew-core
 
 git remote set-url miccal https://github.com/miccal/homebrew-core
 ```
-For `homebrew-livecheck`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
-
-git config --global user.email "miccal.matthews@gmail.com"
-
-git config --global user.name "miccal"
-
-git remote add miccal https://github.com/miccal/homebrew-livecheck
-
-git remote set-url miccal https://github.com/miccal/homebrew-livecheck
-```
 ### Git check
 For `brew`:
 ```bash
@@ -329,19 +317,6 @@ miccal	https://github.com/miccal/homebrew-core (push)
 origin	https://github.com/Homebrew/homebrew-core (fetch)
 origin	https://github.com/Homebrew/homebrew-core (push)
 ```
-For `homebrew-livecheck`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck
-
-git remote -v
-```
-Expected output:
-```bash
-miccal	https://github.com/miccal/homebrew-livecheck (fetch)
-miccal	https://github.com/miccal/homebrew-livecheck (push)
-origin	https://github.com/homebrew/homebrew-livecheck (fetch)
-origin	https://github.com/homebrew/homebrew-livecheck (push)
-```
 ### Cask repair
 ```bash
 cask-repair CASK
@@ -377,9 +352,6 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git chec
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-livecheck; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 To force the update:
 ```bash
