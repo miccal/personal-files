@@ -97,6 +97,8 @@ chsh -s /usr/local/bin/bash miccal
 ```bash
 ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
+ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
+
 ln -s ~/Dropbox/.password-store ~/.password-store
 
 ln -s /usr/local/Cellar/wxmaxima/*/wxmaxima.app/ /Applications/wxMaxima
