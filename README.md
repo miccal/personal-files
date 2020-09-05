@@ -28,8 +28,6 @@ brew tap homebrew/cask-fonts
 
 brew tap homebrew/cask-versions
 
-brew tap homebrew/livecheck
-
 brew tap miccal/miccal
 
 brew tap vitorgalvao/tiny-scripts
