@@ -32,7 +32,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 caskpr ()
 {
-  cask-repair -v "$1" -b "$2"
+  brew bump-cask-pr --no-browse --version="$1" "$2"
 }
 
 curlfollow ()
@@ -53,6 +53,8 @@ sfind ()
 alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
+
+alias caskedit='cask-repair --edit-cask'
 
 alias cdbrew='cd "$(brew --repository)"'
 
