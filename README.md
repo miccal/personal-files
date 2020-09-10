@@ -34,13 +34,9 @@ brew tap vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
-brew cask install little-snitch-nightly --no-quarantine
+brew cask install m-little-snitch --no-quarantine
 
-cd /usr/local/Caskroom/; rm -r little-snitch-nightly; cd
-
-brew cask install little-snitch --no-quarantine
-
-cd /usr/local/Caskroom/; rm -r little-snitch; cd
+cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
 brew cask install keepingyouawake rectangle master-password dropbox --no-quarantine
 
