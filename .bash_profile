@@ -12,9 +12,17 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]   \[\e[1;38;5;$((RANDO
 
 export EDITOR='/usr/bin/open -e -W'
 
+export HOMEBREW_AUTO_UPDATE_SECS=3000
+
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
+export HOMEBREW_CURL_RETRIES=1
+
+export HOMEBREW_CURL_VERBOSE=1
+
 export HOMEBREW_DEVELOPER=1
+
+export HOMEBREW_DISPLAY_INSTALL_TIMES=1
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 
@@ -24,7 +32,15 @@ export HOMEBREW_FORCE_VENDOR_RUBY=1
 
 export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 
+export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
+
+export HOMEBREW_GIT_NAME=miccal
+
 export HOMEBREW_NO_ANALYTICS=1
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -38,6 +54,11 @@ caskpr ()
 curlfollow ()
 {
   curl -sLI "$1" | grep -i Location
+}
+
+formulapr ()
+{
+  brew bump-formula-pr --strict --no-browse --url="$1" "$2"
 }
 
 manpdf ()
