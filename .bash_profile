@@ -12,8 +12,6 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]   \[\e[1;38;5;$((RANDO
 
 export EDITOR='/usr/bin/open -e -W'
 
-export HOMEBREW_AUTO_UPDATE_SECS=3000
-
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 export HOMEBREW_CURL_RETRIES=1
