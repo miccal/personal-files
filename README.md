@@ -29,8 +29,6 @@ brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 
 brew tap miccal/miccal
-
-brew tap vitorgalvao/tiny-scripts
 ```
 ### Homebrew installs
 ```bash
@@ -48,7 +46,7 @@ cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
 brew cask install apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
 
-brew install aspell cask-repair imagemagick mpw pdftoipe pwgen rsync unar wxmaxima
+brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima
 ```
 ### Homebrew maintenance
 ```bash
@@ -94,8 +92,6 @@ ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 ln -s ~/Dropbox/.gitconfig ~/.gitconfig
 
 ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
-
-ln -s ~/Dropbox/.hub ~/.config/hub
 
 ln -s ~/Dropbox/.password-store ~/.password-store
 
@@ -185,10 +181,6 @@ cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
 ### Aspell
 ```bash
 aspell --lang=en --mode=tex check FILE.tex
-```
-### Hub setup
-```bash
-cd "$(brew --repository)" && hub issue
 ```
 ### Git setup
 For `brew`:
@@ -316,26 +308,6 @@ miccal	https://github.com/miccal/homebrew-core (fetch)
 miccal	https://github.com/miccal/homebrew-core (push)
 origin	https://github.com/Homebrew/homebrew-core (fetch)
 origin	https://github.com/Homebrew/homebrew-core (push)
-```
-### Cask repair
-```bash
-cask-repair CASK
-
-cask-repair --edit-cask CASK
-
-cask-repair --cask-version VERSION CASK
-
-cask-repair --blind-submit CASK
-
-cask-repair --delete-branches
-```
-### Bump formula pr
-```bash
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --sha256={SHA} --no-browse
-
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA} --url={URL} --mirror={MIRROR} --version={VERSION} --sha256={SHA} --no-browse
-
-HOMEBREW_GITHUB_API_TOKEN={TOKEN} brew bump-formula-pr --strict {FORMULA}@{NUM} --url={URL,@->%40} --sha256={SHA} --no-browse
 ```
 ### Update forks
 ```bash
