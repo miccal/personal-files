@@ -75,8 +75,6 @@ alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAge
 
 alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
 
-alias caskedit='cask-repair --edit-cask'
-
 alias cdbrew='cd "$(brew --repository)"'
 
 alias cdcasks='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask'
