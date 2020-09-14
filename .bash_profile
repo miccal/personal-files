@@ -14,10 +14,6 @@ export EDITOR='/usr/bin/open -e -W'
 
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
-export HOMEBREW_CURL_RETRIES=1
-
-export HOMEBREW_CURL_VERBOSE=1
-
 export HOMEBREW_DEVELOPER=1
 
 export HOMEBREW_DISPLAY_INSTALL_TIMES=1
@@ -35,10 +31,6 @@ export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 export HOMEBREW_GIT_NAME=miccal
 
 export HOMEBREW_NO_ANALYTICS=1
-
-export HOMEBREW_NO_AUTO_UPDATE=1
-
-export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 export PATH="/usr/local/sbin:$PATH"
 
