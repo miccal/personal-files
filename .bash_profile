@@ -12,6 +12,10 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]   \[\e[1;38;5;$((RANDO
 
 export EDITOR='/usr/bin/open -e -W'
 
+export HOMEBREW_BINTRAY_KEY=$(cat ~/.homebrew_bintray_api_token)
+
+export HOMEBREW_BINTRAY_USER=miccal
+
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 export HOMEBREW_DEVELOPER=1
@@ -109,4 +113,4 @@ alias spell='aspell --lang=en --mode=tex check'
 
 alias textedit='/usr/bin/open -e -W'
  
-alias update='softwareupdate --list && brew update --force && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
+alias update='brew update --force && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
