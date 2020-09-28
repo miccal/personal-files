@@ -8,6 +8,8 @@ sudo '/Applications/Install macOS Catalina.app/Contents/Resources/createinstallm
 ```
 ### Install macos updates
 ```bash
+softwareupdate --list
+
 softwareupdate --all --install --force
 ```
 ### Command line tools for xcode
@@ -30,37 +32,23 @@ brew tap miccal/miccal
 ```
 ### Homebrew installs
 ```bash
-brew install m-little-snitch --no-quarantine
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-brew install keepingyouawake rectangle master-password dropbox --no-quarantine
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim keepingyouawake rectangle master-password dropbox 
 
-brew install bash curl ghostscript git pass vim
-
-brew install m-mactex-no-gui
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
-
-brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
 ```
 ### Homebrew maintenance
 ```bash
-brew update --force && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"
-
-brew doctor
-
-cd "$(brew --repository)"; git fetch; git reset --hard origin/master; cd
-
-brew update-reset
+brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"
 
 brew deps --installed --tree
-
-brew leaves
-
-brew livecheck
 ```
 ### Set homebrew bash as default
 List current shells:
@@ -327,7 +315,7 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout mast
 ```
 To force the update:
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --unshallow origin; git push --force miccal master; cd
+git checkout master; git pull --unshallow origin; git push --force miccal master; cd
 ```
 ### Manual PR's
 _!!!UPDATE FORK FIRST!!!_
