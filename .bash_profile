@@ -113,4 +113,4 @@ alias spell='aspell --lang=en --mode=tex check'
 
 alias textedit='/usr/bin/open -e -W'
  
-alias update='brew update --force && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
+alias update='brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
