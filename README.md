@@ -30,19 +30,19 @@ brew tap miccal/miccal
 ```
 ### Homebrew installs
 ```bash
-brew cask install m-little-snitch --no-quarantine
+brew install m-little-snitch --no-quarantine
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-brew cask install keepingyouawake rectangle master-password dropbox --no-quarantine
+brew install keepingyouawake rectangle master-password dropbox --no-quarantine
 
 brew install bash curl ghostscript git pass vim
 
-brew cask install m-mactex-no-gui
+brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew cask install apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
+brew install apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
 
 brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima
 ```
