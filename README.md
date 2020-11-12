@@ -1,10 +1,10 @@
 ### Get latest macos installer
 ```bash
-softwareupdate --fetch-full-installer --full-installer-version 10.15.6
+softwareupdate --fetch-full-installer --full-installer-version 11.0.0
 ```
 ### Create macos bootable usb
 ```bash
-sudo '/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
+sudo '/Applications/Install macOS Big Sur.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
 ```
 ### Install macos updates
 ```bash
@@ -33,8 +33,6 @@ brew tap miccal/miccal
 ### Homebrew installs
 ```bash
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
-
-cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim keepingyouawake rectangle master-password dropbox 
 
