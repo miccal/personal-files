@@ -40,7 +40,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima apparency bose-soundtouch bose-updater chromium cutter etrecheckpro gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop transmission ubersicht whatsapp xquartz zoomus
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell imagemagick mpw pdftoipe pwgen rsync unar wxmaxima apparency bose-soundtouch bose-updater chromium cutter etrecheckpro homebrew/cask/gitup google-chrome ipe latexdraw launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper slack-beta spires suspicious-package texshop homebrew/cask/transmission ubersicht whatsapp xquartz zoomus
 ```
 ### Homebrew maintenance
 ```bash
