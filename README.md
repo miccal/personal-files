@@ -1,6 +1,6 @@
 ### Get latest macos installer
 ```bash
-softwareupdate --fetch-full-installer --full-installer-version 11.0.0
+softwareupdate --fetch-full-installer --full-installer-version VERSION
 ```
 ### Create macos bootable usb
 ```bash
