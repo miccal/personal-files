@@ -75,9 +75,13 @@ ln -s ~/Dropbox/.bash_profile ~/.bash_profile
 
 ln -s ~/Dropbox/.gitconfig ~/.gitconfig
 
+ln -s ~/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
 ln -s ~/Dropbox/.homebrew_bintray_api_token ~/.homebrew_bintray_api_token
 
 ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
+
+ln -s ~/Dropbox/.maxima-init.mac ~/.maxima/maxima-init.mac
 
 ln -s ~/Dropbox/.password-store ~/.password-store
 
@@ -140,11 +144,7 @@ gpg-connect-agent reloadagent /bye
 ### Maxima
 Enable gnuplot functionality:
 ```bash
-cd ~/.maxima
-
-touch maxima-init.mac
-
-textedit maxima-init.mac
+cd ~/.maxima; touch maxima-init.mac; textedit maxima-init.mac
 ```
 Add the following lines:
 ```bash
