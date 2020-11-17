@@ -4,7 +4,7 @@ softwareupdate --fetch-full-installer --full-installer-version VERSION
 ```
 ### Create macos bootable usb
 ```bash
-sudo '/Applications/Install macOS Big Sur.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
+sudo '/Applications/Install macOS Big Sur.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction
 ```
 ### Install macos updates
 ```bash
