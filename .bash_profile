@@ -34,7 +34,7 @@ export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 
 export HOMEBREW_GIT_NAME=miccal
 
-export HOMEBREW_NO_ANALYTICS=1
+# export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="/usr/local/sbin:$PATH"
 
