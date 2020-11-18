@@ -155,19 +155,6 @@ Turn off dark mode for wxMaxima:
 ```bash
 defaults write wxmaxima NSRequiresAquaSystemAppearance -bool yes
 ```
-### Dropbox cleanup
-Clean up the cache:
-```bash
-cd ~/Dropbox/.dropbox.cache; ls -al
-```
-Remove conflicted files:
-```bash
-cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; cd
-```
-### Aspell
-```bash
-aspell --lang=en --mode=tex check FILE.tex
-```
 ### Git setup
 For `brew`:
 ```bash
@@ -385,8 +372,4 @@ sudo fdesetup remove -user Guest
 ### Set dock height
 ```bash
 defaults write com.apple.dock tilesize -integer 40; killall Dock
-```
-### Disable spotlight
-```bash
-sudo mdutil -a -i off
 ```
