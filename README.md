@@ -34,7 +34,11 @@ brew tap miccal/miccal
 ```bash
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim keepingyouawake rectangle master-password dropbox 
+cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
+
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim dropbox-beta keepingyouawake master-password rectangle
+
+cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
