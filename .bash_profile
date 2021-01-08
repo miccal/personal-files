@@ -93,7 +93,7 @@ alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find 
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
-alias livecheck='brew livecheck --installed'
+alias livecheck='for i in $(brew list --formula -1) ; do brew livecheck $i ; done;'
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
