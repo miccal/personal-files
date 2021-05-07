@@ -12,10 +12,6 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]   \[\e[1;38;5;$((RANDO
 
 export EDITOR='/usr/bin/open -e -W'
 
-export HOMEBREW_BINTRAY_KEY=$(cat ~/.homebrew_bintray_api_token)
-
-export HOMEBREW_BINTRAY_USER=miccal
-
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 export HOMEBREW_DEVELOPER=1
@@ -42,7 +38,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 caskpr ()
 {
-  brew bump-cask-pr --no-browse --version="$1" "$2"
+  brew bump-cask-pr --no-browse --force --version="$1" "$2"
 }
 
 curlfollow ()
@@ -92,8 +88,6 @@ alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo f
 alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd'
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
-
-alias livecheck='for i in $(brew list --formula -1) ; do brew livecheck $i ; done;'
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
