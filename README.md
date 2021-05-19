@@ -111,6 +111,8 @@ mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ```
 ### Gpg
 ```bash
+gpg --full-generate-key
+
 gpg --export GPGID > ~/Dropbox/.public.key
 
 gpg --export-secret-key GPGID > ~/Dropbox/.private.key
@@ -145,7 +147,11 @@ max-cache-ttl 0
 ```
 Reload `gpg-agent`:
 ```bash
-gpg-connect-agent reloadagent /bye
+gpgconf --kill gpg-agent; gpgconf --launch gpg-agent
+```
+Add `pinentry-mac`:
+```bash
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 ```
 ### Maxima
 Enable gnuplot functionality:
