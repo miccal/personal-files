@@ -123,6 +123,8 @@ gpg --list-keys
 
 gpg --list-secret-keys --keyid-format LONG
 
+gpg --armor --export GPGID
+
 gpg --edit-key GPGID
 
 trust
