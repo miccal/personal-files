@@ -36,7 +36,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim dropbox-beta keepingyouawake rectangle
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle
 
 cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
@@ -121,7 +121,7 @@ gpg --allow-secret-key-import --import ~/Dropbox/.private.key
 
 gpg --list-keys
 
-gpg --list-secret-keys
+gpg --list-secret-keys --keyid-format LONG
 
 gpg --edit-key GPGID
 
