@@ -18,7 +18,7 @@ xcode-select --install
 ```
 ### Install homebrew
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 ### Homebrew taps
 ```bash
@@ -81,8 +81,6 @@ ln -s ~/Dropbox/.gitconfig ~/.gitconfig
 
 ln -s ~/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-ln -s ~/Dropbox/.homebrew_bintray_api_token ~/.homebrew_bintray_api_token
-
 ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
 
 ln -s ~/Dropbox/.maxima-init.mac ~/.maxima/maxima-init.mac
@@ -123,7 +121,7 @@ gpg --allow-secret-key-import --import ~/Dropbox/.private.key
 
 gpg --list-keys
 
-gpg --list-secret-keys --keyid-format LONG
+gpg --list-secret-keys --keyid-format LONG/SHORT
 
 gpg --armor --export GPGID
 
