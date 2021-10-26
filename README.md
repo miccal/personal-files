@@ -36,7 +36,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass vim dropbox-beta keepingyouawake rectangle
 
 cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
@@ -44,7 +44,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell mpw pdftoipe pwgen rsync unar wxmaxima apparency chromium etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper sage slack-beta suspicious-package texshop homebrew/cask/transmission ubersicht xquartz zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell mpw pinentry-mac pdftoipe pwgen rsync unar wxmaxima apparency chromium etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-iina m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper sage slack-beta suspicious-package texshop homebrew/cask/transmission ubersicht xquartz zoom
 ```
 ### Homebrew maintenance
 ```bash
