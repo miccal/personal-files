@@ -119,9 +119,9 @@ gpg --import ~/Dropbox/.public.key
 
 gpg --allow-secret-key-import --import ~/Dropbox/.private.key
 
-gpg --list-keys
+gpg --list-keys --keyid-format short
 
-gpg --list-secret-keys --keyid-format LONG/SHORT
+gpg --list-secret-keys --keyid-format long
 
 gpg --armor --export GPGID
 
