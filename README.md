@@ -88,6 +88,8 @@ ln -s ~/Dropbox/.maxima-init.mac ~/.maxima/maxima-init.mac
 ln -s ~/Dropbox/.password-store ~/.password-store
 
 ln -s /usr/local/Cellar/wxmaxima/*/wxmaxima.app/ /Applications/wxMaxima
+
+ln -s /usr/local/Cellar/m-mpv/*/mpv.app/ /Applications/mpv
 ```
 ### Pass
 ```bash
