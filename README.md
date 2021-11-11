@@ -44,7 +44,7 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell mpw pinentry-mac pdftoipe pwgen rsync unar wxmaxima apparency etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper safari-technology-preview sage script-debugger slack-beta suspicious-package texshop homebrew/cask/transmission ubersicht xquartz zoom
+brew install aspell mpw pinentry-mac pdftoipe pwgen rsync unar wxmaxima apparency etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool omnidisksweeper safari-technology-preview sage slack-beta suspicious-package texshop homebrew/cask/transmission xquartz zoom
 
 brew install --HEAD m-mpv
 ```
