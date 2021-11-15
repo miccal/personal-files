@@ -65,9 +65,9 @@ sfind ()
   sudo find / -iname "*$1*"
 }
 
-alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
+alias appcast='"$(brew --repository homebrew/cask)/developer/bin/find-appcast"'
 
-alias bing='cd ~/Dropbox/Code/ubersicht/bing; for i in $(cat url.txt) ; do curl -O -s $i ; done ; for file in HPI* ; do mv "$file" "$file.txt" ; done ; cd'
+alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
 
 alias cdbrew='cd "$(brew --repository)"'
 
@@ -84,6 +84,8 @@ alias checktemp='sudo powermetrics -i 1 -n 1 | grep -i "temp"'
 alias checkfan='sudo powermetrics -i 1 -n 1 | grep -i "fan"'
 
 alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install'
+
+alias dockheight='defaults write com.apple.dock tilesize -integer 40; killall Dock'
 
 alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -A -l'
 
@@ -104,6 +106,10 @@ alias pdf4='pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per she
 alias prune='git remote prune miccal; git remote prune origin'
 
 alias push='cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd'
+
+alias pipoutdated='python3 -m pip list -o'
+
+alias pipupdate='python3 -m pip install --upgrade'
 
 alias sha='shasum -a 256'
 
