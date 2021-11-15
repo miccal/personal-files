@@ -38,6 +38,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
 caskpr ()
 {
   brew bump-cask-pr --no-browse --force --version="$1" "$2"
