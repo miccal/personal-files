@@ -95,6 +95,8 @@ alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find 
 
 alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
 
+alias gpgreload='gpgconf --kill gpg-agent; gpgconf --launch gpg-agent'
+
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
 alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
