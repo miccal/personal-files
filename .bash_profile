@@ -1,8 +1,10 @@
-export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\]   \[\e[1;38;5;$((RANDOM%256))m\]$(ls -Al1 | wc -l | sed "s/ //g")\[\e[m\]\n\[\e[1;38;5;$((RANDOM%256))m\]|->\[\e[m\] '
+export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]\[\e[0;38;5;$((RANDOM%256))m\] | \[\e[m\]\[\e[1;38;5;$((RANDOM%256))m\]$PWD\[\e[m\]\[\e[0;38;5;$((RANDOM%256))m\] | \[\e[m\]\[\e[1;38;5;$((RANDOM%256))m\]$(ls -Al1 | wc -l | sed "s/ //g")\[\e[m\]\n\[\e[1;38;5;$((RANDOM%256))m\]|->\[\e[m\] '
 
 # \s = shell name, \V = version and patchlevel of shell, $PWD = print working directory, $(ls -Al1 | wc -l | sed "s/ //g") = shows number of files in current working directory (omitting . and .. from the count), \n = new line.
 
 # \[\e[x;38;5;COLORm\] where x = 0 for normal, x = 1 for bold, x = 2 for faint, x = 3 for italic, x = 4 for underline, x = 5 for blink, x = 7 for reverse.
+
+# 38;5; for the foreground and 48;5; for the background.
 
 # \[\e[m\] resets to default.
 
@@ -40,35 +42,17 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-bing ()
-{
-  for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done
-}
+bing () { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
-caskpr ()
-{
-  brew bump-cask-pr --no-browse --force --version="$1" "$2"
-}
+caskpr () { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
-curlfollow ()
-{
-  curl -sLI "$1" | grep -i Location
-}
+curlfollow () { curl -sLI "$1" | grep -i Location; }
 
-formulapr ()
-{
-  brew bump-formula-pr --strict --no-browse --url="$1" "$2"
-}
+formulapr () { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
-manpdf ()
-{
-  man -t "$1" | open -f -a Preview
-}
+manpdf () { man -t "$1" | open -f -a Preview; }
 
-sfind ()
-{
-  sudo find / -iname "*$1*"
-}
+sfind () { sudo find / -iname "*$1*"; }
 
 alias appcast='"$(brew --repository homebrew/cask)/developer/bin/find-appcast"'
 
