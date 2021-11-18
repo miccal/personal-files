@@ -40,6 +40,11 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
+bing ()
+{
+  for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done
+}
+
 caskpr ()
 {
   brew bump-cask-pr --no-browse --force --version="$1" "$2"
