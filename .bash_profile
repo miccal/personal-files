@@ -28,19 +28,19 @@ export HOMEBREW_FORCE_BREWED_GIT=1
 
 export HOMEBREW_FORCE_VENDOR_RUBY=1
 
-export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
-
 export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 
 export HOMEBREW_GIT_NAME=miccal
 
-# export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 
-export PATH="/usr/local/sbin:$PATH"
+# export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+export PATH="/usr/local/sbin:$PATH"
 
 appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
 
@@ -60,9 +60,9 @@ cddrivers() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-driv
 
 cdversions() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; }
 
-checktemp() { sudo powermetrics -i 1 -n 1 | grep -i "temp"; }
-
 checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
+
+checktemp() { sudo powermetrics -i 1 -n 1 | grep -i "temp"; }
 
 cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install; }
 
@@ -84,19 +84,19 @@ gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
 manpdf() { man -t "$1" | open -f -a Preview; }
 
-mp3count() { find . -name "*.mp3" | wc -l; }
-
 masterpass() { mpw -u "Miccal Matthews" -F none -t long -c "$1" "$2"; }
 
+mp3count() { find . -name "*.mp3" | wc -l; }
+
 pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
-
-prune() { git remote prune miccal; git remote prune origin; }
-
-push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
 
 pipoutdated() { python3 -m pip list -o; }
 
 pipupdate() { python3 -m pip install --upgrade "$1"; }
+
+prune() { git remote prune miccal; git remote prune origin; }
+
+push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
 
 sfind() { sudo find / -iname "*$1*"; }
 
@@ -105,7 +105,7 @@ sha() { shasum -a 256 "$1"; }
 spell() { aspell --lang=en --mode=tex check "$1"; }
 
 textedit() { /usr/bin/open -e -W "$1"; }
- 
+
 update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"; }
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
