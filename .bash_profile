@@ -46,7 +46,7 @@ appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures; }
 
-bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
 caskpr() { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
