@@ -42,70 +42,70 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-bing () { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
 
-caskpr () { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
+artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures; }
 
-curlfollow () { curl -sLI "$1" | grep -i Location; }
+bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg&pid=hp" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
-formulapr () { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
+caskpr() { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
-manpdf () { man -t "$1" | open -f -a Preview; }
+cdbrew() { cd "$(brew --repository)"; }
 
-sfind () { sudo find / -iname "*$1*"; }
+cdcasks() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; }
 
-alias appcast='"$(brew --repository homebrew/cask)/developer/bin/find-appcast"'
+cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 
-alias artsync='rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures'
+cddrivers() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; }
 
-alias cdbrew='cd "$(brew --repository)"'
+cdversions() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; }
 
-alias cdcasks='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask'
+checktemp() { sudo powermetrics -i 1 -n 1 | grep -i "temp"; }
 
-alias cdcore='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core'
+checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
 
-alias cddrivers='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers'
+cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install; }
 
-alias cdversions='cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions'
+curlfollow() { curl -sLI "$1" | grep -i Location; }
 
-alias checktemp='sudo powermetrics -i 1 -n 1 | grep -i "temp"'
+dockheight() { defaults write com.apple.dock tilesize -integer 40; killall Dock; }
 
-alias checkfan='sudo powermetrics -i 1 -n 1 | grep -i "fan"'
+dropcache() { cd ~/Dropbox/.dropbox.cache; ls -A -l; }
 
-alias cltupdate='sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install'
+dropclean() { cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd; }
 
-alias dockheight='defaults write com.apple.dock tilesize -integer 40; killall Dock'
+dropcleanlist() { cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd; }
 
-alias dropcache='cd ~/Dropbox/.dropbox.cache; ls -A -l'
+dropsync() { rsync -a -v --delete ~/dropbox ~/documents; }
 
-alias dropclean='cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd'
+formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
-alias dropcleanlist='cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd'
+gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
-alias dropsync='rsync -a -v --delete ~/dropbox ~/documents'
+manpdf() { man -t "$1" | open -f -a Preview; }
 
-alias gpgreload='gpgconf --kill gpg-agent; gpgconf --launch gpg-agent'
+mp3count() { find . -name "*.mp3" | wc -l; }
+
+masterpass() { mpw -u "Miccal Matthews" -F none -t long -c "$1" "$2"; }
+
+pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
+
+prune() { git remote prune miccal; git remote prune origin; }
+
+push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
+
+pipoutdated() { python3 -m pip list -o; }
+
+pipupdate() { python3 -m pip install --upgrade "$1"; }
+
+sfind() { sudo find / -iname "*$1*"; }
+
+sha() { shasum -a 256 "$1"; }
+
+spell() { aspell --lang=en --mode=tex check "$1"; }
+
+textedit() { /usr/bin/open -e -W "$1"; }
+ 
+update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"; }
 
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
-
-alias masterpass='mpw -u "Miccal Matthews" -F none -t long -c'
-
-alias mp3count='find . -name "*.mp3" | wc -l'
-
-alias pdf4='pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)"'
-
-alias prune='git remote prune miccal; git remote prune origin'
-
-alias push='cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd'
-
-alias pipoutdated='python3 -m pip list -o'
-
-alias pipupdate='python3 -m pip install --upgrade'
-
-alias sha='shasum -a 256'
-
-alias spell='aspell --lang=en --mode=tex check'
-
-alias textedit='/usr/bin/open -e -W'
- 
-alias update='brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"'
