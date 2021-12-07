@@ -50,6 +50,8 @@ bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --s
 
 caskpr() { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
+caskprlang() { /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/developer/bin/update_multilangual_casks /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/"$1".rb "$2"; }
+
 cdbrew() { cd "$(brew --repository)"; }
 
 cdcasks() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; }
