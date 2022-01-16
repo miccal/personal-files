@@ -36,7 +36,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git mpw pass pinentry-mac vim dropbox-beta keepingyouawake rectangle
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git mpw pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro
 
 cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
