@@ -45,8 +45,6 @@ brew install m-mactex-no-gui
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
 brew install aspell mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams omnidisksweeper safari-technology-preview sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
-
-brew install --HEAD m-mpv
 ```
 ### Homebrew maintenance
 ```bash
@@ -90,8 +88,6 @@ ln -s ~/Dropbox/.maxima-init.mac ~/.maxima/maxima-init.mac
 ln -s ~/Dropbox/.password-store ~/.password-store
 
 ln -s -f /usr/local/Cellar/wxmaxima/*/wxmaxima.app/ /Applications/wxMaxima
-
-ln -s -f /usr/local/Cellar/m-mpv/*/mpv.app/ /Applications/mpv
 ```
 ### Pass
 ```bash
