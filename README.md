@@ -36,7 +36,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git mpw pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git mpw pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro safari-technology-preview
 
 cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
@@ -44,7 +44,9 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc makemkv mathpix-snipping-tool microsoft-teams omnidisksweeper safari-technology-preview sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+brew install aspell mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro homebrew/cask/gitup google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc makemkv mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+
+brew install droidcam-obs
 ```
 ### Homebrew maintenance
 ```bash
