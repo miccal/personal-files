@@ -34,19 +34,19 @@ export HOMEBREW_GIT_NAME=miccal
 
 export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 
-# export HOMEBREW_NO_ANALYTICS=1
-
 export PATH="/usr/local/opt/curl/bin:$PATH"
-
-# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 
 appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
 
+approvepr() { brew pr-publish --tap homebrew/cask --workflow publish-commit-casks.yml "$1"; }
+
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures; }
 
 bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+
+binggrep() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
 
 caskpr() { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
