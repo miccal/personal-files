@@ -28,11 +28,11 @@ export HOMEBREW_FORCE_BREWED_GIT=1
 
 export HOMEBREW_FORCE_VENDOR_RUBY=1
 
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
+
 export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 
 export HOMEBREW_GIT_NAME=miccal
-
-export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 
 export HOMEBREW_UPDATE_REPORT_ALL_FORMULAE=1
 
