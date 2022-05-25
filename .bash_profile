@@ -34,6 +34,8 @@ export HOMEBREW_GIT_NAME=miccal
 
 export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 
+export HOMEBREW_UPDATE_REPORT_ALL_FORMULAE=1
+
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
