@@ -44,7 +44,7 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell ffmpeg mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro google-chrome ipe launchcontrol m-libreoffice m-microsoft-teams-canary m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+brew install aspell ffmpeg gh mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro google-chrome ipe launchcontrol m-libreoffice m-microsoft-teams-canary m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
 ```
 ### Homebrew maintenance
 ```bash
