@@ -44,7 +44,7 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell gh mas pdftoipe pwgen rsync unar wxmaxima apparency camo-studio etrecheckpro google-chrome ipe jupyterlab launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+brew install aspell gh gnuplot mas pdftoipe pwgen rsync unar apparency camo-studio etrecheckpro google-chrome ipe jupyterlab launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
 
 cd /usr/local/Caskroom/; rm -r camo-studio; cd
 ```
@@ -88,8 +88,6 @@ ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
 ln -s ~/Dropbox/.maxima-init.mac ~/.maxima/maxima-init.mac
 
 ln -s ~/Dropbox/.password-store ~/.password-store
-
-ln -s -f /usr/local/Cellar/wxmaxima/*/wxmaxima.app/ /Applications/wxMaxima
 ```
 ### Pass
 ```bash
@@ -152,20 +150,6 @@ gpgconf --kill gpg-agent; gpgconf --launch gpg-agent
 Add `pinentry-mac`:
 ```bash
 echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
-```
-### Maxima
-Enable gnuplot functionality:
-```bash
-cd ~/.maxima; touch maxima-init.mac; textedit maxima-init.mac
-```
-Add the following lines:
-```bash
-gnuplot_command:"/usr/local/bin/gnuplot"$
-draw_command:"/usr/local/bin/gnuplot"$
-```
-Turn off dark mode for wxMaxima:
-```bash
-defaults write wxmaxima NSRequiresAquaSystemAppearance -bool yes
 ```
 ### Git setup
 For `brew`:
