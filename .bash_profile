@@ -86,6 +86,10 @@ formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
+jupytercleanlist () { sudo find . -type d -iname .ipynb_checkpoints; }
+
+jupyterclean () { sudo rm -r -f "`sudo find . -type d -iname .ipynb_checkpoints -print0`"; }
+
 manpdf() { man -t "$1" | open -f -a Preview; }
 
 masterpass() { mpw -u "Miccal Matthews" -F none -t long -c "$1" "$2"; }
