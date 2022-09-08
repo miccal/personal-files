@@ -86,9 +86,7 @@ formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
-jupytercleanlist () { sudo find . -type d -iname .ipynb_checkpoints; }
-
-jupyterclean () { sudo rm -r -f "`sudo find . -type d -iname .ipynb_checkpoints -print0`"; }
+jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
 manpdf() { man -t "$1" | open -f -a Preview; }
 
