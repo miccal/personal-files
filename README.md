@@ -44,7 +44,7 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell gh gnuplot mas pdftoipe pwgen rsync unar apparency camo-studio etrecheckpro google-chrome ipe jupyterlab launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync unar apparency camo-studio etrecheckpro google-chrome ipe homebrew/cask/jupyterlab launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
 
 cd /usr/local/Caskroom/; rm -r camo-studio; cd
 ```
