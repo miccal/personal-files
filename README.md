@@ -26,6 +26,8 @@ brew tap homebrew/cask
 
 brew tap homebrew/cask-drivers
 
+brew tap homebrew/cask-fonts
+
 brew tap homebrew/cask-versions
 
 brew tap miccal/miccal
@@ -44,7 +46,7 @@ brew install m-mactex-no-gui
 
 cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
 
-brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync unar apparency camo-studio etrecheckpro google-chrome ipe homebrew/cask/jupyterlab launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
+brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar apparency etrecheckpro google-chrome ipe launchcontrol m-libreoffice m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams obs-beta omnidisksweeper sage slack-beta suspicious-package texshop textbuddy homebrew/cask/transmission xquartz zoom
 
 cd /usr/local/Caskroom/; rm -r camo-studio; cd
 ```
