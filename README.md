@@ -4,7 +4,7 @@ softwareupdate --fetch-full-installer --full-installer-version VERSION
 ```
 ### Create macos bootable usb
 ```bash
-sudo '/Applications/Install macOS Monterey.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction
+sudo '/Applications/Install macOS Ventura.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction --downloadassets
 ```
 ### Install macos updates
 ```bash
