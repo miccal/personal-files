@@ -88,7 +88,7 @@ dropcleanlist() { cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -
 
 dropsync() { rsync -a -v --delete ~/dropbox ~/documents; }
 
-formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
+formulapr() { brew bump-formula-pr --strict --no-browse --force --url="$1" "$2"; }
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
@@ -105,6 +105,8 @@ pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)
 pipoutdated() { python3 -m pip list -o; }
 
 pipupdate() { python3 -m pip install --upgrade "$1"; }
+
+prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Dropbox/Code/brew/list; }
 
 prune() { git remote prune miccal; git remote prune origin; }
 
