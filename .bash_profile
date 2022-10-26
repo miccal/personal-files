@@ -50,11 +50,11 @@ approveprfonts() { brew pr-publish --tap homebrew/cask-fonts --workflow publish-
 
 approveprversions() { brew pr-publish --tap homebrew/cask-versions --workflow publish-commit-casks.yml "$1"; }
 
-artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/dropbox/pictures; }
+artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
-bing() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
-binggrep() { for i in $(cat ~/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
+binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
 
 caskpr() { brew bump-cask-pr --no-browse --force --version="$1" "$2"; }
 
@@ -68,6 +68,8 @@ cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 
 cddrivers() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; }
 
+cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
+
 cdversions() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; }
 
 checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
@@ -80,13 +82,13 @@ curlfollow() { curl -sLI "$1" | grep -i Location; }
 
 dockheight() { defaults write com.apple.dock tilesize -integer 40; killall Dock; }
 
-dropcache() { cd ~/Dropbox/.dropbox.cache; ls -A -l; }
+dropcache() { cd ~/Library/CloudStorage/Dropbox/.dropbox.cache; ls -A -l; }
 
-dropclean() { cd ~/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd; }
+dropclean() { cd ~/Library/CloudStorage/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd; }
 
-dropcleanlist() { cd ~/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd; }
+dropcleanlist() { cd ~/Library/CloudStorage/Dropbox; sudo find . -iname "*conflicted*"; sudo find . -iname ".DS_Store"; cd; }
 
-dropsync() { rsync -a -v --delete ~/dropbox ~/documents; }
+dropsync() { rsync -a -v --delete ~/Library/CloudStorage/Dropbox ~/documents; }
 
 formulapr() { brew bump-formula-pr --strict --no-browse --force --url="$1" "$2"; }
 
@@ -106,7 +108,7 @@ pipoutdated() { python3 -m pip list -o; }
 
 pipupdate() { python3 -m pip install --upgrade "$1"; }
 
-prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Dropbox/Code/brew/list; }
+prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Library/CloudStorage/Dropbox/Code/brew/list; }
 
 prune() { git remote prune miccal; git remote prune origin; }
 
