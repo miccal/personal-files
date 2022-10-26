@@ -79,15 +79,15 @@ chsh -s /usr/local/bin/bash miccal
 ```
 ### Symlinks
 ```bash
-ln -s ~/Dropbox/.bash_profile ~/.bash_profile
+ln -s ~/Library/CloudStorage/Dropbox/.bash_profile ~/.bash_profile
 
-ln -s ~/Dropbox/.gitconfig ~/.gitconfig
+ln -s ~/Library/CloudStorage/Dropbox/.gitconfig ~/.gitconfig
 
-ln -s ~/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
+ln -s ~/Library/CloudStorage/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-ln -s ~/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
+ln -s ~/Library/CloudStorage/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
 
-ln -s ~/Dropbox/.password-store ~/.password-store
+ln -s ~/Library/CloudStorage/Dropbox/.password-store ~/.password-store
 ```
 ### Pass
 ```bash
@@ -111,13 +111,13 @@ mpw -u "Miccal Matthews" -F none -t long -c COUNTER NAME
 ```bash
 gpg --full-generate-key
 
-gpg --export GPGID > ~/Dropbox/.public.key
+gpg --export GPGID > ~/Library/CloudStorage/Dropbox/.public.key
 
-gpg --export-secret-key GPGID > ~/Dropbox/.private.key
+gpg --export-secret-key GPGID > ~/Library/CloudStorage/Dropbox/.private.key
 
-gpg --import ~/Dropbox/.public.key
+gpg --import ~/Library/CloudStorage/Dropbox/.public.key
 
-gpg --allow-secret-key-import --import ~/Dropbox/.private.key
+gpg --allow-secret-key-import --import ~/Library/CloudStorage/Dropbox/.private.key
 
 gpg --list-keys --keyid-format short
 
