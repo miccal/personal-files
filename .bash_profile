@@ -52,6 +52,8 @@ approveprversions() { brew pr-publish --tap homebrew/cask-versions --workflow pu
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
+bashsync() { rsync -a -v ~/.bash_profile ~/Library/CloudStorage/Dropbox; }
+
 bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
 binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
@@ -96,9 +98,7 @@ gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
 jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
-manpdf() { man -t "$1" | open -f -a Preview; }
-
-masterpass() { mpw -u "Miccal Matthews" -F none -t long -c "$1" "$2"; }
+manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
 mp3count() { find . -name "*.mp3" | wc -l; }
 
@@ -123,5 +123,3 @@ spell() { aspell --lang=en --mode=tex check "$1"; }
 textedit() { /usr/bin/open -e -W "$1"; }
 
 update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"; }
-
-alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
