@@ -122,4 +122,4 @@ spell() { aspell --lang=en --mode=tex check "$1"; }
 
 textedit() { /usr/bin/open -e -W "$1"; }
 
-update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"; }
+update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s --prune=all && rm -r -f "$(brew --cache)"; }
