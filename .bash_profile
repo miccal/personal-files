@@ -14,6 +14,8 @@ export PS1='\[\e[1;38;5;$((RANDOM%256))m\]bash \V\[\e[m\]\[\e[0;38;5;$((RANDOM%2
 
 export EDITOR='/usr/bin/open -e -W'
 
+export HOMEBREW_AUTOREMOVE=1
+
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 export HOMEBREW_DEVELOPER=1
@@ -33,6 +35,8 @@ export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 
 export HOMEBREW_GIT_NAME=miccal
+
+export HOMEBREW_NO_INSTALL_FROM_API=1
 
 export HOMEBREW_UPDATE_REPORT_ALL_FORMULAE=1
 
