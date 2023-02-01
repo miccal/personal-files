@@ -65,17 +65,25 @@ Add homebrew bash:
 ```bash
 sudo vim /etc/shells
 ```
-Add to last line:
+Add to last line for Intel:
 ```bash
 /usr/local/bin/bash
+```
+or for Arm:
+```bash
+/opt/homebrew/bin/bash
 ```
 Check list:
 ```bash
 cat /etc/shells
 ```
-Set default shell:
+Set default shell for Intel:
 ```bash
 chsh -s /usr/local/bin/bash miccal
+```
+or for Arm:
+```bash
+chsh -s /opt/homebrew/bin/bash miccal
 ```
 ### Symlinks
 ```bash
@@ -148,6 +156,16 @@ gpgconf --kill gpg-agent; gpgconf --launch gpg-agent
 Add `pinentry-mac`:
 ```bash
 echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+```
+Note that for Intel:
+```
+|-> which pinentry-mac
+/usr/local/bin/pinentry-mac
+```
+while for Arm:
+```
+|-> which pinentry-mac
+/opt/homebrew/bin/pinentry-mac
 ```
 ### Git setup
 For `brew`:
@@ -239,6 +257,16 @@ git config --global gpg.program $(which gpg)
 git remote add miccal https://github.com/miccal/homebrew-core
 
 git remote set-url miccal https://github.com/miccal/homebrew-core
+```
+Note that for Intel:
+```
+|-> which gpg
+/usr/local/bin/gpg
+```
+while for Arm:
+```
+|-> which gpg
+/opt/homebrew/bin/gpg
 ```
 ### Git check
 For `brew`:
