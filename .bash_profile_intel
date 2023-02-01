@@ -56,8 +56,6 @@ approveprversions() { brew pr-publish --tap homebrew/cask-versions --workflow pu
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
-bashsync() { rsync -a -v ~/.bash_profile ~/Library/CloudStorage/Dropbox; }
-
 bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
 binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
@@ -87,8 +85,6 @@ cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-sele
 curlfollow() { curl -sLI "$1" | grep -i Location; }
 
 dockheight() { defaults write com.apple.dock tilesize -integer 40; killall Dock; }
-
-dropcache() { cd ~/Library/CloudStorage/Dropbox/.dropbox.cache; ls -A -l; }
 
 dropclean() { cd ~/Library/CloudStorage/Dropbox; sudo find . -iname "*conflicted*" -delete; sudo find . -iname ".DS_Store" -delete; cd; }
 
