@@ -38,7 +38,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git mpw pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro safari-technology-preview
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro safari-technology-preview
 
 cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
 
@@ -79,8 +79,6 @@ chsh -s /usr/local/bin/bash miccal
 ```
 ### Symlinks
 ```bash
-ln -s ~/Library/CloudStorage/Dropbox/.bash_profile ~/.bash_profile
-
 ln -s ~/Library/CloudStorage/Dropbox/.gitconfig ~/.gitconfig
 
 ln -s ~/Library/CloudStorage/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
