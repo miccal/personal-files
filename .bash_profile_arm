@@ -106,6 +106,8 @@ prune() { git remote prune miccal; git remote prune origin; }
 
 push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
 
+rebasepr() { gh pr comment "$1" --body "/rebase"; }
+
 sfind() { sudo find / -iname "*$1*"; }
 
 sha() { shasum -a 256 "$1"; }
