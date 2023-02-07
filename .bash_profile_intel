@@ -46,13 +46,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
 
-approvepr() { brew pr-publish --tap homebrew/cask --workflow publish-commit-casks.yml "$1"; }
-
-approveprdrivers() { brew pr-publish --tap homebrew/cask-drivers --workflow publish-commit-casks.yml "$1"; }
-
-approveprfonts() { brew pr-publish --tap homebrew/cask-fonts --workflow publish-commit-casks.yml "$1"; }
-
-approveprversions() { brew pr-publish --tap homebrew/cask-versions --workflow publish-commit-casks.yml "$1"; }
+approvepr() { gh pr review --approve "$1"; }
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
@@ -100,6 +94,8 @@ jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
+mergepr() { gh pr merge --squash "$1"; }
+
 mp3count() { find . -name "*.mp3" | wc -l; }
 
 pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
@@ -113,6 +109,8 @@ prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Library/CloudStorage
 prune() { git remote prune miccal; git remote prune origin; }
 
 push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
+
+rebasepr() { gh pr comment "$1" --body "/rebase"; }
 
 sfind() { sudo find / -iname "*$1*"; }
 
