@@ -46,13 +46,7 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
 
-approvepr() { brew pr-publish --tap homebrew/cask --workflow publish-commit-casks.yml "$1"; }
-
-approveprdrivers() { brew pr-publish --tap homebrew/cask-drivers --workflow publish-commit-casks.yml "$1"; }
-
-approveprfonts() { brew pr-publish --tap homebrew/cask-fonts --workflow publish-commit-casks.yml "$1"; }
-
-approveprversions() { brew pr-publish --tap homebrew/cask-versions --workflow publish-commit-casks.yml "$1"; }
+approvepr() { gh pr review --approve "$1"; }
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
@@ -76,10 +70,6 @@ cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
 
 cdversions() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; }
 
-checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
-
-checktemp() { sudo powermetrics -i 1 -n 1 | grep -i "temp"; }
-
 cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install; }
 
 curlfollow() { curl -sLI "$1" | grep -i Location; }
@@ -99,6 +89,8 @@ gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
+
+mergepr() { gh pr merge --squash "$1"; }
 
 mp3count() { find . -name "*.mp3" | wc -l; }
 
