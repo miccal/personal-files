@@ -36,19 +36,19 @@ brew tap miccal/miccal
 ```bash
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
-cd /usr/local/Caskroom/; rm -r m-little-snitch; cd
+cd "$(brew --caskroom)"; rm -r m-little-snitch; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro safari-technology-preview
 
-cd /usr/local/Caskroom/; rm -r dropbox-beta; cd
+cd "$(brew --caskroom)"; rm -r dropbox-beta; cd
 
 brew install m-mactex-no-gui
 
-cd /usr/local/Caskroom/; rm -r m-mactex-no-gui; cd
+cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
 brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar apparency etrecheckpro folx google-chrome ipe launchcontrol m-libreoffice m-obs m-tex-live-utility m-tor-browser m-vlc mathpix-snipping-tool microsoft-teams omnidisksweeper sage slack-beta suspicious-package texshop textbuddy xquartz zoom
 
-cd /usr/local/Caskroom/; rm -r camo-studio; cd
+cd "$(brew --caskroom)"; rm -r camo-studio; cd
 ```
 ### Homebrew maintenance
 ```bash
