@@ -87,10 +87,6 @@ chsh -s /opt/homebrew/bin/bash miccal
 ```
 ### Symlinks
 ```bash
-ln -s ~/Library/CloudStorage/Dropbox/.gitconfig ~/.gitconfig
-
-ln -s ~/Library/CloudStorage/Dropbox/.gpg-agent.conf ~/.gnupg/gpg-agent.conf
-
 ln -s ~/Library/CloudStorage/Dropbox/.homebrew_github_api_token ~/.homebrew_github_api_token
 
 ln -s ~/Library/CloudStorage/Dropbox/.password-store ~/.password-store
