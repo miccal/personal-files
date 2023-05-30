@@ -92,7 +92,7 @@ jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
-mergepr() { gh pr merge --squash "$1"; }
+mergepr() { gh pr merge --merge "$1"; }
 
 mp3count() { find . -name "*.mp3" | wc -l; }
 
