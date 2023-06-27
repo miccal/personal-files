@@ -24,8 +24,6 @@ xcode-select --install
 ```bash
 brew tap homebrew/cask
 
-brew tap homebrew/cask-drivers
-
 brew tap homebrew/cask-fonts
 
 brew tap homebrew/cask-versions
@@ -38,7 +36,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd "$(brew --caskroom)"; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro safari-technology-preview
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta duckduckgo keepingyouawake rectangle-pro
 
 cd "$(brew --caskroom)"; rm -r dropbox-beta; cd
 
@@ -46,7 +44,7 @@ brew install m-mactex-no-gui
 
 cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
-brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar archaeology apparency etrecheckpro folx google-chrome ipe launchcontrol m-libreoffice m-mpv m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams omnidisksweeper sage slack-beta suspicious-package texshop textbuddy xquartz zoom
+brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar archaeology apparency camo-studio etrecheckpro folx google-chrome ipe launchcontrol m-libreoffice m-mpv m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams omnidisksweeper sage slack-beta suspicious-package texshop textbuddy xquartz zoom
 
 cd "$(brew --caskroom)"; rm -r camo-studio; cd
 ```
