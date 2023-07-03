@@ -198,9 +198,9 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
-For `homebrew-cask-drivers`:
+For `homebrew-cask-fonts`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts
 
 git config --global user.email "miccal.matthews@gmail.com"
 
@@ -212,9 +212,9 @@ git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
 
-git remote add miccal https://github.com/miccal/homebrew-cask-drivers
+git remote add miccal https://github.com/miccal/homebrew-cask-fonts
 
-git remote set-url miccal https://github.com/miccal/homebrew-cask-drivers
+git remote set-url miccal https://github.com/miccal/homebrew-cask-fonts
 ```
 For `homebrew-cask-versions`:
 ```bash
@@ -289,18 +289,18 @@ miccal	https://github.com/miccal/homebrew-cask (push)
 origin	https://github.com/homebrew/homebrew-cask (fetch)
 origin	https://github.com/homebrew/homebrew-cask (push)
 ```
-For `homebrew-cask-drivers`:
+For `homebrew-cask-fonts`:
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts
 
 git remote -v
 ```
 Expected output:
 ```bash
-miccal	https://github.com/miccal/homebrew-cask-drivers (fetch)
-miccal	https://github.com/miccal/homebrew-cask-drivers (push)
-origin	https://github.com/Homebrew/homebrew-cask-drivers (fetch)
-origin	https://github.com/Homebrew/homebrew-cask-drivers (push)
+miccal	https://github.com/miccal/homebrew-cask-fonts (fetch)
+miccal	https://github.com/miccal/homebrew-cask-fonts (push)
+origin	https://github.com/Homebrew/homebrew-cask-fonts (fetch)
+origin	https://github.com/Homebrew/homebrew-cask-fonts (push)
 ```
 For `homebrew-cask-versions`:
 ```bash
@@ -336,7 +336,7 @@ cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git pu
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-drivers; git checkout master; git pull --rebase origin; git push miccal master; cd
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd
