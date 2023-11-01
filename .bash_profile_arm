@@ -88,7 +88,11 @@ formulapr() { brew bump-formula-pr --strict --no-browse --force --url="$1" "$2";
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
-jupyterclean () { sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
+jupyterclean () { rm -r .jupyter; sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
+
+jupyterload () { jupyter lab --no-browser; }
+
+jupyterstart () { open -a /Applications/Google\ Chrome.app --args --incognito --app="$1"; }
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
