@@ -40,11 +40,11 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass
 
 cd "$(brew --caskroom)"; rm -r dropbox-beta; cd
 
-brew install m-mactex-no-gui
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
-brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar apparency etrecheckpro folx google-chrome ipe launchcontrol m-dwsim m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams-classic obs-beta omnidisksweeper onedrive sage slack-beta suspicious-package texshop textbuddy vmware-horizon-client zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync unar apparency etrecheckpro folx google-chrome ipe launchcontrol m-dwsim m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams-classic obs-beta omnidisksweeper onedrive sage slack-beta suspicious-package texshop textbuddy vmware-horizon-client zoom
 ```
 ### Homebrew maintenance
 ```bash
