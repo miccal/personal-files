@@ -56,7 +56,7 @@ bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktli
 
 binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
 
-caskpr() { brew bump-cask-pr --no-browse --no-audit --no-style --force --version="$1" "$2"; }
+caskpr() { brew bump-cask-pr --no-browse --no-audit --no-style --version="$1" "$2"; }
 
 caskprlang() { /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/developer/bin/update_multilangual_casks /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/"$1".rb "$2"; }
 
@@ -84,7 +84,7 @@ dropcleanlist() { cd ~/Library/CloudStorage/Dropbox; sudo find . -iname "*confli
 
 dropsync() { rsync -a -v --delete ~/Library/CloudStorage/Dropbox ~/documents; }
 
-formulapr() { brew bump-formula-pr --strict --no-browse --force --url="$1" "$2"; }
+formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
