@@ -46,8 +46,6 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 
-appcast() { "$(brew --repository homebrew/cask)/developer/bin/find-appcast" "$1"; }
-
 approvepr() { gh pr review --approve "$1"; }
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
@@ -57,8 +55,6 @@ bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktli
 binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
 
 caskpr() { brew bump-cask-pr --no-browse --no-audit --no-style --version="$1" "$2"; }
-
-caskprlang() { /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/developer/bin/update_multilangual_casks /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/"$1".rb "$2"; }
 
 cdbrew() { cd "$(brew --repository)"; }
 
@@ -108,7 +104,7 @@ pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)
 
 pipoutdated() { python3 -m pip list -o; }
 
-pipupdate() { python3 -m pip install --upgrade "$1"; }
+pipupdate() { python3 -m pip install --upgrade --break-system-packages "$1"; }
 
 prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Library/CloudStorage/Dropbox/Code/brew/list; }
 
