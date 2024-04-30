@@ -26,8 +26,6 @@ brew tap homebrew/cask
 
 brew tap homebrew/cask-fonts
 
-brew tap homebrew/cask-versions
-
 brew tap miccal/miccal
 ```
 ### Homebrew installs
@@ -36,15 +34,15 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd "$(brew --caskroom)"; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox-beta keepingyouawake rectangle-pro
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox@beta keepingyouawake rectangle-pro
 
-cd "$(brew --caskroom)"; rm -r dropbox-beta; cd
+cd "$(brew --caskroom)"; rm -r dropbox@beta; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync typst unar apparency etrecheckpro folx google-chrome ipe launchcontrol m-dwsim m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams-classic omnidisksweeper onedrive sage slack-beta suspicious-package texshop textbuddy vmware-horizon-client zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pipgrip pwgen rsync typst unar apparency etrecheckpro folx google-chrome ipe launchcontrol m-dwsim m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-tex-live-utility m-tor-browser mathpix-snipping-tool microsoft-teams@classic omnidisksweeper onedrive sage slack@beta suspicious-package texshop textbuddy vmware-horizon-client zoom
 ```
 ### Homebrew maintenance
 ```bash
@@ -214,24 +212,6 @@ git remote add miccal https://github.com/miccal/homebrew-cask-fonts
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask-fonts
 ```
-For `homebrew-cask-versions`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
-
-git config --global user.email "miccal.matthews@gmail.com"
-
-git config --global user.name "miccal"
-
-git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>'
-
-git config --global commit.gpgSign true
-
-git config --global gpg.program $(which gpg)
-
-git remote add miccal https://github.com/miccal/homebrew-cask-versions
-
-git remote set-url miccal https://github.com/miccal/homebrew-cask-versions
-```
 For `homebrew-core`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
@@ -300,19 +280,6 @@ miccal	https://github.com/miccal/homebrew-cask-fonts (push)
 origin	https://github.com/Homebrew/homebrew-cask-fonts (fetch)
 origin	https://github.com/Homebrew/homebrew-cask-fonts (push)
 ```
-For `homebrew-cask-versions`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions
-
-git remote -v
-```
-Expected output:
-```bash
-miccal	https://github.com/miccal/homebrew-cask-versions (fetch)
-miccal	https://github.com/miccal/homebrew-cask-versions (push)
-origin	https://github.com/homebrew/homebrew-cask-versions (fetch)
-origin	https://github.com/homebrew/homebrew-cask-versions (push)
-```
 For `homebrew-core`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
@@ -335,9 +302,6 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout mast
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-versions; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd
