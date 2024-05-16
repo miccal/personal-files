@@ -24,8 +24,6 @@ xcode-select --install
 ```bash
 brew tap homebrew/cask
 
-brew tap homebrew/cask-fonts
-
 brew tap miccal/miccal
 ```
 ### Homebrew installs
@@ -194,24 +192,6 @@ git remote add miccal https://github.com/miccal/homebrew-cask
 
 git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
-For `homebrew-cask-fonts`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts
-
-git config --global user.email "miccal.matthews@gmail.com"
-
-git config --global user.name "miccal"
-
-git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>'
-
-git config --global commit.gpgSign true
-
-git config --global gpg.program $(which gpg)
-
-git remote add miccal https://github.com/miccal/homebrew-cask-fonts
-
-git remote set-url miccal https://github.com/miccal/homebrew-cask-fonts
-```
 For `homebrew-core`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
@@ -267,19 +247,6 @@ miccal	https://github.com/miccal/homebrew-cask (push)
 origin	https://github.com/homebrew/homebrew-cask (fetch)
 origin	https://github.com/homebrew/homebrew-cask (push)
 ```
-For `homebrew-cask-fonts`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts
-
-git remote -v
-```
-Expected output:
-```bash
-miccal	https://github.com/miccal/homebrew-cask-fonts (fetch)
-miccal	https://github.com/miccal/homebrew-cask-fonts (push)
-origin	https://github.com/Homebrew/homebrew-cask-fonts (fetch)
-origin	https://github.com/Homebrew/homebrew-cask-fonts (push)
-```
 For `homebrew-core`:
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
@@ -299,9 +266,6 @@ cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git pu
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts; git checkout master; git pull --rebase origin; git push miccal master; cd
 ```
 ```bash
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd
