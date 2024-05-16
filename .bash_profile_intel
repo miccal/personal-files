@@ -58,8 +58,6 @@ cdcasks() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; }
 
 cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 
-cdfonts() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts; }
-
 cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
 
 checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
@@ -104,7 +102,7 @@ prlist() { gh pr list --limit=1000 | awk '{ print $1 }' > ~/Library/CloudStorage
 
 prune() { git remote prune miccal; git remote prune origin; }
 
-push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask-fonts; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
+push() { cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd; }
 
 rebasepr() { gh pr comment "$1" --body "/rebase"; }
 
