@@ -46,9 +46,9 @@ approvepr() { gh pr review --approve "$1"; }
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
-bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
 
-binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt) ; do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
+binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
 
 caskpr() { brew bump-cask-pr --no-browse --no-audit --no-style --version="$1" "$2"; }
 
@@ -76,9 +76,9 @@ formulapr() { brew bump-formula-pr --strict --no-browse --url="$1" "$2"; }
 
 gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
 
-jupyterclean () { rm -r .jupyter; sudo find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
+jupyterclean () { find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
-jupyterload () { jupyter lab --no-browser; }
+jupyterload () { cd ~/Library/CloudStorage/Dropbox; jupyter lab --no-browser; }
 
 jupyterstart () { open -a /Applications/Google\ Chrome.app --args --incognito --app="$1"; }
 
@@ -110,4 +110,4 @@ spell() { aspell --lang=en --mode=tex check "$1"; }
 
 textedit() { /usr/bin/open -e -W "$1"; }
 
-update() { brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s --prune=all && rm -r -f "$(brew --cache)"; }
+update() { brew update; brew outdated --greedy --verbose; brew upgrade --dry-run; brew cleanup -s --prune=all; rm -r -f "$(brew --cache)"; }
