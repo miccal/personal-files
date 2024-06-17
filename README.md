@@ -40,7 +40,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync apparency devtoys etrecheckpro folx google-chrome ipe launchcontrol m-dwsim m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-tex-live-utility m-tor-browser mathpix-snipping-tool omnidisksweeper homebrew/cask/onedrive proxyman sage slack@beta suspicious-package texshop textbuddy vmware-horizon-client wolfram-engine zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync apparency devtoys etrecheckpro folx ipe launchcontrol m-dwsim m-google-chrome m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-tex-live-utility m-tor-browser mathpix-snipping-tool omnidisksweeper homebrew/cask/onedrive proxyman sage slack@beta suspicious-package texshop textbuddy vmware-horizon-client wolfram-engine zoom
 ```
 ### Homebrew maintenance
 ```bash
