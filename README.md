@@ -32,15 +32,15 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
 
 cd "$(brew --caskroom)"; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim dropbox@beta keepingyouawake rectangle-pro
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass pinentry-mac vim m-dropbox m-keepingyouawake m-rectangle-pro
 
-cd "$(brew --caskroom)"; rm -r dropbox@beta; cd
+cd "$(brew --caskroom)"; rm -r m-dropbox; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
 
 cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync apparency devtoys etrecheckpro folx ipe launchcontrol m-dwsim m-google-chrome m-libreoffice m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-tex-live-utility m-tor-browser mathpix-snipping-tool omnidisksweeper homebrew/cask/onedrive proxyman sage slack@beta suspicious-package texshop textbuddy vmware-horizon-client wolfram-engine zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync m-apparency m-devtoys m-dwsim m-folx m-google-chrome m-launchcontrol m-libreoffice m-mathpix-snipping-tool m-microsoft-defender m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-onedrive m-proxyman m-sage m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-vmware-horizon-client m-wolfram-engine m-zoom
 ```
 ### Homebrew maintenance
 ```bash
