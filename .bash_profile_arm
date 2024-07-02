@@ -108,6 +108,8 @@ sha() { shasum -a 256 "$1"; }
 
 spell() { aspell --lang=en --mode=tex check "$1"; }
 
+textbuddy() { /usr/bin/open -n -W -b com.clickontyler.TextBuddy "$1"; }
+
 textedit() { /usr/bin/open -e -W "$1"; }
 
 update() { brew update; brew outdated --greedy --verbose; brew upgrade --dry-run; brew cleanup -s --prune=all; rm -r -f "$(brew --cache)"; }
