@@ -36,11 +36,11 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl ghostscript git pass
 
 cd "$(brew --caskroom)"; rm -r m-dropbox; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex-no-gui
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex
 
-cd "$(brew --caskroom)"; rm -r m-mactex-no-gui; cd
+cd "$(brew --caskroom)"; rm -r m-mactex; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync m-apparency m-devtoys m-dwsim m-folx m-google-chrome m-launchcontrol m-libreoffice m-mathpix-snipping-tool m-microsoft-defender m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-onedrive m-proxyman m-sage m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-vmware-horizon-client m-wolfram-engine m-zoom
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync m-apparency m-devtoys m-dwsim m-folx m-google-chrome m-launchcontrol m-libreoffice m-mathpix-snipping-tool m-microsoft-defender m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-onedrive m-processspy m-proxyman m-sage m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-vmware-horizon-client m-wolfram-engine m-xquartz m-zoom
 ```
 ### Homebrew maintenance
 ```bash
