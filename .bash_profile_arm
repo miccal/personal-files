@@ -60,6 +60,8 @@ cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 
 cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
 
+cdmiccal() { cd "$(brew --repository)"/Library/Taps/miccal/homebrew-miccal; }
+
 cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install; }
 
 curlfollow() { curl -sLI "$1" | grep -i Location; }
