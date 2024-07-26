@@ -60,6 +60,8 @@ cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 
 cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
 
+cdmiccal() { cd "$(brew --repository)"/Library/Taps/miccal/homebrew-miccal; }
+
 checkfan() { sudo powermetrics -i 1 -n 1 | grep -i "fan"; }
 
 checktemp() { sudo powermetrics -i 1 -n 1 | grep -i "temp"; }
