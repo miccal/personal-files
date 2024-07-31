@@ -238,20 +238,6 @@ Expected output:
 origin	https://github.com/Homebrew/homebrew-core (fetch)
 origin	https://github.com/Homebrew/homebrew-core (push)
 ```
-### Update forks
-```bash
-cd "$(brew --repository)"; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; git checkout master; git pull --rebase origin; git push miccal master; cd
-```
-To force the update:
-```bash
-git checkout master; git pull --unshallow origin; git push --force miccal master; cd
-```
 ### Manual PR's
 
 After `cd`'ing into the relevant directory:
