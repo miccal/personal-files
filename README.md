@@ -165,10 +165,6 @@ git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>
 git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
-
-git remote add miccal https://github.com/miccal/brew
-
-git remote set-url miccal https://github.com/miccal/brew
 ```
 For `homebrew-cask`:
 ```bash
@@ -183,10 +179,6 @@ git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>
 git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
-
-git remote add miccal https://github.com/miccal/homebrew-cask
-
-git remote set-url miccal https://github.com/miccal/homebrew-cask
 ```
 For `homebrew-core`:
 ```bash
@@ -201,10 +193,6 @@ git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>
 git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
-
-git remote add miccal https://github.com/miccal/homebrew-core
-
-git remote set-url miccal https://github.com/miccal/homebrew-core
 ```
 Note that for Intel:
 ```
@@ -225,8 +213,6 @@ git remote -v
 ```
 Expected output:
 ```bash
-miccal	https://github.com/miccal/brew (fetch)
-miccal	https://github.com/miccal/brew (push)
 origin	https://github.com/Homebrew/brew (fetch)
 origin	https://github.com/Homebrew/brew (push)
 ```
@@ -238,8 +224,6 @@ git remote -v
 ```
 Expected output:
 ```bash
-miccal	https://github.com/miccal/homebrew-cask (fetch)
-miccal	https://github.com/miccal/homebrew-cask (push)
 origin	https://github.com/homebrew/homebrew-cask (fetch)
 origin	https://github.com/homebrew/homebrew-cask (push)
 ```
@@ -251,8 +235,6 @@ git remote -v
 ```
 Expected output:
 ```bash
-miccal	https://github.com/miccal/homebrew-core (fetch)
-miccal	https://github.com/miccal/homebrew-core (push)
 origin	https://github.com/Homebrew/homebrew-core (fetch)
 origin	https://github.com/Homebrew/homebrew-core (push)
 ```
@@ -271,7 +253,6 @@ To force the update:
 git checkout master; git pull --unshallow origin; git push --force miccal master; cd
 ```
 ### Manual PR's
-_!!!UPDATE FORK FIRST!!!_
 
 After `cd`'ing into the relevant directory:
 ```bash
@@ -293,7 +274,7 @@ git commit --all --message "PR TITLE"
 
 git commit --amend --message "PR TITLE"
 
-git push miccal BRANCH
+git push BRANCH
 
 git fetch --all
 
@@ -301,9 +282,9 @@ git fetch origin pull/ID/head:BRANCH
 
 git rebase --interactive origin/master # squash
 
-git push --force miccal BRANCH
+git push --force BRANCH
 
-git push --force-with-lease miccal BRANCH
+git push --force-with-lease BRANCH
 
 git checkout master
 
@@ -312,8 +293,6 @@ git branch
 git branch --delete --force BRANCH
 
 git branch -a
-
-git remote prune miccal
 
 git remote prune origin
 ```
