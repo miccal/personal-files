@@ -86,6 +86,8 @@ manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
 mp3count() { find . -name "*.mp3" | wc -l; }
 
+onesync() { rsync -a -v --delete ~/Library/CloudStorage/OneDrive-UWA ~/Library/CloudStorage/Dropbox; }
+
 pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
 
 pipoutdated() { python3 -m pip list -o; }
