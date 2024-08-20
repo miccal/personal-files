@@ -40,7 +40,7 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex
 
 cd "$(brew --caskroom)"; rm -r m-mactex; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync m-apparency m-devtoys m-dwsim m-folx m-google-chrome m-launchcontrol m-libreoffice m-mathpix-snipping-tool m-microsoft-defender m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-onedrive m-processspy m-proxyman m-sagemath m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-vmware-horizon-client m-wolfram-engine m-xquartz m-zoomus
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync m-apparency m-folx m-google-chrome m-launchcontrol m-libreoffice m-mathpix-snipping-tool m-microsoft-defender m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-onedrive m-processspy m-proxyman m-sagemath m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-vmware-horizon-client m-wolfram-engine m-xquartz m-zoomus
 ```
 ### Homebrew maintenance
 ```bash
