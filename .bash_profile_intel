@@ -82,6 +82,8 @@ jupyterload () { cd ~/Library/CloudStorage/Dropbox; jupyter lab --no-browser; }
 
 jupyterstart () { open -a /Applications/Google\ Chrome.app --args --incognito --app="$1"; }
 
+launchpadreset () { defaults write com.apple.dock ResetLaunchPad -boolean true; killall Dock; }
+
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
 mp3count() { find . -name "*.mp3" | wc -l; }
