@@ -86,6 +86,8 @@ jupyterload () { cd ~/Library/CloudStorage/Dropbox; jupyter lab --no-browser; }
 
 jupyterstart () { open -a /Applications/Google\ Chrome.app --args --incognito --app="$1"; }
 
+keychain() { open /System/Library/CoreServices/Applications/Keychain\ Access.app; }
+
 launchpadreset () { defaults write com.apple.dock ResetLaunchPad -boolean true; killall Dock; }
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
