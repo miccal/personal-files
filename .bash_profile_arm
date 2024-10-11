@@ -46,9 +46,9 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 artsync() { rsync -a -v --delete ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork ~/Library/CloudStorage/Dropbox/pictures; }
 
-bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' ; done; }
+bing() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g'; done; }
 
-binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW ; done; }
+binggrep() { for i in $(cat ~/Library/CloudStorage/Dropbox/Code/shortcuts/bing/mktlist.txt); do curl --silent "http://www.bing.com/HPImageArchive.aspx?format=js&uhd=1&idx=0&n=1&mkt=$i" | grep --only-matching "\"url\":\"\/.*\.jpg" | sed 's/"url":"\/th?id=OHR\.//g' | sed 's/\.jpg.*//g' | grep -v ROW; done; }
 
 cdbrew() { cd "$(brew --repository)"; }
 
