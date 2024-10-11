@@ -36,6 +36,8 @@ export HOMEBREW_GIT_EMAIL=miccal.matthews@gmail.com
 
 export HOMEBREW_GIT_NAME=miccal
 
+export HOMEBREW_NO_ANALYTICS=1
+
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
 export HOMEBREW_UPGRADE_GREEDY=1
@@ -57,6 +59,8 @@ cdcore() { cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core; }
 cddropbox() { cd ~/Library/CloudStorage/Dropbox; }
 
 cdmiccal() { cd "$(brew --repository)"/Library/Taps/miccal/homebrew-miccal; }
+
+chromeincognito() { open -a /Applications/Google\ Chrome.app --args --incognito; }
 
 cltupdate() { sudo rm -r -f /Library/Developer/CommandLineTools; sudo xcode-select --install; }
 
@@ -82,6 +86,8 @@ launchpadreset () { defaults write com.apple.dock ResetLaunchPad -boolean true; 
 
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
+masterpassword() { open -a /Applications/Google\ Chrome.app --args --incognito --app=https://js.masterpassword.app; }
+
 mp3count() { find . -name "*.mp3" | wc -l; }
 
 onesync() { rsync -a -v --delete ~/Library/CloudStorage/OneDrive-UWA ~/Library/CloudStorage/Dropbox; }
@@ -98,6 +104,8 @@ sfind() { sudo find / -iname "*$1*"; }
 
 sha() { shasum -a 256 "$1"; }
 
+spectre() { open -a /Applications/Google\ Chrome.app --args --incognito --app=https://spectre.pw; }
+
 spell() { aspell --lang=en --mode=tex check "$1"; }
 
 textbuddy() { /usr/bin/open -n -W -b com.clickontyler.TextBuddy "$1"; }
@@ -105,3 +113,5 @@ textbuddy() { /usr/bin/open -n -W -b com.clickontyler.TextBuddy "$1"; }
 textedit() { /usr/bin/open -e -W "$1"; }
 
 update() { brew update; brew outdated --greedy --verbose; brew upgrade --dry-run; brew cleanup -s --prune=all; rm -r -f "$(brew --cache)"; }
+
+xattrquarantine() { xattr -d -r com.apple.quarantine "$1"; }
