@@ -48,6 +48,8 @@ HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab m
 brew update && brew outdated --greedy --verbose && brew upgrade --dry-run && brew cleanup -s && rm -r -f "$(brew --cache)"
 
 brew deps --installed --tree
+
+brew deps --installed --graph
 ```
 ### Set homebrew bash as default
 List current shells:
@@ -72,11 +74,11 @@ cat /etc/shells
 ```
 Set default shell for Intel:
 ```bash
-chsh -s /usr/local/bin/bash miccal
+chsh -s /usr/local/bin/bash NAME
 ```
 or for Arm:
 ```bash
-chsh -s /opt/homebrew/bin/bash miccal
+chsh -s /opt/homebrew/bin/bash NAME
 ```
 ### Symlinks
 ```bash
@@ -153,38 +155,7 @@ while for Arm:
 /opt/homebrew/bin/pinentry-mac
 ```
 ### Git setup
-For `brew`:
 ```bash
-cd "$(brew --repository)"
-
-git config --global user.email "miccal.matthews@gmail.com"
-
-git config --global user.name "miccal"
-
-git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>'
-
-git config --global commit.gpgSign true
-
-git config --global gpg.program $(which gpg)
-```
-For `homebrew-cask`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
-
-git config --global user.email "miccal.matthews@gmail.com"
-
-git config --global user.name "miccal"
-
-git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>'
-
-git config --global commit.gpgSign true
-
-git config --global gpg.program $(which gpg)
-```
-For `homebrew-core`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
-
 git config --global user.email "miccal.matthews@gmail.com"
 
 git config --global user.name "miccal"
@@ -205,89 +176,6 @@ while for Arm:
 |-> which gpg
 /opt/homebrew/bin/gpg
 ```
-### Git check
-For `brew`:
-```bash
-cd "$(brew --repository)"
-
-git remote -v
-```
-Expected output:
-```bash
-origin	https://github.com/Homebrew/brew (fetch)
-origin	https://github.com/Homebrew/brew (push)
-```
-For `homebrew-cask`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
-
-git remote -v
-```
-Expected output:
-```bash
-origin	https://github.com/homebrew/homebrew-cask (fetch)
-origin	https://github.com/homebrew/homebrew-cask (push)
-```
-For `homebrew-core`:
-```bash
-cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-core
-
-git remote -v
-```
-Expected output:
-```bash
-origin	https://github.com/Homebrew/homebrew-core (fetch)
-origin	https://github.com/Homebrew/homebrew-core (push)
-```
-### Manual PR's
-
-After `cd`'ing into the relevant directory:
-```bash
-git status
-
-git checkout -b BRANCH
-
-touch FILE.rb
-
-textedit FILE.rb
-
-git add FILE.rb
-
-git rm FILE.rb
-
-git commit --message "PR TITLE"
-
-git commit --all --message "PR TITLE"
-
-git commit --amend --message "PR TITLE"
-
-git push BRANCH
-
-git fetch --all
-
-git fetch origin pull/ID/head:BRANCH
-
-git rebase --interactive origin/master # squash
-
-git push --force BRANCH
-
-git push --force-with-lease BRANCH
-
-git checkout master
-
-git branch
-
-git branch --delete --force BRANCH
-
-git branch -a
-
-git remote prune origin
-```
-### List references in a remote repository
-Example:
-```bash
-git ls-remote https://gitlab.com/MasterPassword/MasterPassword.git
-```
 ### Show/hide hidden files
 ```bash
 defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
@@ -302,8 +190,4 @@ sudo fdesetup list
 Remove `Guest` user:
 ```bash
 sudo fdesetup remove -user Guest
-```
-### Set dock height
-```bash
-defaults write com.apple.dock tilesize -integer 40; killall Dock
 ```
