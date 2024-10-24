@@ -154,6 +154,15 @@ while for Arm:
 |-> which pinentry-mac
 /opt/homebrew/bin/pinentry-mac
 ```
+### Ipe
+Create configuration file:
+```bash
+cd ~/.ipe; touch ipe.conf; textedit ipe.conf
+```
+Add the following line:
+```bash
+IPELATEXPATH=/Library/TeX/texbin
+```
 ### Git setup
 ```bash
 git config --global user.email "miccal.matthews@gmail.com"
