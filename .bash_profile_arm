@@ -74,7 +74,7 @@ dropcleanlist() { cd ~/Library/CloudStorage/Dropbox; sudo find . -iname "*confli
 
 dropsync() { rsync -a -v --delete ~/Library/CloudStorage/Dropbox ~/documents; }
 
-gpgreload() { gpgconf --kill gpg-agent; gpgconf --launch gpg-agent; }
+gpgreload() { gpgconf --kill all; gpgconf --launch all; }
 
 jupyterclean () { find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
