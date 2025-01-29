@@ -94,7 +94,7 @@ masterpassword() { open -a /Applications/Google\ Chrome.app --args --incognito -
 
 mp3count() { find . -name "*.mp3" | wc -l; }
 
-onesync() { rsync -a -v --delete ~/Library/CloudStorage/OneDrive-UWA ~/Library/CloudStorage/Dropbox; }
+# onesync() { rsync -a -v --delete ~/Library/CloudStorage/OneDrive-UWA ~/Library/CloudStorage/Dropbox; }
 
 pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
 
