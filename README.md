@@ -41,9 +41,7 @@ cd "$(brew --caskroom)"; rm -r m-dropbox; cd
 
 HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-apparency m-etrecheckpro m-google-chrome m-ipe m-launchcontrol m-leader-key m-libreoffice m-mathpix-snipping-tool m-microsoft-outlook m-microsoft-teams m-mouseless m-mpv m-obs m-omnidisksweeper m-onedrive m-processspy m-proxyman m-sagemath m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-zoomus
-
-cd "$(brew --caskroom)"; rm -r m-onedrive; cd
+HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gh gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-apparency m-etrecheckpro m-google-chrome m-ipe m-launchcontrol m-leader-key m-libreoffice m-mathpix-snipping-tool m-microsoft-outlook m-microsoft-teams m-mouseless m-mpv m-obs m-omnidisksweeper m-processspy m-proxyman m-sagemath m-slack m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-zoomus
 ```
 ### Homebrew maintenance
 ```bash
@@ -62,11 +60,7 @@ Add homebrew bash:
 ```bash
 sudo vim /etc/shells
 ```
-Add to last line for Intel:
-```bash
-/usr/local/bin/bash
-```
-or for Arm:
+Add to last line:
 ```bash
 /opt/homebrew/bin/bash
 ```
@@ -74,11 +68,7 @@ Check list:
 ```bash
 cat /etc/shells
 ```
-Set default shell for Intel:
-```bash
-chsh -s /usr/local/bin/bash NAME
-```
-or for Arm:
+Set default shell:
 ```bash
 chsh -s /opt/homebrew/bin/bash NAME
 ```
@@ -146,13 +136,8 @@ Add `pinentry-mac`:
 ```bash
 echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 ```
-Note that for Intel:
-```
-|-> which pinentry-mac
-/usr/local/bin/pinentry-mac
-```
-while for Arm:
-```
+Note that
+```bash
 |-> which pinentry-mac
 /opt/homebrew/bin/pinentry-mac
 ```
@@ -177,13 +162,8 @@ git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
 ```
-Note that for Intel:
-```
-|-> which gpg
-/usr/local/bin/gpg
-```
-while for Arm:
-```
+Note that:
+```bash
 |-> which gpg
 /opt/homebrew/bin/gpg
 ```
