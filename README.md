@@ -25,7 +25,7 @@ xcode-select --install
 ```
 ### Homebrew taps
 ```bash
-brew tap homebrew/cask
+brew tap --force homebrew/cask
 
 brew tap miccal/miccal
 ```
