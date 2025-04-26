@@ -127,19 +127,11 @@ Add the following lines:
 ```bash
 default-cache-ttl 0
 max-cache-ttl 0
+pinentry-program /opt/homebrew/bin/pinentry-mac
 ```
 Reload `gpg-agent`:
 ```bash
 gpgconf --kill gpg-agent; gpgconf --launch gpg-agent
-```
-Add `pinentry-mac`:
-```bash
-echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
-```
-Note that
-```bash
-|-> which pinentry-mac
-/opt/homebrew/bin/pinentry-mac
 ```
 ### Ipe
 Create configuration file:
@@ -161,11 +153,6 @@ git config --global user.signingKey 'Miccal Matthews <miccal.matthews@gmail.com>
 git config --global commit.gpgSign true
 
 git config --global gpg.program $(which gpg)
-```
-Note that:
-```bash
-|-> which gpg
-/opt/homebrew/bin/gpg
 ```
 ### Show/hide hidden files
 ```bash
