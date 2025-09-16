@@ -7,7 +7,7 @@ softwareupdate --fetch-full-installer --full-installer-version VERSION
 ```
 ### Create macos bootable usb
 ```bash
-sudo '/Applications/Install macOS Sequoia.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction
+sudo '/Applications/Install macOS Tahoe.app/Contents/Resources/createinstallmedia' --volume /Volumes/Untitled --nointeraction
 ```
 ### Install macos updates
 ```bash
