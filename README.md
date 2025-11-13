@@ -31,17 +31,17 @@ brew tap miccal/miccal
 ```
 ### Homebrew installs
 ```bash
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-little-snitch
+brew install m-little-snitch
 
 cd "$(brew --caskroom)"; rm -r m-little-snitch; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install bash curl git pass pinentry-mac vim m-dropbox m-keepingyouawake m-pearcleaner m-rectangle-pro
+brew install bash curl git pass pinentry-mac vim m-dropbox m-keepingyouawake m-pearcleaner m-rectangle-pro
 
 cd "$(brew --caskroom)"; rm -r m-dropbox; cd
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install m-mactex
+brew install m-mactex
 
-HOMEBREW_CASK_OPTS="--no-quarantine" brew install aspell gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-apparency m-etrecheckpro m-google-chrome m-ipe m-launchcontrol m-leader-key m-libreoffice m-mathpix-snipping-tool m-microsoft-365-copilot m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-processspy m-proxyman m-sagemath m-sentinel m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-z-library m-zoomus
+brew install aspell gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-apparency m-etrecheckpro m-google-chrome m-ipe m-launchcontrol m-leader-key m-libreoffice m-mathpix-snipping-tool m-microsoft-365-copilot m-microsoft-outlook m-microsoft-teams m-mpv m-obs m-omnidisksweeper m-processspy m-proxyman m-sagemath m-sentinel m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-z-library m-zoomus
 ```
 ### Homebrew maintenance
 ```bash
