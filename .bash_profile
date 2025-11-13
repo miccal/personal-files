@@ -16,8 +16,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export EDITOR='/usr/bin/open -e -W'
 
-export HOMEBREW_CASK_OPTS="--no-quarantine"
-
 export HOMEBREW_DEVELOPER=1
 
 export HOMEBREW_DISPLAY_INSTALL_TIMES=1
