@@ -16,6 +16,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export EDITOR='/usr/bin/open -e -W'
 
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
 export HOMEBREW_DEVELOPER=1
 
 export HOMEBREW_DISPLAY_INSTALL_TIMES=1
@@ -84,15 +86,9 @@ jupyterstart () { open -a /Applications/Google\ Chrome.app --args --incognito --
 
 keychain() { open /System/Library/CoreServices/Applications/Keychain\ Access.app; }
 
-launchpadreset () { defaults write com.apple.dock ResetLaunchPad -boolean true; killall Dock; }
-
 manpdf() { man -t "$1" | ps2pdf - - | open -f -a Preview; }
 
-masterpassword() { open -a /Applications/Google\ Chrome.app --args --incognito --app=https://js.masterpassword.app; }
-
 mp3count() { find . -name "*.mp3" | wc -l; }
-
-# onesync() { rsync -a -v --delete ~/Library/CloudStorage/OneDrive-UWA ~/Library/CloudStorage/Dropbox; }
 
 pdf4() { pdfjam --nup 2x2 --landscape --frame true --suffix "(4 pages per sheet)" "$1"; }
 
