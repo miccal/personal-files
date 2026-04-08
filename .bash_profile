@@ -110,6 +110,6 @@ textbuddy() { /usr/bin/open -n -W -b com.clickontyler.TextBuddy "$1"; }
 
 textedit() { /usr/bin/open -e -W "$1"; }
 
-update() { brew update; brew outdated --greedy --verbose; brew upgrade --dry-run; brew cleanup -s --prune=all; rm -r -f "$(brew --cache)"; }
+update() { brew update; brew cleanup -s --prune=all; rm -r -f "$(brew --cache)"; }
 
 xattrquarantine() { xattr -d -r com.apple.quarantine "$1"; }
