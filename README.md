@@ -41,7 +41,7 @@ cd "$(brew --caskroom)"; rm -r m-dropbox; cd
 
 brew install m-mactex
 
-brew install aspell gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-annotate m-apparency m-batt m-etrecheckpro m-fileutils m-free-ruler m-google-chrome m-ipe m-launchcontrol m-libreoffice m-low-profile m-mathpix-snipping-tool m-microsoft-365-copilot m-microsoft-outlook m-microsoft-teams m-mole m-mpv m-obs m-omnidisksweeper m-processspy m-proxyman m-sagemath m-sentinel m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tor-browser m-tuna m-whatcable m-z-library m-zoomus
+brew install aspell gnuplot jupyterlab mas pdftoipe pwgen rsync transmission-cli m-annotate m-apparency m-batt m-etrecheckpro m-fileutils m-free-ruler m-google-chrome m-ipe m-launchcontrol m-libreoffice m-low-profile m-mathpix-snipping-tool m-microsoft-365-copilot m-microsoft-outlook m-microsoft-teams m-mole m-mpv m-obs m-omnidisksweeper m-processspy m-proxyman m-sagemath m-sentinel m-suspicious-package m-tex-live-utility m-texshop m-textbuddy m-tikz-editor m-tor-browser m-tuna m-whatcable m-z-library m-zoomus
 ```
 ### Homebrew maintenance
 ```bash
