@@ -78,6 +78,10 @@ dropsync() { rsync -a -v --delete ~/Library/CloudStorage/Dropbox ~/documents; }
 
 gpgreload() { gpgconf --kill all; gpgconf --launch all; }
 
+jamfcheck() { pkgutil --pkgs | grep jamf; }
+
+jamfclean() { sudo pkgutil --forget "$1"; }
+
 jupyterclean () { find . -type d -iname ".ipynb_checkpoints" | sed -e 's/^/"/g' -e 's/$/"/g' | tr '\n' ' ' | sed 's/$/\n/g'; }
 
 jupyterload () { cd ~/Library/CloudStorage/Dropbox; jupyter lab --no-browser; }
