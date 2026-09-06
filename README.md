@@ -28,6 +28,8 @@ xcode-select --install
 brew tap --force homebrew/cask
 
 brew tap miccal/miccal
+
+brew trust miccal/miccal
 ```
 ### Homebrew installs
 ```bash
