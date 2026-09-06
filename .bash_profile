@@ -40,8 +40,6 @@ export HOMEBREW_NO_ASK=1
 
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
-export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
-
 export HOMEBREW_UPGRADE_GREEDY=1
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
